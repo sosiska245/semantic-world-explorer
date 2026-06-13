@@ -1,0 +1,41 @@
+How should capital/major-city coordinates + profile text be sourced for the city-level map layer?
+
+❯ 1. Curated list (Recommended)
+     ~100 major cities: capitals from restcountries.com + a hand-picked extra list, lat/lon included. 
+     Profile text via Wikipedia API per city. Simple, fast to build.
+  2. Wikidata SPARQL
+     One query pulls cities above a population threshold with coordinates + Wikipedia titles. Broader 
+     coverage, more setup complexity.
+  3. GeoNames dataset
+     Download cities500/cities1000 dump. Most comprehensive, but large file + free account signup 
+     required.
+  4. Type something.
+
+
+
+ ● Correction: Anthropic has no native embeddings API — their docs point to Voyage AI as the
+   recommended partner. Which embedding setup should the plan use?
+   → Voyage AI voyage-4-lite (Recommended)
+ ● Server-based Python dashboard framework (Streamlit is banned by the assignment). Which should the
+   plan build on?
+   → Plotly Dash (Recommended)
+ ● How should capital/major-city coordinates + profile text be sourced for the city-level map layer?
+   → Curated list (Recommended)
+ ● Where should the dashboard be deployed for the required 'live demo' link?
+   → Render (Recommended)
+
+
+Мне кажется, самая сильная версия продукта вообще не про страны.
+
+Она про:
+
+🌍 страны
+🏙 города
+🎓 университеты
+💼 компании
+📚 исторические эпохи
+👤 известных людей
+
+в одном пространстве.
+
+Тогда запрос:

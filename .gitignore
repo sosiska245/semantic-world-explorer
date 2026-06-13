@@ -1,0 +1,11 @@
+.env
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+venv/
+data/raw/wiki_cache/
+data/raw/*.json
+data/interim/
+*.log
+.claude/

@@ -1,0 +1,21 @@
+city_name,country_iso3,lat,lon
+New York City,USA,40.7128,-74.0060
+Los Angeles,USA,34.0522,-118.2437
+Chicago,USA,41.8781,-87.6298
+Shanghai,CHN,31.2304,121.4737
+Guangzhou,CHN,23.1291,113.2644
+Mumbai,IND,19.0760,72.8777
+Bangalore,IND,12.9716,77.5946
+Sydney,AUS,-33.8688,151.2093
+Melbourne,AUS,-37.8136,144.9631
+Sao Paulo,BRA,-23.5505,-46.6333
+Rio de Janeiro,BRA,-22.9068,-43.1729
+Dubai,ARE,25.2048,55.2708
+Toronto,CAN,43.6532,-79.3832
+Vancouver,CAN,49.2827,-123.1207
+Munich,DEU,48.1351,11.5820
+Osaka,JPN,34.6937,135.5023
+Barcelona,ESP,41.3851,2.1734
+Milan,ITA,45.4642,9.1900
+Saint Petersburg,RUS,59.9343,30.3351
+Istanbul,TUR,41.0082,28.9784

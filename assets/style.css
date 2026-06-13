@@ -1,0 +1,149 @@
+:root {
+  --slot-red: #ff5c5c;
+  --slot-green: #5cff8a;
+  --slot-blue: #5c9aff;
+  --bg-page: #15151f;
+  --bg-card: #1e1e2e;
+  --bg-card-alt: #24243a;
+  --border-soft: #34344a;
+}
+
+body {
+  background-color: var(--bg-page);
+}
+
+.swe-navbar {
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-soft);
+  padding: 0.6rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.swe-logo {
+  height: 38px;
+  width: 38px;
+}
+
+.swe-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.swe-subtitle {
+  font-size: 0.8rem;
+  color: #9a9ab0;
+  margin: 0;
+}
+
+.swe-tabs .tab {
+  background-color: var(--bg-card) !important;
+  color: #c5c5dd !important;
+  border: none !important;
+}
+
+.swe-tabs .tab--selected {
+  background-color: var(--bg-card-alt) !important;
+  color: #ffffff !important;
+  border-top: 2px solid var(--slot-blue) !important;
+}
+
+.swe-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.slot-card {
+  background-color: var(--bg-card-alt);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.6rem;
+}
+
+.slot-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.slot-label-R {
+  color: var(--slot-red);
+}
+
+.slot-label-G {
+  color: var(--slot-green);
+}
+
+.slot-label-B {
+  color: var(--slot-blue);
+}
+
+.slot-input {
+  width: 100%;
+  background-color: var(--bg-page);
+  color: #f0f0f5;
+  border: none;
+  border-radius: 4px;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.9rem;
+}
+
+.slot-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--border-soft);
+}
+
+.slot-input-R {
+  border-left: 4px solid var(--slot-red);
+}
+
+.slot-input-G {
+  border-left: 4px solid var(--slot-green);
+}
+
+.slot-input-B {
+  border-left: 4px solid var(--slot-blue);
+}
+
+.slot-swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.slot-swatch.slot-R {
+  background-color: var(--slot-red);
+}
+
+.slot-swatch.slot-G {
+  background-color: var(--slot-green);
+}
+
+.slot-swatch.slot-B {
+  background-color: var(--slot-blue);
+}
+
+.detail-sim-row {
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.swe-section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #d5d5ea;
+}
+
+.swe-hidden {
+  display: none;
+}
