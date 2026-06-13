@@ -23,14 +23,13 @@ from src.config import EMBEDDING_DIM, EMBEDDING_MODEL  # noqa: E402
 INTERIM_PARQUET = os.path.join(ROOT_DIR, "data", "interim", "profiles.parquet")
 OUT_PARQUET = os.path.join(ROOT_DIR, "data", "processed", "embeddings.parquet")
 
-# Free-tier Voyage accounts (no payment method on file) are capped at 3 RPM /
-# 10K TPM. Profile texts run up to 6000 chars (~2K tokens worst case), so a
-# batch of >=2 max-length texts can exceed the 10K TPM cap on its own
-# (a single oversized request gets rejected no matter how long you wait
-# between requests). One text per request keeps every request well under
-# the cap; 21s spacing keeps requests under 3 RPM.
-BATCH_SIZE = 1
-SECONDS_BETWEEN_REQUESTS = 21
+# Payment method on file -> standard (tier 1) rate limits, far above the
+# 3 RPM / 10K TPM free-tier cap. Batch of 10 max-length (~6000 char / ~2K
+# token) profile texts is ~20K tokens per request, comfortably under tier-1
+# TPM; short spacing keeps well under tier-1 RPM. RateLimitError retry stays
+# as a safety net in case limits haven't kicked in yet.
+BATCH_SIZE = 10
+SECONDS_BETWEEN_REQUESTS = 2
 RATE_LIMIT_RETRY_SECONDS = 65
 
 
