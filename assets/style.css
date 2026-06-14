@@ -727,3 +727,6 @@ body {
 
 /* Compare tab — view mode radio */
 .compare-view-radio label { font-size: 0.85em; color: var(--text-primary); }
+
+/* Bottom breathing room so last card doesn't sit flush at viewport edge */
+.tab-content { padding-bottom: 5rem; }

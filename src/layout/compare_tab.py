@@ -24,9 +24,10 @@ _TABLE_STYLE_DATA_CONDITIONAL = [
     {"if": {"filter_query": "{rank} <= 5", "column_id": "rank"}, "color": "#d97757", "fontWeight": "700"},
 ]
 _TABLE_COL_CONDITIONAL = [
+    {"if": {"column_id": "name"},        "textAlign": "left", "width": "140px"},
     {"if": {"column_id": "score"},       "width": "58px", "textAlign": "right"},
     {"if": {"column_id": "rank"},        "width": "52px", "textAlign": "right"},
-    {"if": {"column_id": "top_section"}, "width": "90px"},
+    {"if": {"column_id": "top_section"}, "width": "90px", "textAlign": "left"},
 ] + [
     {"if": {"column_id": c}, "width": "72px", "textAlign": "right"}
     for c in ("economy", "culture", "geography", "politics", "history")
