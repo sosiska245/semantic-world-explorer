@@ -24,14 +24,7 @@ def slot_card(index):
 
 
 def _jump_to_options():
-    options = []
-    for _, row in ENTITIES_DF.iterrows():
-        if row["type"] == "country":
-            sub = "Country"
-        else:
-            sub = f"City, {row['parent_country']}"
-        options.append({"label": f"{row['name']} ({sub})", "value": row["id"]})
-    return options
+    return [{"label": f"{row['name']} (Country)", "value": row["id"]} for _, row in ENTITIES_DF.iterrows()]
 
 
 def sidebar():
@@ -43,8 +36,8 @@ def sidebar():
                     html.Div(id="slot-inputs-container", children=[slot_card(0)]),
                     html.Div(
                         [
-                            dbc.Button("+ Add concept", id="btn-add-slot", size="sm", color="secondary", className="me-2"),
-                            dbc.Button("- Remove", id="btn-remove-slot", size="sm", color="secondary", disabled=True),
+                            dbc.Button("+ Add concept", id="btn-add-slot", size="sm", color="link", className="swe-btn me-2"),
+                            dbc.Button("- Remove", id="btn-remove-slot", size="sm", color="link", className="swe-btn", disabled=True),
                         ],
                         className="mb-2",
                     ),
@@ -58,7 +51,7 @@ def sidebar():
                     dcc.Dropdown(
                         id="detail-jump-to",
                         options=_jump_to_options(),
-                        placeholder="Jump to a country or city...",
+                        placeholder="Jump to a country...",
                         className="mb-2",
                     ),
                     html.Div(

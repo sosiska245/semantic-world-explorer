@@ -4,7 +4,7 @@ scripts/build_embeddings.py (document embeddings) and src/similarity.py
 (query embeddings) for dot-product similarity to be meaningful.
 """
 
-EMBEDDING_MODEL = "voyage-4-lite"
+EMBEDDING_MODEL = "voyage-4"
 EMBEDDING_DIM = 1024
 
 EMBEDDINGS_PARQUET = "data/processed/embeddings.parquet"

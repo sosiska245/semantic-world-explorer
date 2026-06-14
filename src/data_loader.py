@@ -1,7 +1,7 @@
 """Load the precomputed entity profiles + embeddings once at app startup.
 
 data/processed/embeddings.parquet is the ONLY data file the running app
-reads. It contains one row per country/city with a precomputed 1024-dim
+reads. It contains one row per country with a precomputed 1024-dim
 document embedding (see scripts/build_embeddings.py). The app never embeds
 profile text at runtime - only short user queries (see src/similarity.py).
 """
@@ -39,10 +39,3 @@ def get_entity(entity_id):
 
 def get_entity_index(entity_id):
     return _ID_TO_INDEX.get(entity_id)
-
-
-def entities_for_country(iso3, include_country=False):
-    mask = ENTITIES_DF["iso3"] == iso3
-    if not include_country:
-        mask &= ENTITIES_DF["type"] == "city"
-    return ENTITIES_DF[mask]

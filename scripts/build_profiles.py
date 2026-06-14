@@ -1,5 +1,5 @@
 """Build per-entity profile text (Wikipedia excerpt + structured-stat sentences)
-for every country and curated city.
+for every country.
 
 Caches raw Wikipedia content per entity under data/raw/wiki_cache/<id>.txt so
 re-runs are resumable and don't re-hit Wikipedia.
@@ -23,19 +23,47 @@ INTERIM_DIR = os.path.join(ROOT_DIR, "data", "interim")
 WIKI_CACHE_DIR = os.path.join(RAW_DIR, "wiki_cache")
 
 COUNTRIES_CSV = os.path.join(INTERIM_DIR, "countries_base.csv")
-CITIES_CSV = os.path.join(INTERIM_DIR, "cities_base.csv")
 STATS_CSV = os.path.join(INTERIM_DIR, "stats_by_country.csv")
+FACTS_CSV = os.path.join(INTERIM_DIR, "facts_by_country.csv")
 OUT_PARQUET = os.path.join(INTERIM_DIR, "profiles.parquet")
 
 USER_AGENT = "SemanticWorldExplorer/1.0 (contact: marcogrilocrocodiolo@gmail.com)"
-MAX_PROFILE_CHARS = 6000
-SUMMARY_TRUNCATE_CHARS = 1000
+MAX_PROFILE_CHARS = 15000
+SUMMARY_TRUNCATE_CHARS = 2000
 EXCERPT_CHARS = 400
+CATEGORY_CHAR_CAP = 600
 
-COUNTRY_SECTION_TARGETS = {"demographics", "religion", "climate", "culture"}
-CITY_SECTION_TARGETS = {"demographics", "climate", "culture", "cuisine"}
+# Defines both (a) which Wikipedia sections get pulled into a profile - any
+# section whose lowercased title CONTAINS one of these keywords as a
+# substring (e.g. "Economy and infrastructure", "Government and politics",
+# "Science and technology" all match) - and (b) the order those sections
+# appear in the assembled profile text. When a title matches more than one
+# keyword, the earlier keyword in this list wins (so "Economy and
+# infrastructure" -> "economy", "Government and politics" -> "government").
+COUNTRY_SECTION_ORDER = [
+    "economy",
+    "agriculture",
+    "culture",
+    "religion",
+    "climate",
+    "energy",
+    "geography",
+    "government",
+    "politics",
+    "military",
+    "education",
+    "tourism",
+    "history",
+    "demographics",
+    "cuisine",
+    "sports",
+    "infrastructure",
+    "science",
+    "technology",
+    "transport",
+]
 
-# Manual overrides for country/city names whose Wikipedia article title differs
+# Manual overrides for country names whose Wikipedia article title differs
 # from the restcountries "common name". Expand this dict if a pipeline run
 # reports an entity with no wiki text (see WARN logs below).
 WIKI_TITLE_OVERRIDES = {
@@ -60,18 +88,33 @@ def _retry(fn, *args, retries=3, **kwargs):
             time.sleep(wait)
 
 
-def _collect_sections(sections, targets, depth=0, max_depth=2):
-    texts = []
+def _section_category(title_lower, order):
+    """Return the first keyword in `order` that is a substring of
+    `title_lower`, or None if no keyword matches."""
+    for keyword in order:
+        if keyword in title_lower:
+            return keyword
+    return None
+
+
+def _collect_sections(sections, order, depth=0, max_depth=2):
+    """Group section text by category (first matching keyword in `order`),
+    recursing into subsections up to max_depth. Returns dict category ->
+    list of '== Title ==\\ntext' blocks, in traversal order within each
+    category."""
+    grouped = {}
     for s in sections:
         title_lower = s.title.strip().lower()
-        if title_lower in targets and s.text.strip():
-            texts.append(f"== {s.title} ==\n{s.text.strip()}")
+        category = _section_category(title_lower, order)
+        if category and s.text.strip():
+            grouped.setdefault(category, []).append(f"== {s.title} ==\n{s.text.strip()}")
         if depth < max_depth:
-            texts.extend(_collect_sections(s.sections, targets, depth + 1, max_depth))
-    return texts
+            for cat, texts in _collect_sections(s.sections, order, depth + 1, max_depth).items():
+                grouped.setdefault(cat, []).extend(texts)
+    return grouped
 
 
-def fetch_wiki(entity_id, title, alt_title, section_targets):
+def fetch_wiki(entity_id, title, alt_title, section_order):
     """Returns dict {summary, sections_text, source_title} or None. Cached on disk."""
     cache_path = os.path.join(WIKI_CACHE_DIR, f"{entity_id}.json")
     if os.path.exists(cache_path):
@@ -83,7 +126,14 @@ def fetch_wiki(entity_id, title, alt_title, section_targets):
         if not page.exists():
             return None
         summary = page.summary.strip()
-        sections_text = "\n\n".join(_collect_sections(page.sections, section_targets))
+        grouped = _collect_sections(page.sections, section_order)
+        ordered_texts = []
+        for category in section_order:
+            blocks = grouped.get(category)
+            if not blocks:
+                continue
+            ordered_texts.append("\n\n".join(blocks)[:CATEGORY_CHAR_CAP])
+        sections_text = "\n\n".join(ordered_texts)
         return {"summary": summary, "sections_text": sections_text, "source_title": t}
 
     result = _retry(_fetch, title)
@@ -137,16 +187,45 @@ def stat_sentences(stats_row):
     return sentences
 
 
-def build_profile_text(name, entity_type, wiki_result, stats_row):
+# Per-indicator sentence templates for data/interim/facts_by_country.csv rows.
+# These render as plain sentences in the profile text (feeding the embedding,
+# placed early so they survive MAX_PROFILE_CHARS truncation) and the same
+# rows back the detail panel's "Evidence" block via src/facts_loader.py.
+FACT_TEMPLATES = {
+    "renewable_share": lambda name, v, year: f"Approximately {v:g}% of {name}'s primary energy consumption comes from renewable sources ({year}).",
+    "agriculture_share_gdp": lambda name, v, year: f"Agriculture accounts for approximately {v:g}% of {name}'s GDP ({year}).",
+    "agriculture_employment_share": lambda name, v, year: f"Approximately {v:g}% of {name}'s workforce is employed in agriculture ({year}).",
+    "democracy_index": lambda name, v, year: f"{name}'s V-Dem electoral democracy index is approximately {v:.2f} on a 0-1 scale ({year}).",
+    "regime_type": lambda name, v, year: f"{name} is classified as {'an' if v[0].lower() in 'aeiou' else 'a'} {v} ({year}).",
+    "population_density": lambda name, v, year: f"{name} has a population density of approximately {v:g} people per square kilometer ({year}).",
+    "land_area_km2": lambda name, v, year: f"{name} has a land area of approximately {v:,.0f} square kilometers ({year}).",
+}
+
+
+def fact_sentences(name, facts):
+    sentences = []
+    for f in facts:
+        template = FACT_TEMPLATES.get(f["indicator"])
+        if template is None:
+            continue
+        value = f["value"] if f["indicator"] == "regime_type" else float(f["value"])
+        sentences.append(template(name, value, int(f["year"])))
+    return sentences
+
+
+def build_profile_text(name, entity_type, wiki_result, stats_row, facts=None):
     summary = wiki_result["summary"][:SUMMARY_TRUNCATE_CHARS]
     parts = [f"{name} ({entity_type})."]
+    sentences = stat_sentences(stats_row)
+    if sentences:
+        parts.append(" ".join(sentences))
+    fact_sents = fact_sentences(name, facts or [])
+    if fact_sents:
+        parts.append(" ".join(fact_sents))
     if summary:
         parts.append(summary)
     if wiki_result["sections_text"]:
         parts.append(wiki_result["sections_text"])
-    sentences = stat_sentences(stats_row)
-    if sentences:
-        parts.append(" ".join(sentences))
 
     profile_text = "\n\n".join(parts)
     return profile_text[:MAX_PROFILE_CHARS]
@@ -154,10 +233,10 @@ def build_profile_text(name, entity_type, wiki_result, stats_row):
 
 def main():
     countries = pd.read_csv(COUNTRIES_CSV)
-    cities = pd.read_csv(CITIES_CSV)
     stats = pd.read_csv(STATS_CSV).set_index("iso3")
 
-    iso3_to_name = dict(zip(countries["iso3"], countries["name_common"]))
+    facts_df = pd.read_csv(FACTS_CSV)
+    facts_by_iso3 = {iso3: g.to_dict("records") for iso3, g in facts_df.groupby("iso3")}
 
     rows = []
 
@@ -168,10 +247,11 @@ def main():
         wiki_title = WIKI_TITLE_OVERRIDES.get(c["name_common"], c["name_common"])
 
         print(f"[country] {c['name_common']} -> '{wiki_title}'")
-        wiki_result = fetch_wiki(entity_id, wiki_title, None, COUNTRY_SECTION_TARGETS)
+        wiki_result = fetch_wiki(entity_id, wiki_title, None, COUNTRY_SECTION_ORDER)
 
         stats_row = stats.loc[c["iso3"]].to_dict() if c["iso3"] in stats.index else None
-        profile_text = build_profile_text(c["name_common"], "country", wiki_result, stats_row)
+        facts = facts_by_iso3.get(c["iso3"], [])
+        profile_text = build_profile_text(c["name_common"], "country", wiki_result, stats_row, facts)
 
         rows.append(
             {
@@ -182,32 +262,6 @@ def main():
                 "parent_country": None,
                 "lat": lat,
                 "lon": lon,
-                "profile_text": profile_text,
-                "profile_excerpt": (wiki_result["summary"] or profile_text)[:EXCERPT_CHARS],
-            }
-        )
-
-    for _, ci in cities.iterrows():
-        entity_id = ci["city_id"]
-        country_name = iso3_to_name.get(ci["country_iso3"])
-        wiki_title = WIKI_TITLE_OVERRIDES.get(ci["city_name"], ci["city_name"])
-        alt_title = f"{ci['city_name']}, {country_name}" if country_name else None
-
-        print(f"[city] {ci['city_name']} ({country_name}) -> '{wiki_title}' / alt '{alt_title}'")
-        wiki_result = fetch_wiki(entity_id, wiki_title, alt_title, CITY_SECTION_TARGETS)
-
-        stats_row = stats.loc[ci["country_iso3"]].to_dict() if ci["country_iso3"] in stats.index else None
-        profile_text = build_profile_text(ci["city_name"], "city", wiki_result, stats_row)
-
-        rows.append(
-            {
-                "id": entity_id,
-                "name": ci["city_name"],
-                "type": "city",
-                "iso3": ci["country_iso3"],
-                "parent_country": country_name,
-                "lat": ci["lat"],
-                "lon": ci["lon"],
                 "profile_text": profile_text,
                 "profile_excerpt": (wiki_result["summary"] or profile_text)[:EXCERPT_CHARS],
             }

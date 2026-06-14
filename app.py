@@ -17,7 +17,7 @@ from src.callbacks import (  # noqa: F401
     table_callbacks,
 )
 
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.DARKLY], title="Semantic World Explorer")
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP], title="Semantic World Explorer")
 server = app.server
 
 app.layout = html.Div(

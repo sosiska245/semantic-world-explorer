@@ -9,13 +9,13 @@ def explorer_layout():
             html.Div(
                 [
                     html.Div("World Map", className="swe-section-title"),
-                    html.P(
-                        "Marker color blends each active concept's similarity "
-                        "(Slot 1 = Red, Slot 2 = Green, Slot 3 = Blue). Click a "
-                        "marker to see details.",
-                        className="text-muted",
+                    html.Div(
+                        [
+                            dcc.Graph(id="world-map", style={"height": "560px"}),
+                            html.Div(id="map-legend", className="map-legend-box"),
+                        ],
+                        className="map-card",
                     ),
-                    dcc.Graph(id="world-map", style={"height": "560px"}),
                 ],
                 className="swe-card",
             ),
@@ -29,7 +29,7 @@ def explorer_layout():
                                 options=SLOT_OPTIONS,
                                 value="R",
                                 clearable=False,
-                                style={"width": "240px", "display": "inline-block", "color": "#15151f"},
+                                style={"width": "240px", "display": "inline-block"},
                             ),
                         ]
                     ),
@@ -37,7 +37,6 @@ def explorer_layout():
                         id="ranking-table",
                         columns=[
                             {"name": "Name", "id": "name"},
-                            {"name": "Type", "id": "type"},
                         ],
                         data=[],
                         sort_action="native",
@@ -45,22 +44,37 @@ def explorer_layout():
                         page_size=12,
                         style_table={"overflowX": "auto", "marginTop": "0.75rem"},
                         style_header={
-                            "backgroundColor": "#24243a",
-                            "color": "#d5d5ea",
+                            "backgroundColor": "#ece9e2",
+                            "color": "#2d2a26",
+                            "fontFamily": "'IBM Plex Mono', monospace",
                             "fontWeight": "600",
                             "border": "none",
                         },
                         style_cell={
-                            "backgroundColor": "#1e1e2e",
-                            "color": "#f0f0f5",
-                            "border": "1px solid #34344a",
+                            "backgroundColor": "#ffffff",
+                            "color": "#2d2a26",
+                            "fontFamily": "'IBM Plex Mono', monospace",
+                            "border": "1px solid #ddd9ce",
                             "padding": "6px 10px",
                         },
+                        style_cell_conditional=[
+                            {"if": {"column_id": "rank"}, "width": "48px", "textAlign": "center"},
+                            {"if": {"column_id": "relevance_bar"}, "width": "110px", "letterSpacing": "1px"},
+                        ],
                         style_data_conditional=[
                             {
+                                "if": {"filter_query": "{rank} <= 3"},
+                                "backgroundColor": "#f7f0e3",
+                            },
+                            {
+                                "if": {"filter_query": "{rank} = 1", "column_id": "rank"},
+                                "fontWeight": "700",
+                                "color": "#d97757",
+                            },
+                            {
                                 "if": {"state": "selected"},
-                                "backgroundColor": "#34344a",
-                                "border": "1px solid #5c9aff",
+                                "backgroundColor": "#f0ddd4",
+                                "border": "1px solid #d97757",
                             },
                         ],
                     ),

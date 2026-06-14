@@ -1,29 +1,41 @@
-import numpy as np
 import plotly.graph_objects as go
-from dash import Input, Output, callback
+from dash import Input, Output, callback, html
 
-from src.data_loader import ENTITIES_DF, N_ENTITIES, entities_for_country, get_entity, get_entity_index
-from src.similarity import NEUTRAL_GRAY, colors_from_normalized, normalize_all, sims_from_store_data
+from src.choropleth import LOW_RELEVANCE_GRAY, country_blend_colors, discrete_colorscale
+from src.config import SLOT_COLORS, SLOT_DISPLAY
+from src.data_loader import ENTITIES_DF, N_ENTITIES, get_entity
+from src.similarity import sims_from_store_data
 
-GEO_STYLE = dict(
+# Light "cartography" theme for the world map, per the reference image: cream
+# land, light-blue ocean, white country borders.
+GEO_STYLE_WORLD = dict(
     projection_type="natural earth",
     showland=True,
-    landcolor="#2a2a3a",
+    landcolor="#f3ecd8",
     showcountries=True,
-    countrycolor="#444455",
+    countrycolor="#ffffff",
     showocean=True,
-    oceancolor="#15151f",
+    oceancolor="#cfe8f5",
     showframe=False,
     bgcolor="rgba(0,0,0,0)",
 )
 
+COUNTRY_MASK = (ENTITIES_DF["type"] == "country").to_numpy()
+COUNTRIES_DF = ENTITIES_DF[ENTITIES_DF["type"] == "country"]
 
-def _entity_colors(sim_data):
-    sims = sims_from_store_data(sim_data, N_ENTITIES)
-    if all(sims[c] is None for c in sims):
-        return [NEUTRAL_GRAY] * N_ENTITIES
-    normalized = normalize_all(sims, N_ENTITIES)
-    return colors_from_normalized(normalized, "blend", N_ENTITIES)
+
+def _hover_texts(sims, country_mask):
+    """List[str], one per country in COUNTRIES_DF order: name plus a
+    'Slot X (Color): <sim>' line for each active slot, joined with <br> for
+    a multi-line Plotly hover tooltip."""
+    lines_per_country = [[name] for name in COUNTRIES_DF["name"]]
+    for color in SLOT_COLORS:
+        sim = sims.get(color)
+        if sim is None:
+            continue
+        for lines, v in zip(lines_per_country, sim[country_mask]):
+            lines.append(f"{SLOT_DISPLAY[color]}: {float(v):.3f}")
+    return ["<br>".join(lines) for lines in lines_per_country]
 
 
 @callback(
@@ -32,115 +44,106 @@ def _entity_colors(sim_data):
     Input("store-selected-entity", "data"),
 )
 def update_world_map(sim_data, selected_id):
-    colors = _entity_colors(sim_data)
-    sizes = np.where(ENTITIES_DF["type"] == "country", 9, 5)
+    sims = sims_from_store_data(sim_data, N_ENTITIES)
+    active = any(sims[c] is not None for c in sims)
 
-    fig = go.Figure(
+    fig = go.Figure()
+    hover_texts = _hover_texts(sims, COUNTRY_MASK)
+
+    if active:
+        colors = country_blend_colors(sims, COUNTRY_MASK)
+        z, zmin, zmax, colorscale = discrete_colorscale(colors)
+        fig.add_trace(
+            go.Choropleth(
+                locations=COUNTRIES_DF["iso3"],
+                locationmode="ISO-3",
+                z=z,
+                zmin=zmin,
+                zmax=zmax,
+                colorscale=colorscale,
+                showscale=False,
+                marker_line_color="#ffffff",
+                marker_line_width=0.5,
+                customdata=COUNTRIES_DF["id"],
+                text=hover_texts,
+                hovertemplate="%{text}<extra></extra>",
+            )
+        )
+    else:
+        colors = [LOW_RELEVANCE_GRAY] * len(COUNTRIES_DF)
+
+    # Small centroid markers, same color as the choropleth fill, for every
+    # country: keeps every country clickable, and acts as a fallback for any
+    # territory the built-in choropleth atlas has no polygon for (it would
+    # otherwise render with no fill at all).
+    fig.add_trace(
         go.Scattergeo(
-            lon=ENTITIES_DF["lon"],
-            lat=ENTITIES_DF["lat"],
+            lon=COUNTRIES_DF["lon"],
+            lat=COUNTRIES_DF["lat"],
             mode="markers",
-            marker=dict(color=colors, size=sizes, line=dict(width=0.5, color="rgba(255,255,255,0.3)")),
-            customdata=ENTITIES_DF["id"],
-            text=ENTITIES_DF["name"],
+            marker=dict(color=colors, size=6, line=dict(width=0.5, color="rgba(255,255,255,0.6)")),
+            customdata=COUNTRIES_DF["id"],
+            text=COUNTRIES_DF["name"],
             hovertemplate="%{text}<extra></extra>",
             showlegend=False,
         )
     )
 
     if selected_id:
-        idx = get_entity_index(selected_id)
-        if idx is not None:
+        highlight = get_entity(selected_id)
+        if highlight is not None:
             fig.add_trace(
                 go.Scattergeo(
-                    lon=[ENTITIES_DF["lon"].iloc[idx]],
-                    lat=[ENTITIES_DF["lat"].iloc[idx]],
+                    lon=[highlight["lon"]],
+                    lat=[highlight["lat"]],
                     mode="markers",
-                    marker=dict(size=16, color="rgba(0,0,0,0)", line=dict(width=3, color="white")),
+                    marker=dict(size=16, color="rgba(0,0,0,0)", line=dict(width=3, color="#222222")),
                     hoverinfo="skip",
                     showlegend=False,
                 )
             )
 
-    fig.update_geos(**GEO_STYLE)
+    fig.update_geos(**GEO_STYLE_WORLD)
     fig.update_layout(
-        template="plotly_dark",
+        template="plotly",
         margin=dict(l=0, r=0, t=10, b=0),
-        paper_bgcolor="#15151f",
-        plot_bgcolor="#15151f",
-    )
-    return fig
-
-
-def _empty_geo_figure(message):
-    fig = go.Figure()
-    fig.update_geos(**GEO_STYLE)
-    fig.update_layout(
-        template="plotly_dark",
-        margin=dict(l=0, r=0, t=10, b=0),
-        paper_bgcolor="#15151f",
-        plot_bgcolor="#15151f",
-        annotations=[
-            dict(text=message, showarrow=False, font=dict(size=14, color="#9a9ab0"), x=0.5, y=0.5, xref="paper", yref="paper")
-        ],
+        paper_bgcolor="#f3ecd8",
+        plot_bgcolor="#f3ecd8",
     )
     return fig
 
 
 @callback(
-    Output("city-drilldown-map", "figure"),
-    Output("drilldown-title", "children"),
-    Input("store-selected-entity", "data"),
-    Input("store-similarity", "data"),
-    Input("drilldown-color-mode", "value"),
+    Output("map-legend", "children"),
+    Input("store-slots", "data"),
 )
-def update_drilldown(selected_id, sim_data, color_mode):
-    if not selected_id:
-        return _empty_geo_figure("Select a country or city to see its cities"), "City Drill-down"
+def update_map_legend(slots_data):
+    slots_data = slots_data or {}
+    rows = []
+    for color in SLOT_COLORS:
+        text = slots_data.get(color)
+        if not text:
+            continue
+        rows.append(
+            html.Div(
+                [
+                    html.Span(className=f"slot-swatch slot-{color}"),
+                    html.Span(text, className="legend-label"),
+                ],
+                className="legend-row",
+            )
+        )
 
-    entity = get_entity(selected_id)
-    if entity is None:
-        return _empty_geo_figure("Select a country or city to see its cities"), "City Drill-down"
+    if not rows:
+        return html.Div("Type a concept in a slot to color the map.", className="legend-empty")
 
-    iso3 = entity["iso3"]
-    country_name = entity["name"] if entity["type"] == "country" else entity["parent_country"]
-    title = f"Cities in {country_name}"
-
-    cities_df = entities_for_country(iso3, include_country=False)
-    if cities_df.empty:
-        return _empty_geo_figure(f"No curated cities for {country_name}"), title
-
-    sims = sims_from_store_data(sim_data, N_ENTITIES)
-    normalized = normalize_all(sims, N_ENTITIES)
-    idx = cities_df.index.to_numpy()
-    sub_normalized = {c: arr[idx] for c, arr in normalized.items()}
-    colors = colors_from_normalized(sub_normalized, color_mode, len(idx))
-
-    fig = go.Figure(
-        go.Scattergeo(
-            lon=cities_df["lon"],
-            lat=cities_df["lat"],
-            mode="markers+text",
-            text=cities_df["name"],
-            textposition="top center",
-            textfont=dict(color="#d5d5ea", size=10),
-            marker=dict(color=colors, size=12, line=dict(width=0.5, color="rgba(255,255,255,0.3)")),
-            customdata=cities_df["id"],
-            hovertemplate="%{text}<extra></extra>",
-            showlegend=False,
+    rows.append(
+        html.Div(
+            [
+                html.Span(className="slot-swatch legend-swatch-gray"),
+                html.Span("Low/no similarity to active concept(s)", className="legend-label"),
+            ],
+            className="legend-row",
         )
     )
-
-    pad = 2.0
-    fig.update_geos(
-        **GEO_STYLE,
-        lataxis_range=[cities_df["lat"].min() - pad, cities_df["lat"].max() + pad],
-        lonaxis_range=[cities_df["lon"].min() - pad, cities_df["lon"].max() + pad],
-    )
-    fig.update_layout(
-        template="plotly_dark",
-        margin=dict(l=0, r=0, t=10, b=0),
-        paper_bgcolor="#15151f",
-        plot_bgcolor="#15151f",
-    )
-    return fig, title
+    return rows

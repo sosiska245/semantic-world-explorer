@@ -7,6 +7,7 @@ Output: data/processed/embeddings.parquet
 """
 
 import os
+import shutil
 import sys
 import time
 
@@ -22,6 +23,12 @@ from src.config import EMBEDDING_DIM, EMBEDDING_MODEL  # noqa: E402
 
 INTERIM_PARQUET = os.path.join(ROOT_DIR, "data", "interim", "profiles.parquet")
 OUT_PARQUET = os.path.join(ROOT_DIR, "data", "processed", "embeddings.parquet")
+
+# data/interim/ is gitignored (intermediate pipeline output); copy the facts
+# table to data/processed/ so it ships with the deployed app alongside
+# embeddings.parquet. See src/facts_loader.py.
+FACTS_INTERIM_CSV = os.path.join(ROOT_DIR, "data", "interim", "facts_by_country.csv")
+FACTS_PROCESSED_CSV = os.path.join(ROOT_DIR, "data", "processed", "facts_by_country.csv")
 
 # Payment method on file -> standard (tier 1) rate limits, far above the
 # 3 RPM / 10K TPM free-tier cap. Batch of 10 max-length (~6000 char / ~2K
@@ -85,6 +92,10 @@ def main():
             time.sleep(SECONDS_BETWEEN_REQUESTS)
 
     print(f"Wrote {len(existing)} embedded profiles to {OUT_PARQUET}")
+
+    if os.path.exists(FACTS_INTERIM_CSV):
+        shutil.copy(FACTS_INTERIM_CSV, FACTS_PROCESSED_CSV)
+        print(f"Copied facts table to {FACTS_PROCESSED_CSV}")
 
 
 if __name__ == "__main__":
