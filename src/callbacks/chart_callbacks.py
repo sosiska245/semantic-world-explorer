@@ -7,9 +7,10 @@ from src.data_loader import ENTITIES_DF, N_ENTITIES, get_entity_index
 from src.similarity import sims_from_store_data
 
 CARTESIAN_LAYOUT = dict(
-    template="plotly_dark",
-    paper_bgcolor="#15151f",
-    plot_bgcolor="#1e1e2e",
+    template="plotly",
+    paper_bgcolor="#f4f3ee",
+    plot_bgcolor="#ece9e2",
+    font=dict(family="'IBM Plex Mono', monospace", color="#2d2a26"),
     margin=dict(l=10, r=10, t=30, b=10),
 )
 
@@ -21,7 +22,7 @@ def _empty_figure(message):
         xaxis=dict(visible=False),
         yaxis=dict(visible=False),
         annotations=[
-            dict(text=message, showarrow=False, font=dict(size=14, color="#9a9ab0"), x=0.5, y=0.5, xref="paper", yref="paper")
+            dict(text=message, showarrow=False, font=dict(size=14, color="#8c8579"), x=0.5, y=0.5, xref="paper", yref="paper")
         ],
     )
     return fig
@@ -114,7 +115,7 @@ def update_polarity_scatter(sim_data, x_color, y_color, selected_id):
                     x=[x[idx]],
                     y=[y[idx]],
                     mode="markers",
-                    marker=dict(size=14, color="rgba(0,0,0,0)", line=dict(width=2, color="white")),
+                    marker=dict(size=14, color="rgba(0,0,0,0)", line=dict(width=2, color="#d97757")),
                     hoverinfo="skip",
                     showlegend=False,
                 )

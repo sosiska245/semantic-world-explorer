@@ -9,13 +9,16 @@ def explorer_layout():
             html.Div(
                 [
                     html.Div("World Map", className="swe-section-title"),
-                    html.P(
-                        "Marker color blends each active concept's similarity "
-                        "(Slot 1 = Red, Slot 2 = Green, Slot 3 = Blue). Click a "
-                        "marker to see details.",
-                        className="text-muted",
+                    html.Div(
+                        [
+                            dcc.Loading(
+                                dcc.Graph(id="world-map", style={"height": "560px"}),
+                                type="circle",
+                            ),
+                            html.Div(id="map-legend", className="map-legend-box"),
+                        ],
+                        className="map-card",
                     ),
-                    dcc.Graph(id="world-map", style={"height": "560px"}),
                 ],
                 className="swe-card",
             ),
@@ -29,40 +32,71 @@ def explorer_layout():
                                 options=SLOT_OPTIONS,
                                 value="R",
                                 clearable=False,
-                                style={"width": "240px", "display": "inline-block", "color": "#15151f"},
+                                style={"width": "240px", "display": "inline-block"},
+                            ),
+                            dcc.Clipboard(
+                                id="table-copy-btn",
+                                content="",
+                                title="Copy current page (12 rows, 3dp)",
+                                className="swe-btn table-copy-btn",
+                                style={"display": "inline-block", "marginLeft": "0.6rem", "verticalAlign": "middle"},
+                            ),
+                            dcc.Clipboard(
+                                id="table-copy-all-btn",
+                                content="",
+                                title="Copy all 50 rows (4dp)",
+                                className="swe-btn table-copy-btn",
+                                style={"display": "inline-block", "marginLeft": "0.3rem", "verticalAlign": "middle"},
                             ),
                         ]
                     ),
-                    dash_table.DataTable(
-                        id="ranking-table",
-                        columns=[
-                            {"name": "Name", "id": "name"},
-                            {"name": "Type", "id": "type"},
-                        ],
-                        data=[],
-                        sort_action="native",
-                        row_selectable="single",
-                        page_size=12,
-                        style_table={"overflowX": "auto", "marginTop": "0.75rem"},
-                        style_header={
-                            "backgroundColor": "#24243a",
-                            "color": "#d5d5ea",
-                            "fontWeight": "600",
-                            "border": "none",
-                        },
-                        style_cell={
-                            "backgroundColor": "#1e1e2e",
-                            "color": "#f0f0f5",
-                            "border": "1px solid #34344a",
-                            "padding": "6px 10px",
-                        },
-                        style_data_conditional=[
-                            {
-                                "if": {"state": "selected"},
-                                "backgroundColor": "#34344a",
-                                "border": "1px solid #5c9aff",
+                    dcc.Loading(
+                        dash_table.DataTable(
+                            id="ranking-table",
+                            columns=[
+                                {"name": "Name", "id": "name"},
+                            ],
+                            data=[],
+                            sort_action="native",
+                            page_size=12,
+                            page_current=0,
+                            style_table={"overflowX": "auto", "marginTop": "0.75rem"},
+                            style_header={
+                                "backgroundColor": "#ece9e2",
+                                "color": "#2d2a26",
+                                "fontFamily": "'IBM Plex Mono', monospace",
+                                "fontWeight": "600",
+                                "border": "none",
                             },
-                        ],
+                            style_cell={
+                                "backgroundColor": "#ffffff",
+                                "color": "#2d2a26",
+                                "fontFamily": "'IBM Plex Mono', monospace",
+                                "border": "1px solid #ddd9ce",
+                                "padding": "6px 10px",
+                            },
+                            style_cell_conditional=[
+                                {"if": {"column_id": "rank"},      "width": "40px", "textAlign": "center"},
+                                {"if": {"column_id": "score_pct"}, "width": "64px", "textAlign": "right"},
+                            ],
+                            style_data_conditional=[
+                                {
+                                    "if": {"filter_query": "{rank} <= 3"},
+                                    "backgroundColor": "#f7f0e3",
+                                },
+                                {
+                                    "if": {"filter_query": "{rank} = 1", "column_id": "rank"},
+                                    "fontWeight": "700",
+                                    "color": "#d97757",
+                                },
+                                {
+                                    "if": {"state": "active"},
+                                    "backgroundColor": "#f0ddd4",
+                                    "border": "1px solid #d97757",
+                                },
+                            ],
+                        ),
+                        type="dot",
                     ),
                 ],
                 className="swe-card",

@@ -16,7 +16,7 @@ def compare_layout():
                                 options=SLOT_OPTIONS,
                                 value="R",
                                 clearable=False,
-                                style={"width": "240px", "display": "inline-block", "color": "#15151f", "marginRight": "1.5rem"},
+                                style={"width": "240px", "display": "inline-block", "marginRight": "1.5rem"},
                             ),
                             html.Div(
                                 [
@@ -35,60 +35,37 @@ def compare_layout():
                         ],
                         className="mb-2",
                     ),
-                    dcc.Graph(id="bar-chart", style={"height": "420px"}),
+                    dcc.Loading(
+                        dcc.Graph(id="bar-chart", style={"height": "420px"}),
+                        type="circle",
+                    ),
                 ],
                 className="swe-card",
             ),
             html.Div(
                 [
                     html.Div("Polarity", className="swe-section-title"),
-                    html.P(
-                        "Compare two concepts at once - each point is a country or "
-                        "city, positioned by its similarity to each axis concept.",
-                        className="text-muted",
-                    ),
                     html.Div(
                         [
                             dcc.Dropdown(
                                 id="polarity-x-dropdown",
                                 placeholder="X axis concept",
                                 clearable=False,
-                                style={"width": "240px", "display": "inline-block", "color": "#15151f", "marginRight": "1rem"},
+                                style={"width": "240px", "display": "inline-block", "marginRight": "1rem"},
                             ),
                             dcc.Dropdown(
                                 id="polarity-y-dropdown",
                                 placeholder="Y axis concept",
                                 clearable=False,
-                                style={"width": "240px", "display": "inline-block", "color": "#15151f"},
+                                style={"width": "240px", "display": "inline-block"},
                             ),
                         ],
                         className="mb-2",
                     ),
-                    dcc.Graph(id="polarity-scatter", style={"height": "480px"}),
-                ],
-                className="swe-card",
-            ),
-            html.Div(
-                [
-                    html.Div(id="drilldown-title", className="swe-section-title", children="City Drill-down"),
-                    html.P(
-                        "Select a country (or one of its cities) anywhere in the "
-                        "app to zoom in on its curated cities here.",
-                        className="text-muted",
+                    dcc.Loading(
+                        dcc.Graph(id="polarity-scatter", style={"height": "480px"}),
+                        type="circle",
                     ),
-                    dcc.RadioItems(
-                        id="drilldown-color-mode",
-                        options=[
-                            {"label": "Blended", "value": "blend"},
-                            {"label": "Slot 1 (Red)", "value": "R"},
-                            {"label": "Slot 2 (Green)", "value": "G"},
-                            {"label": "Slot 3 (Blue)", "value": "B"},
-                        ],
-                        value="blend",
-                        inline=True,
-                        className="mb-2",
-                    ),
-                    dcc.Graph(id="city-drilldown-map", style={"height": "420px"}),
                 ],
                 className="swe-card",
             ),

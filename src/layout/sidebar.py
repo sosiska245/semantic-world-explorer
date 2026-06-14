@@ -1,8 +1,21 @@
 import dash_bootstrap_components as dbc
-from dash import dcc, html
+from dash import dcc, html, no_update
 
 from src.config import SLOT_COLORS, SLOT_DISPLAY
 from src.data_loader import ENTITIES_DF
+
+PRESET_QUERIES = [
+    "renewable energy leaders",
+    "Buddhist culture and meditation",
+    "island nations",
+    "alpine mountains and skiing",
+    "oil and gas exporters",
+    "tropical rainforest climate",
+    "democracy and civil liberties",
+    "coffee and tea culture",
+    "space exploration technology",
+    "football soccer culture",
+]
 
 
 def slot_card(index):
@@ -24,14 +37,7 @@ def slot_card(index):
 
 
 def _jump_to_options():
-    options = []
-    for _, row in ENTITIES_DF.iterrows():
-        if row["type"] == "country":
-            sub = "Country"
-        else:
-            sub = f"City, {row['parent_country']}"
-        options.append({"label": f"{row['name']} ({sub})", "value": row["id"]})
-    return options
+    return [{"label": f"{row['name']} (Country)", "value": row["id"]} for _, row in ENTITIES_DF.iterrows()]
 
 
 def sidebar():
@@ -43,12 +49,42 @@ def sidebar():
                     html.Div(id="slot-inputs-container", children=[slot_card(0)]),
                     html.Div(
                         [
-                            dbc.Button("+ Add concept", id="btn-add-slot", size="sm", color="secondary", className="me-2"),
-                            dbc.Button("- Remove", id="btn-remove-slot", size="sm", color="secondary", disabled=True),
+                            dbc.Button("+ Add concept", id="btn-add-slot", size="sm", color="link", className="swe-btn me-2"),
+                            dbc.Button("- Remove", id="btn-remove-slot", size="sm", color="link", className="swe-btn", disabled=True),
                         ],
                         className="mb-2",
                     ),
-                    dbc.Alert(id="embedding-error-alert", color="danger", is_open=False, className="mt-2"),
+                    html.Div(
+                        [html.Div("Try:", className="chips-label")]
+                        + [
+                            html.Button(q, id={"type": "query-chip", "query": q}, n_clicks=0, className="query-chip")
+                            for q in PRESET_QUERIES
+                        ],
+                        className="chips-container",
+                        style={"marginBottom": "0.75rem"},
+                    ),
+                    html.Div(
+                        [
+                            html.Div("Ranking mode", className="slot-label"),
+                            dcc.RadioItems(
+                                id="ranking-mode-radio",
+                                options=[
+                                    {"label": "Auto", "value": "auto"},
+                                    {"label": "Semantic", "value": "semantic"},
+                                    {"label": "Hybrid (+ BM25)", "value": "hybrid"},
+                                    {"label": "Domain (exp.)", "value": "domain"},
+                                    {"label": "Brand / Associations (exp.)", "value": "brand"},
+                                ],
+                                value="auto",
+                                inline=True,
+                                className="ranking-mode-radio",
+                            ),
+                        ],
+                        className="mb-2",
+                    ),
+                    dbc.Alert(id="routing-info-alert",   color="info",   is_open=False, className="mt-2", style={"fontSize": "0.82em"}),
+                    dbc.Alert(id="confidence-alert",     is_open=False,  className="mt-1", style={"fontSize": "0.82em", "padding": "0.4rem 0.75rem"}),
+                    dbc.Alert(id="embedding-error-alert", color="danger", is_open=False, className="mt-1"),
                 ],
                 className="swe-card",
             ),
@@ -58,7 +94,7 @@ def sidebar():
                     dcc.Dropdown(
                         id="detail-jump-to",
                         options=_jump_to_options(),
-                        placeholder="Jump to a country or city...",
+                        placeholder="Jump to a country...",
                         className="mb-2",
                     ),
                     html.Div(

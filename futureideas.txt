@@ -39,3 +39,173 @@ How should capital/major-city coordinates + profile text be sourced for the city
 в одном пространстве.
 
 Тогда запрос:
+
+
+
+
+d ──
+❯ maybe make like claude style here like programistik and easy to look a
+
+
+
+
+ Pick: Phase-2 facts + BM25, skip item 3 tonight.
+
+  Why money/overnight doesn't flip verdict:
+  - Item 3 bottleneck isn't $ or wall-clock — it's 6-10h schema rewrite + full
+  regression (map/table/detail/bar/scatter) needing YOUR eyes. Can't leave that
+  unattended. Demo tomorrow = no slack for high-risk core rewrite.
+  - Re-embed cost (3000 calls, ~$few) trivial now, but doesn't unblock the
+  dev-time/risk part.
+  
+  Tonight plan (~6-7h, fits overnight):
+  1. Phase-2 facts (3-4h) — proven pattern, zero risk, pure addition. Run first.
+  2. BM25 hybrid (2-3h) — no API cost, local compute, safe to test alone. 
+  3. Skip item 1 (truncation tweak) — low/uncertain payoff, not worth slot.
+  4. Re-flag in morning. Only then reconsider item 3 — and only if you get a
+  full extra day before demo. 
+  
+  Also fix critical stuff from earlier analysis first/in parallel (untracked
+  facts_by_country.csv, dark chart theme, about-tab text mismatch) — those break
+  the live demo regardless of which item you pick.
+
+  Want me to start with Phase-2 facts now?
+
+
+
+
+
+
+
+ Top 3, ranked by quality-gain/effort ratio:
+
+  1. Phase 2 facts expansion (religion pivot + economy/education/tech/tourism/health). Lowest effort —
+  fetch_facts.py pattern proven, ~mechanical per category (1 OWID/Pew source + template + run pipeline). Broadens
+  Evidence/factual coverage across most remaining query types, directly extends the architecture user cares
+  about most.
+  2. Hybrid BM25 + semantic blend. Medium effort (TF-IDF/BM25 index over profile_text, rank-fusion or weighted
+  blend with cosine sim at query time). Fixes systemic class of flags where exact keyword (e.g.
+  "airport"/"aviation") gets diluted in whole-profile embedding — explains Netherlands/Iceland aviation flags
+  (211/224), Costa Rica/renewable pre-facts, Brazil/agriculture. Was explicitly deferred earlier, biggest
+  remaining architectural gap.
+  3. Per-section multi-vector embeddings (embed each Wikipedia section separately, max-pool sim per country
+  instead of one whole-profile vector). Highest effort — re-architects embedding+similarity pipeline, needs
+  re-embed all 250×~10 sections + query-time max-pool. Root-cause fix for dilution-type flags beyond what
+  facts/BM25 cover (arbitrary qualitative queries, not just Phase-1-4 categories). Best long-term ceiling, but
+  effort/risk highest of the three.
+  
+  #15 (Render deploy) still gates all of these going live.
+  
+✻ Cogitated for 39s
+
+❯ I have some time before deployment.                                                                            
+                                                                                                                 
+  I want to focus on improvements with the highest quality gain and lowest architectural risk.                   
+                                                                                                                 
+  Let's evaluate these in order:                                                                                 
+                                                                                                                 
+  1. Increase MAX_PROFILE_CHARS to 12000-14000 and measure the impact.                                           
+  2. Expand the factual layer with religion, education, technology, tourism, and health.                         
+                                                                                                                 
+                                                                                                                 
+  I do not want to implement BM25 or multi-vector embeddings yet unless you can demonstrate a clear quality gain 
+  over these simpler improvements   how muach time it would take for 2 and 3 how much effort and hoe much        
+  plusses i will get from this like in procents compaired to previous level ups                                  
+  
+⏺ Bash(git log --oneline -- scripts/build_profiles.py | head -10
+      echo "---diff history of MAX_PROFILE_CHARS---"…)
+  ⎿  0876e13 Initial commit: Semantic World Explorer dashboard
+     ---diff history of MAX_PROFILE_CHARS---
+     48:+MAX_PROFILE_CHARS = 6000
+     169:+    return profile_text[:MAX_PROFILE_CHARS]
+     
+⏺ Correction first: MAX_PROFILE_CHARS is already 15000 (uncommitted, from rebuild #5 — was 6000 in the last
+  commit). "Increase to 12000-14000" = going down from current, not up. Worth knowing before you run it —
+  different experiment than you may think.
+     
+  Item 1: MAX_PROFILE_CHARS 15000→12-14k test
+  - Effort: ~10-15 min. 1-line constant change, build_profiles.py rerun (no wiki refetch, cached),
+  build_embeddings.py rerun (~10 min for 250×voyage-4), retest.
+  - Expected gain: low/uncertain, ~0-10%. The 6000→15000 jump (last "level-up") gave 8→6 flags (-25%). Most
+  remaining 6 flags aren't truncation-bound — they're "exact keyword diluted across whole-profile vector"
+  (aviation/airport, agriculture/Brazil), which a length tweak in the 12-15k range won't fix either way. Could go
+  neutral or even slightly worse if it trims a relevant late section. Cheap experiment, low expected payoff.
+  
+  Item 2: Phase-2 facts (religion + education + technology + tourism + health)
+  - Effort: ~3-4 hrs total, much cheaper per-category than Phase 1 — framework (fetch_facts.py, FACT_TEMPLATES,
+  facts_loader.py, keyword-match, Evidence block, CSS) already built and proven. Per mechanical category
+  (education/tech/tourism/health, wide OWID CSVs like Phase 1's energy/agri/geo): ~20-30 min each (source
+  validation + SOURCES entry + template + label/display + keyword). Religion needs long→wide pivot (Pew
+  religious-composition via OWID, pick dominant/top-share religion per country): ~45-60 min. Plus final
+  rebuild+retest ~20 min.
+  - Expected gain: Phase 1 covered 4/10 of the original taxonomy (energy/agri/politics/geo) — that's ~40%
+  Evidence coverage, and it fully fixed 1 major regression (Germany 212→83 rank, -61%). Phase 2 brings coverage
+  to 9/10 (+125% relative category coverage). Per-category effect on any directly relevant flagged/borderline
+  query should be similar magnitude to Germany's fix (10-60% rank improvement) wherever OWID/Pew data exists —
+  e.g. tourism facts could help UK/music-festivals (180), health facts ground "universal healthcare" queries with
+  real life-expectancy/spend numbers, etc. Broad qualitative win across nearly all query types, low
+  architectural risk (pure additive, same pattern, no pipeline redesign).
+  
+  Recommendation: do item 2 first — predictable, large, proven-pattern, zero risk to existing code paths. Item 1
+  is a cheap 15-min side-experiment you can run before or after; expected value is much lower than item 2, so
+  don't block on it. 
+  
+✻ Cooked for 1m 43s
+
+❯  how muach time it would take for 2 and 3 how much effort and hoe much                                         
+    plusses i will get from this like in procents compaired to previous level ups      for this 2  2. Hybrid     
+  BM25 + semantic blend. Medium effort (TF-IDF/BM25 index over profile_text, rank-fusion or weighted             
+    blend with cosine sim at query time). Fixes systemic class of flags where exact keyword (e.g.                
+    "airport"/"aviation") gets diluted in whole-profile embedding — explains Netherlands/Iceland aviation flags  
+    (211/224), Costa Rica/renewable pre-facts, Brazil/agriculture. Was explicitly deferred earlier, biggest      
+    remaining architectural gap.                                                                                 
+    3. Per-section multi-vector embeddings (embed each Wikipedia section separately, max-pool sim per country    
+    instead of one whole-profile vector). Highest effort — re-architects embedding+similarity pipeline, needs    
+    re-embed all 250×~10 sections + query-time max-pool. Root-cause fix for dilution-type flags beyond what      
+    facts/BM25 cover (arbitrary qualitative queries, not just Phase-1-4 categories). Best long-term ceiling, but 
+    effort/risk highest of the three.                                                                            
+                                                                                                                 
+  
+⏺ Item 2: Hybrid BM25 + semantic blend
+  - Time/effort: ~2-3 hrs. New lightweight module (BM25/TF-IDF over profile_text, 250 docs, built at startup from
+  cached profiles — no re-embedding). Blend logic in similarity.py (weighted sum/rank-fusion with cosine sim).
+  Alpha-tuning against flagged queries (~30-45min). Detail-panel label tweak ("semantic" → "relevance" or show
+  both scores).
+  - Risk: low-medium. Additive only — embeddings.parquet untouched, no rebuild, no API cost. Main risk: alpha
+  tuned to current flag set might not generalize; raw BM25 on English text needs basic stopword handling or noise
+  creeps in.
+  - Expected gain: directly targets lexical-dilution flags — Netherlands/Iceland aviation (211/224),
+  Brazil/agriculture (176), likely UK/music-festivals (180). These are cases where the exact query term IS in the
+  profile text but drowned by whole-doc embedding — BM25 catches it. Estimate: 3-4 of 6 remaining flags resolved
+  (~50-67% flag reduction), plus broad improvement on any query containing exact place/term matches not
+  currently flagged at all (silent quality gain beyond the 6 tracked). Japan/space-exploration (203) likely NOT
+  (~50-67% flag reduction), plus broad improvement on any query containing exact place/term matches not
+  currently flagged at all (silent quality gain beyond the 6 tracked). Japan/space-exploration (203) likely NOT
+  (~50-67% flag reduction), plus broad improvement on any query containing exact place/term matches not
+  currently flagged at all (silent quality gain beyond the 6 tracked). Japan/space-exploration (203) likely NOT
+  fixed — genuinely low textual signal, not a dilution issue.
+  - Gain/effort ratio: ~20-27%/hr — comparable to Phase-1 facts, better than item-1 truncation test.
+
+  Item 3: Per-section multi-vector embeddings
+  - Time/effort: ~6-10 hrs. Restructure build_profiles.py to emit per-section chunks (10-15/country) instead of
+  one blob. Re-embed all: 250×~12 ≈ 3000 calls (~10x current cost/time, embedding rebuild alone ~1.5-2hrs vs
+  ~10min). New embeddings.parquet schema (nested vectors). Rewrite similarity.py for max-pool per country.
+  Re-tune choropleth.py rank-normalization (sim distribution shape changes under max-pool). Full regression
+  across map/table/detail/bar/scatter.
+  - Risk: high. Touches core data schema + every downstream consumer of EMBEDDINGS. Largest regression surface of
+  anything done so far. 10x embedding cost.
+  - Expected gain: theoretically highest ceiling — fixes dilution for arbitrary qualitative queries outside
+  facts/BM25 reach (the long tail), could drive remaining flags toward 0 (~100%). But unproven, and BM25 likely
+  already gets 50-67% of that for 1/3 the time at far lower risk.
+  - Gain/effort ratio: ~12.5%/hr at best, plus risk multiplier — worst ratio of the two.
+
+  Verdict: BM25 (item 2) clears your bar — better gain/effort/risk than item 1 (truncation test), no re-embed
+  cost, doesn't compete with item-2-facts (different layer, can run in parallel/after). Item 3 doesn't clear it
+  yet — do Phase-2 facts + BM25 first, re-flag remaining count, only then is multi-vector's marginal gain
+  measurable enough to justify 6-10hr / 10x-cost / high-risk rewrite.
+
+✻ Cogitated for 56s
+
+※ recap: Building a country-similarity explorer with a factual evidence layer; just shipped a code-review pass
+  fixing theme/doc bugs and staged critical missing files. Next: decide whether to expand the facts layer to
+  religion/education/tech/tourism/health, or add BM25 hybrid search first.

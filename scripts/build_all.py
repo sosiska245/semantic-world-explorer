@@ -10,8 +10,8 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 STEPS = [
     "fetch_country_list.py",
-    "fetch_city_list.py",
     "fetch_structured_stats.py",
+    "fetch_facts.py",
     "build_profiles.py",
     "build_embeddings.py",
 ]

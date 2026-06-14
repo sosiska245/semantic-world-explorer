@@ -17,7 +17,7 @@ from src.callbacks import (  # noqa: F401
     table_callbacks,
 )
 
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.DARKLY], title="Semantic World Explorer")
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP], title="Semantic World Explorer")
 server = app.server
 
 app.layout = html.Div(
@@ -26,6 +26,10 @@ app.layout = html.Div(
         dcc.Store(id="store-slots", data={"R": None, "G": None, "B": None}),
         dcc.Store(id="store-similarity", data={"R": None, "G": None, "B": None}),
         dcc.Store(id="store-selected-entity", data=None),
+        dcc.Store(id="store-ranking-mode", data="auto"),
+        dcc.Store(id="store-mode-info", data={}),
+        dcc.Store(id="store-query-vecs", data={}),
+        dcc.Store(id="store-highlight-section", data=None),
         navbar(),
         dbc.Container(
             dbc.Row(
