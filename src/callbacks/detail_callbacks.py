@@ -1,7 +1,10 @@
-"""Rich country detail card for the sidebar Detail panel."""
+"""Rich country detail card for the sidebar Detail panel and Compare tab."""
 
 import numpy as np
-from dash import ALL, Input, Output, State, callback, ctx, html, no_update
+from dash import (
+    ALL, ClientsideFunction, Input, Output, State,
+    callback, clientside_callback, ctx, html, no_update,
+)
 
 from src.config import SLOT_COLORS, SLOT_DISPLAY
 from src.data_loader import (
@@ -13,6 +16,25 @@ from src.data_loader import (
 )
 from src.facts_loader import INDICATOR_DISPLAY, INDICATOR_LABELS, get_facts, match_category
 from src.similarity import sims_from_store_data
+
+# ── Clientside click router: map / scatter / bar / table → store-click-event ──
+clientside_callback(
+    ClientsideFunction(namespace="swe", function_name="routeClick"),
+    Output("store-click-event", "data"),
+    Input("world-map", "clickData"),
+    Input("polarity-scatter", "clickData"),
+    Input("bar-chart", "clickData"),
+    Input("ranking-table", "active_cell"),
+    State("ranking-table", "data"),
+)
+
+# ── Clientside click router: sidebar Selected list buttons → store-list-click ─
+clientside_callback(
+    ClientsideFunction(namespace="swe", function_name="routeSelectedItem"),
+    Output("store-list-click", "data"),
+    Input({"type": "selected-item-btn", "eid": ALL}, "n_clicks"),
+    prevent_initial_call=True,
+)
 
 # ── ISO-3 → ISO-2 (for flag emoji) ───────────────────────────────────────────
 _ISO3_TO_ISO2 = {
@@ -219,32 +241,35 @@ def handle_section_highlight(n_clicks_list, _selected_entity, current_highlight)
     return no_update
 
 
-# ── entity selection callback ─────────────────────────────────────────────────
+# ── entity selection / compare-filter routing ─────────────────────────────────
 
 @callback(
     Output("store-selected-entity", "data"),
-    Input("ranking-table", "active_cell"),
-    Input("world-map", "clickData"),
-    Input("polarity-scatter", "clickData"),
+    Output("country-filter-dropdown", "value"),
+    Input("store-click-event", "data"),
+    Input("store-list-click", "data"),
     Input("detail-jump-to", "value"),
-    State("ranking-table", "data"),
+    State("country-filter-dropdown", "value"),
     prevent_initial_call=True,
 )
-def update_selected_entity(active_cell, map_click, scatter_click, jump_value, table_data):
+def route_selection(click_event, list_click, jump_value, current_filter):
     trigger = ctx.triggered_id
-    if trigger == "ranking-table":
-        if active_cell and table_data:
-            row = active_cell["row"]
-            if row < len(table_data):
-                return table_data[row]["id"]
-        return no_update
-    if trigger == "world-map":
-        return map_click["points"][0]["customdata"]
-    if trigger == "polarity-scatter":
-        return scatter_click["points"][0]["customdata"]
     if trigger == "detail-jump-to":
-        return jump_value
-    return no_update
+        return jump_value, no_update
+    event = click_event if trigger == "store-click-event" else list_click
+    if event:
+        entity_id = event.get("entity_id")
+        if not entity_id:
+            return no_update, no_update
+        if event.get("meta"):
+            current = list(current_filter or [])
+            if entity_id in current:
+                current.remove(entity_id)
+            else:
+                current.append(entity_id)
+            return no_update, current
+        return entity_id, no_update
+    return no_update, no_update
 
 
 # ── main detail card ──────────────────────────────────────────────────────────
@@ -416,3 +441,207 @@ def update_detail_panel(
         parts.append(pills_section)
 
     return html.Div(parts, className="detail-card")
+
+
+# ── Compare-tab helpers ───────────────────────────────────────────────────────
+
+def _entity_score_rank(entity_id, sims, sort_color):
+    """Return (score_pct, rank_n) for entity, or (None, None)."""
+    idx = get_entity_index(entity_id)
+    sim_arr = sims.get(sort_color or "R")
+    if sim_arr is None or idx is None:
+        return None, None
+    arr = np.array(sim_arr, dtype=np.float32)
+    top_val = float(arr.max())
+    score_pct = int(round(float(arr[idx]) / top_val * 100)) if top_val > 0 else None
+    rank_n = int(np.sum(arr > float(arr[idx]))) + 1
+    return score_pct, rank_n
+
+
+def _build_compare_card(entity_id, sims, mode_info, query_vecs, slots_data, sort_color):
+    entity = get_entity(entity_id)
+    if entity is None:
+        return html.Div("Not found", className="text-muted")
+
+    iso3 = entity["iso3"]
+    name = entity["name"]
+    idx  = get_entity_index(entity_id)
+    flag = _flag(iso3)
+    wiki_url = "https://en.wikipedia.org/wiki/" + name.replace(" ", "_")
+
+    score_pct, rank_n = _entity_score_rank(entity_id, sims, sort_color)
+    mode_str  = (mode_info or {}).get(sort_color or "R")
+    mode_text = _mode_label(mode_str)
+    query_vec = (query_vecs or {}).get(sort_color or "R")
+    sec_scores = _section_scores(idx, query_vec)
+
+    header = html.Div(
+        [
+            html.Div(f"{flag} {name}" if flag else name, className="detail-country-name"),
+            html.A("Wikipedia →", href=wiki_url, target="_blank", className="detail-wiki-link"),
+        ],
+        className="detail-header",
+    )
+    score_block = html.Div(
+        [
+            html.Span(f"Match Score {score_pct}/100", className="detail-score-value")
+            if score_pct is not None else html.Span("No query active", className="text-muted"),
+            html.Span(f" · #{rank_n}", className="detail-score-rank") if rank_n else "",
+            html.Div(f"Mode: {mode_text}", className="detail-mode-label"),
+        ],
+        className="detail-score-block",
+    )
+    breakdown = (
+        html.Div(
+            [html.Div("Section breakdown", className="detail-sub-label"), _section_breakdown(sec_scores, None)],
+            className="detail-breakdown-section",
+        )
+        if sec_scores else None
+    )
+    pills_div = _fact_pills(iso3, slots_data)
+    pills_section = (
+        html.Div([html.Div("Fact evidence", className="detail-sub-label"), pills_div], className="detail-pills-section")
+        if pills_div else None
+    )
+    parts = [header, score_block]
+    if breakdown:
+        parts.append(breakdown)
+    if pills_section:
+        parts.append(pills_section)
+    return html.Div(parts, className="detail-card")
+
+
+def _build_compact_row(entity_id, sims, query_vecs, sort_color):
+    entity = get_entity(entity_id)
+    if entity is None:
+        return None
+    name = entity["name"]
+    idx  = get_entity_index(entity_id)
+    flag = _flag(entity["iso3"])
+
+    score_pct, rank_n = _entity_score_rank(entity_id, sims, sort_color)
+    query_vec  = (query_vecs or {}).get(sort_color or "R")
+    sec_scores = _section_scores(idx, query_vec)
+    top_section = ""
+    if sec_scores:
+        top_key = max(sec_scores, key=sec_scores.get)
+        top_section = _SECTION_LABELS.get(top_key, top_key.title())
+
+    return html.Button(
+        [
+            html.Span(flag or "🌐", className="cmp-flag"),
+            html.Span(name, className="cmp-name"),
+            html.Span(str(score_pct) if score_pct is not None else "—", className="cmp-score"),
+            html.Span(f"#{rank_n}" if rank_n else "—", className="cmp-rank"),
+            html.Span(top_section, className="cmp-section"),
+        ],
+        id={"type": "compare-compact-btn", "eid": entity_id},
+        n_clicks=0,
+        className="cmp-row-btn",
+        title="Click → details",
+    )
+
+
+def _build_table_row(entity_id, sims, query_vecs, sort_color):
+    entity = get_entity(entity_id)
+    if entity is None:
+        return None
+    name = entity["name"]
+    idx  = get_entity_index(entity_id)
+
+    score_pct, rank_n = _entity_score_rank(entity_id, sims, sort_color)
+    query_vec  = (query_vecs or {}).get(sort_color or "R")
+    sec_scores = _section_scores(idx, query_vec)
+    top_section = ""
+    if sec_scores:
+        top_key = max(sec_scores, key=sec_scores.get)
+        top_section = _SECTION_LABELS.get(top_key, top_key.title())
+
+    row = {
+        "id": entity_id,
+        "name": name,
+        "score": score_pct,
+        "rank": rank_n,
+        "top_section": top_section,
+    }
+    for key in ("economy", "culture", "geography", "politics", "history"):
+        v = sec_scores.get(key)
+        row[key] = int(round(v * 100)) if v is not None else None
+    return row
+
+
+# ── Compare-tab main callback ─────────────────────────────────────────────────
+
+@callback(
+    Output("compare-detail-panels", "children"),
+    Output("compare-detail-panels", "style"),
+    Output("compare-table", "data"),
+    Output("compare-table-wrapper", "style"),
+    Output("compare-details-hint", "style"),
+    Input("country-filter-dropdown", "value"),
+    Input("store-similarity", "data"),
+    Input("store-slots", "data"),
+    Input("store-mode-info", "data"),
+    Input("store-query-vecs", "data"),
+    Input("bar-slot-dropdown", "value"),
+    Input("compare-view-mode", "value"),
+)
+def update_compare_details(filter_ids, sim_data, slots_data, mode_info, query_vecs, sort_color, view_mode):
+    _HIDE = {"display": "none"}
+    _SHOW = {}
+
+    if not filter_ids:
+        return [], _HIDE, [], _HIDE, _SHOW
+
+    sims = sims_from_store_data(sim_data, N_ENTITIES)
+    sc   = sort_color or "R"
+    vm   = view_mode or "cards"
+
+    if vm == "table":
+        rows = [r for r in (_build_table_row(eid, sims, query_vecs, sc) for eid in filter_ids) if r]
+        return [], _HIDE, rows, _SHOW, _HIDE
+
+    if vm == "compact":
+        btns = [b for b in (_build_compact_row(eid, sims, query_vecs, sc) for eid in filter_ids) if b]
+        compact = html.Div(btns, className="cmp-list")
+        return compact, _SHOW, [], _HIDE, _HIDE
+
+    # cards (default)
+    cards = [
+        html.Div(_build_compare_card(eid, sims, mode_info, query_vecs, slots_data, sc), className="compare-detail-col")
+        for eid in filter_ids
+    ]
+    return html.Div(cards, className="compare-detail-grid"), _SHOW, [], _HIDE, _HIDE
+
+
+# ── Compare table click → details ─────────────────────────────────────────────
+
+@callback(
+    Output("store-selected-entity", "data", allow_duplicate=True),
+    Input("compare-table", "active_cell"),
+    State("compare-table", "data"),
+    prevent_initial_call=True,
+)
+def compare_table_click(active_cell, table_data):
+    if not active_cell or not table_data:
+        return no_update
+    row = active_cell.get("row")
+    if row is not None and row < len(table_data):
+        return table_data[row]["id"]
+    return no_update
+
+
+# ── Compact row click → details ───────────────────────────────────────────────
+
+@callback(
+    Output("store-selected-entity", "data", allow_duplicate=True),
+    Input({"type": "compare-compact-btn", "eid": ALL}, "n_clicks"),
+    prevent_initial_call=True,
+)
+def compact_btn_click(n_clicks_list):
+    if not any(n for n in n_clicks_list if n):
+        return no_update
+    trigger = ctx.triggered_id
+    if isinstance(trigger, dict) and trigger.get("type") == "compare-compact-btn":
+        return trigger["eid"]
+    return no_update

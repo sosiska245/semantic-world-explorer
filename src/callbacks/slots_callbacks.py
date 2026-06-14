@@ -1,4 +1,4 @@
-from dash import ALL, Input, Output, State, callback, ctx, no_update
+from dash import ALL, Input, Output, State, callback, ctx, html, no_update
 
 from src.config import MAX_SLOTS, SLOT_COLORS
 from src.data_loader import EMBEDDINGS, ENTITIES_DF, N_ENTITIES
@@ -248,3 +248,72 @@ def update_confidence_badge(sim_data, sort_color, mode_info):
         True,
         "warning",
     )
+
+
+@callback(
+    Output("chips-container", "style"),
+    Input("tabs", "value"),
+)
+def toggle_chips_visibility(tab):
+    if tab == "compare":
+        return {"display": "none"}
+    return {"marginBottom": "0.75rem"}
+
+
+@callback(
+    Output("sidebar-details-card", "style"),
+    Input("tabs", "value"),
+)
+def toggle_details_card(tab):
+    if tab == "compare":
+        return {"display": "none"}
+    return {}
+
+
+@callback(
+    Output("compare-view-mode", "value"),
+    Output("store-compare-count-prev", "data"),
+    Input("country-filter-dropdown", "value"),
+    State("compare-view-mode", "value"),
+    State("store-compare-count-prev", "data"),
+)
+def auto_view_mode(filter_ids, current_mode, prev_count):
+    n    = len(filter_ids or [])
+    prev = prev_count or 0
+    if prev <= 8 and n > 8:
+        return "table", n
+    if prev > 8 and n <= 8:
+        return "cards", n
+    return no_update, n
+
+
+@callback(
+    Output("sidebar-selected-card", "children"),
+    Output("sidebar-selected-card", "style"),
+    Input("tabs", "value"),
+    Input("country-filter-dropdown", "value"),
+)
+def update_selected_card(tab, filter_ids):
+    if tab != "explorer" or not filter_ids:
+        return [], {"display": "none"}
+
+    id_to_name = {row["id"]: row["name"] for _, row in ENTITIES_DF.iterrows()}
+    items = [
+        html.Button(
+            id_to_name.get(eid, eid),
+            id={"type": "selected-item-btn", "eid": eid},
+            n_clicks=0,
+            className="selected-item-btn",
+            title="Click → details · ⌘-click → remove",
+        )
+        for eid in filter_ids
+    ]
+    return [
+        html.Div("Selected", className="swe-section-title"),
+        html.Div(items, style={"display": "flex", "flexDirection": "column", "gap": "0.15rem"}),
+        html.P(
+            "Click → details  ·  ⌘-click → remove",
+            className="text-muted",
+            style={"fontSize": "0.75em", "marginTop": "0.4rem"},
+        ),
+    ], {}

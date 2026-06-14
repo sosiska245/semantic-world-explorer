@@ -30,6 +30,9 @@ app.layout = html.Div(
         dcc.Store(id="store-mode-info", data={}),
         dcc.Store(id="store-query-vecs", data={}),
         dcc.Store(id="store-highlight-section", data=None),
+        dcc.Store(id="store-click-event", data=None),
+        dcc.Store(id="store-list-click", data=None),
+        dcc.Store(id="store-compare-count-prev", data=0),
         navbar(),
         dbc.Container(
             dbc.Row(
