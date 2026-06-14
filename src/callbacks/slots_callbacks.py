@@ -80,6 +80,19 @@ _ENERGY_TERMS = {
     "hydroelectric", "photovoltaic", "clean energy", "fossil fuel",
 }
 
+# Commodity / crop keywords where BM25 keyword matching outperforms pure cosine.
+# Applied in Auto mode only — forces hybrid path when these appear in the query.
+_HYBRID_CROP_TERMS = {
+    "wheat", "barley", "oats", "rye", "maize",
+    "cocoa", "cacao",
+    "viticulture", "paddy",
+    "plantation",
+    "livestock", "ranching",
+    "rice cultivation", "coffee production", "wine production",
+    "tea production", "spice farming", "cereal farming", "grain farming",
+    "fishing industry", "seafood export", "farming export", "agriculture export",
+}
+
 _ISO3_LIST = ENTITIES_DF["iso3"].tolist()
 
 
@@ -88,6 +101,12 @@ def _section_alpha(query_text: str) -> float:
     if any(term in t for term in _ENERGY_TERMS):
         return 0.10
     return 0.30
+
+
+def _auto_use_hybrid(query_text: str) -> bool:
+    """Return True when BM25 keyword boost helps (specific crops/commodities)."""
+    t = query_text.lower()
+    return any(term in t for term in _HYBRID_CROP_TERMS)
 
 
 # ── main similarity callback ──────────────────────────────────────────────────
@@ -153,7 +172,11 @@ def update_similarities(slots_data, ranking_mode):
         else:
             cosine = multi_sim(query_vec=vec, alpha=_section_alpha(text))
             cosine = apply_length_penalty(cosine)
-            if ranking_mode == "hybrid":
+            use_hybrid = (
+                ranking_mode == "hybrid"
+                or (ranking_mode == "auto" and _auto_use_hybrid(text))
+            )
+            if use_hybrid:
                 from src.bm25 import blend as bm25_blend
                 final = bm25_blend(cosine, text, alpha=0.08)
             else:

@@ -124,16 +124,24 @@ SHOULD_ROUTE = [
     ("most agricultural economies farming gdp share",
      "agriculture_share_gdp",
      ["BDI","NER","CAF","SSD","MWI","MOZ","TCD","RWA","UGA","ETH"]),
+
+    ("military spending defence budget",
+     "military_spending_usd",
+     ["USA","CHN","RUS","SAU","IND","GBR","DEU","FRA","JPN","KOR"]),
+
+    ("biggest military spender country",
+     "military_spending_usd",
+     ["USA","CHN","RUS","SAU","IND","GBR","DEU","FRA","JPN","KOR"]),
 ]
 
 EDGE_CASES_NO_ROUTE = [
-    # Military/healthcare that should NOT route (wrong indicator available)
-    ("military spending armed forces power",          "NOT_ROUTED"),
+    # Healthcare should NOT route (health_expenditure_gdp has small-island outliers)
     ("healthcare system universal coverage quality",  "NOT_ROUTED"),
     # Borderline phrasing — sound factual but shouldn't trigger
     ("solar power plant photovoltaic",                "NOT_ROUTED"),  # no "renewable energy leaders"
     ("how does democracy work political system",      "NOT_ROUTED"),  # query about democracy concept, not ranking
     ("agricultural country rice paddy field",         "NOT_ROUTED"),  # specific crop, not economy share
+    ("peacekeeping military UN troops",               "NOT_ROUTED"),  # no trigger phrase
 ]
 
 

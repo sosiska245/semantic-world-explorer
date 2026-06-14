@@ -55,6 +55,12 @@ FACTUAL_ROUTES = [
          "agriculture gdp", "farm economy", "most agricultural"],
         "agriculture_share_gdp", False, "agriculture share of GDP",
     ),
+    (
+        ["military spending", "defence budget", "defense budget",
+         "biggest military spender", "largest military budget",
+         "highest military spending", "military expenditure"],
+        "military_spending_usd", False, "military spending (USD, World Bank 2024)",
+    ),
 ]
 
 # Load facts once at import

@@ -1,0 +1,98 @@
+========================================================================
+FINAL QUALITY AUDIT — 139 queries across all categories
+Evaluating Auto mode (default) vs Oracle (best per query)
+========================================================================
+
+OVERALL HITS@20 (1382 expected across 139 queries)
+-------------------------------------------------------
+  Auto (default)    :  635/1382   45.9%  ██████████████████████
+  Semantic only     :  601/1382   43.5%  █████████████████████
+  Hybrid            :  605/1382   43.8%  █████████████████████
+  Domain            :  594/1382   43.0%  █████████████████████
+  Oracle ceiling    :  724/1382   52.4%  ██████████████████████████
+
+  Auto leaves 89 hits on table vs oracle (45.9% vs 52.4%)
+
+MODE DISTRIBUTION (how often each path taken in Auto)
+  semantic            : 133 queries (96%)
+  factual             : 6 queries (4%)
+
+HUB ANALYSIS
+  Small-territory (<5000 chars) in top-20: 24 appearances across 15 queries
+
+BY CATEGORY (Auto hits / Oracle ceiling):
+  culture        : Auto= 13/70 (  19%)  Oracle=19/70 (27%)  gap=+6  ███
+  aviation       : Auto= 11/40 (  28%)  Oracle=13/40 (32%)  gap=+2  █████
+  environment    : Auto= 11/40 (  28%)  Oracle=12/40 (30%)  gap=+1  █████
+  tourism        : Auto= 19/60 (  32%)  Oracle=22/60 (37%)  gap=+3  ██████
+  military       : Auto= 13/40 (  32%)  Oracle=17/40 (42%)  gap=+4  ██████
+  energy         : Auto= 20/59 (  34%)  Oracle=28/59 (47%)  gap=+8  ██████
+  sports         : Auto= 19/56 (  34%)  Oracle=24/56 (43%)  gap=+5  ██████
+  disasters      : Auto= 14/40 (  35%)  Oracle=14/40 (35%)  gap=+0  ███████
+  agriculture    : Auto= 25/70 (  36%)  Oracle=37/70 (53%)  gap=+12  ███████
+  economy        : Auto= 36/98 (  37%)  Oracle=42/98 (43%)  gap=+6  ███████
+  technology     : Auto= 23/60 (  38%)  Oracle=27/60 (45%)  gap=+4  ███████
+  society        : Auto= 20/49 (  41%)  Oracle=26/49 (53%)  gap=+6  ████████
+  food           : Auto= 21/50 (  42%)  Oracle=27/50 (54%)  gap=+6  ████████
+  education      : Auto= 25/50 (  50%)  Oracle=28/50 (56%)  gap=+3  ██████████
+  health         : Auto= 20/40 (  50%)  Oracle=20/40 (50%)  gap=+0  ██████████
+  islands        : Auto= 25/50 (  50%)  Oracle=25/50 (50%)  gap=+0  ██████████
+  language       : Auto=  5/10 (  50%)  Oracle=6/10 (60%)  gap=+1  ██████████
+  tech           : Auto=  5/10 (  50%)  Oracle=5/10 (50%)  gap=+0  ██████████
+  politics       : Auto= 41/80 (  51%)  Oracle=45/80 (56%)  gap=+4  ██████████
+  history        : Auto= 39/70 (  56%)  Oracle=44/70 (63%)  gap=+5  ███████████
+  religion       : Auto= 45/80 (  56%)  Oracle=50/80 (62%)  gap=+5  ███████████
+  climate        : Auto= 30/50 (  60%)  Oracle=35/50 (70%)  gap=+5  ████████████
+  nature         : Auto= 18/30 (  60%)  Oracle=20/30 (67%)  gap=+2  ████████████
+  desert         : Auto= 21/30 (  70%)  Oracle=22/30 (73%)  gap=+1  ██████████████
+  mountains      : Auto= 37/50 (  74%)  Oracle=37/50 (74%)  gap=+0  ██████████████
+  oil_gas        : Auto= 31/40 (  78%)  Oracle=31/40 (78%)  gap=+0  ███████████████
+  factual        : Auto= 48/60 (  80%)  Oracle=48/60 (80%)  gap=+0  ████████████████
+
+TOP 15 WORST QUERIES (by Auto hits):
+   0/10 [culture     ] [semantic          ] fashion luxury brands design
+   0/10 [sports      ] [semantic          ] Olympic medals sports achievement
+   0/10 [economy     ] [semantic          ] gold reserves central bank
+   1/10 [politics    ] [semantic          ] elections voting rights
+   1/10 [technology  ] [semantic          ] cryptocurrency blockchain adoption
+   1/10 [health      ] [semantic          ] medical tourism destination
+   1/10 [tourism     ] [semantic          ] cultural heritage UNESCO world heritage
+   1/10 [tourism     ] [semantic          ] luxury cruise ship destination
+   1/10 [agriculture ] [semantic          ] wheat grain cereal farming
+   1/10 [climate     ] [semantic          ] tropical humid rainforest climate
+   1/10 [military    ] [semantic          ] peacekeeping UN military troops
+   1/10 [military    ] [semantic          ] arms weapons export manufacturer
+   1/10 [history     ] [semantic          ] colonial history empire
+   1/10 [culture     ] [semantic          ] anime manga cartoon
+   1/10 [aviation    ] [semantic          ] landlocked country no sea access
+
+TOP 10 QUERIES WHERE ORACLE BEATS AUTO:
+  oracle=4 auto=1 (+3) best_alt=hyb  [climate] tropical humid rainforest climate
+  oracle=5 auto=2 (+3) best_alt=hyb  [agriculture] spice tea plantation
+  oracle=5 auto=2 (+3) best_alt=dom  [culture] film cinema movie industry
+  oracle=8 auto=5 (+3) best_alt=dom  [energy] nuclear power station electricity
+  oracle=9 auto=6 (+3) best_alt=hyb  [society] ethnic diversity multicultural society
+  oracle=3 auto=1 (+2) best_alt=hyb  [agriculture] wheat grain cereal farming
+  oracle=4 auto=2 (+2) best_alt=hyb  [agriculture] wine production viticulture vineyards
+  oracle=5 auto=3 (+2) best_alt=dom  [religion] theocracy religion and state
+  oracle=5 auto=3 (+2) best_alt=hyb  [history] indigenous native culture
+  oracle=5 auto=3 (+2) best_alt=dom  [sports] cricket national sport
+
+FAILURE PATTERN ANALYSIS (748 total missed expected countries)
+-------------------------------------------------------
+  SEMANTIC_MISS       :  418  ( 55.9%)  ███████████████████████████
+  BROAD_QUERY         :  318  ( 42.5%)  █████████████████████
+  INDICATOR_PROXY     :   12  (  1.6%)  
+
+========================================================================
+STRATEGIC ANALYSIS
+========================================================================
+
+  Baseline (semantic only): 43.5%
+  Auto mode (current):      45.9%
+  Oracle ceiling:           52.4%
+  Auto gap to oracle:       6.4pp
+
+  Total queries: 139
+  Factual-routed queries: 6
+  Semantic-path queries:  133
