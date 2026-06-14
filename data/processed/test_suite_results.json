@@ -1,0 +1,6602 @@
+[
+  {
+    "q": "anime manga pop culture",
+    "cat": "brand",
+    "exp": "Japan",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Japan",
+        "Northern Mariana Islands",
+        "Guam",
+        "Svalbard and Jan Mayen",
+        "South Korea"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1464,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Japan",
+        "South Korea",
+        "Mexico",
+        "Philippines",
+        "Taiwan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1946,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Japan",
+        "Northern Mariana Islands",
+        "Guam",
+        "Svalbard and Jan Mayen",
+        "South Korea"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1464,
+      "rank": 1
+    }
+  },
+  {
+    "q": "K-pop Korean wave music",
+    "cat": "brand",
+    "exp": "South Korea",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "South Korea",
+        "North Korea",
+        "Taiwan",
+        "Kosovo",
+        "Japan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2846,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "South Korea",
+        "North Korea",
+        "Congo",
+        "United States",
+        "Angola"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3223,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "South Korea",
+        "North Korea",
+        "Taiwan",
+        "Kosovo",
+        "Japan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2846,
+      "rank": 1
+    }
+  },
+  {
+    "q": "reggae music Bob Marley",
+    "cat": "brand",
+    "exp": "Jamaica",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Jamaica",
+        "Barbados",
+        "Antigua and Barbuda",
+        "Grenada",
+        "Dominica"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1133,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Jamaica",
+        "Montserrat",
+        "Barbados",
+        "Liberia",
+        "Cape Verde"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2899,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Jamaica",
+        "Barbados",
+        "Antigua and Barbuda",
+        "Grenada",
+        "Dominica"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1133,
+      "rank": 1
+    }
+  },
+  {
+    "q": "tango dance Buenos Aires",
+    "cat": "brand",
+    "exp": "Argentina",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Argentina",
+        "Uruguay",
+        "Paraguay",
+        "Puerto Rico",
+        "Bolivia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2237,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Argentina",
+        "Uruguay",
+        "Spain",
+        "Dominican Republic",
+        "Cuba"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3142,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Argentina",
+        "Uruguay",
+        "Paraguay",
+        "Puerto Rico",
+        "Bolivia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2237,
+      "rank": 1
+    }
+  },
+  {
+    "q": "flamenco Spain Andalucia",
+    "cat": "brand",
+    "exp": "Spain",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Spain",
+        "Gibraltar",
+        "Morocco",
+        "Equatorial Guinea",
+        "Cuba"
+      ],
+      "conf": "HIGH",
+      "delta": 0.202,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Spain",
+        "Puerto Rico",
+        "Portugal",
+        "Equatorial Guinea",
+        "Morocco"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2846,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Spain",
+        "Gibraltar",
+        "Morocco",
+        "Equatorial Guinea",
+        "Cuba"
+      ],
+      "conf": "HIGH",
+      "delta": 0.202,
+      "rank": 1
+    }
+  },
+  {
+    "q": "LEGO toy bricks",
+    "cat": "brand",
+    "exp": "Denmark",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Belgium",
+        "Denmark",
+        "Togo",
+        "Lebanon",
+        "Liechtenstein"
+      ],
+      "conf": "LOW",
+      "delta": 0.0423,
+      "rank": 2
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Denmark",
+        "Belgium",
+        "Hungary",
+        "Sweden",
+        "United Kingdom"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2818,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Belgium",
+        "Denmark",
+        "Togo",
+        "Lebanon",
+        "Liechtenstein"
+      ],
+      "conf": "LOW",
+      "delta": 0.0423,
+      "rank": 2
+    }
+  },
+  {
+    "q": "IKEA furniture design",
+    "cat": "brand",
+    "exp": "Sweden",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Sweden",
+        "Finland",
+        "\u00c5land Islands",
+        "Estonia",
+        "Denmark"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1342,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Sweden",
+        "Denmark",
+        "Finland",
+        "Netherlands",
+        "Greenland"
+      ],
+      "conf": "HIGH",
+      "delta": 0.322,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Sweden",
+        "Finland",
+        "\u00c5land Islands",
+        "Estonia",
+        "Denmark"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1342,
+      "rank": 1
+    }
+  },
+  {
+    "q": "Ferrari Lamborghini sports cars",
+    "cat": "brand",
+    "exp": "Italy",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Monaco",
+        "Macau",
+        "San Marino",
+        "Italy",
+        "Luxembourg"
+      ],
+      "conf": "HIGH",
+      "delta": 0.12,
+      "rank": 4
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Italy",
+        "Monaco",
+        "France",
+        "Germany",
+        "Bahrain"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2302,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Monaco",
+        "Macau",
+        "San Marino",
+        "Italy",
+        "Luxembourg"
+      ],
+      "conf": "HIGH",
+      "delta": 0.12,
+      "rank": 4
+    }
+  },
+  {
+    "q": "Swiss chocolate luxury confectionery",
+    "cat": "brand",
+    "exp": "Switzerland",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Switzerland",
+        "Liechtenstein",
+        "Luxembourg",
+        "Monaco",
+        "Saint Barth\u00e9lemy"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2539,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Switzerland",
+        "Belgium",
+        "Luxembourg",
+        "Ivory Coast",
+        "Liechtenstein"
+      ],
+      "conf": "HIGH",
+      "delta": 0.304,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Switzerland",
+        "Liechtenstein",
+        "Luxembourg",
+        "Monaco",
+        "Saint Barth\u00e9lemy"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2539,
+      "rank": 1
+    }
+  },
+  {
+    "q": "Bollywood Hindi film industry",
+    "cat": "brand",
+    "exp": "India",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "India",
+        "Pakistan",
+        "Bangladesh",
+        "Nepal",
+        "Afghanistan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.212,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "India",
+        "United States",
+        "Iran",
+        "Hong Kong",
+        "Nigeria"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3451,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "India",
+        "Pakistan",
+        "Bangladesh",
+        "Nepal",
+        "Afghanistan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.212,
+      "rank": 1
+    }
+  },
+  {
+    "q": "Nollywood African cinema",
+    "cat": "brand",
+    "exp": "Nigeria",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Nigeria",
+        "Cameroon",
+        "Burkina Faso",
+        "Niger",
+        "Equatorial Guinea"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1983,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Nigeria",
+        "Sierra Leone",
+        "Burkina Faso",
+        "Cameroon",
+        "Ivory Coast"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3304,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Nigeria",
+        "Cameroon",
+        "Burkina Faso",
+        "Niger",
+        "Equatorial Guinea"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1983,
+      "rank": 1
+    }
+  },
+  {
+    "q": "Hollywood film movies entertainment",
+    "cat": "brand",
+    "exp": "United States",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "United States",
+        "Palestine",
+        "Bouvet Island",
+        "Hong Kong",
+        "Monaco"
+      ],
+      "conf": "LOW",
+      "delta": 0.047,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "United States",
+        "Hong Kong",
+        "India",
+        "Cuba",
+        "Australia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1945,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "United States",
+        "Palestine",
+        "Bouvet Island",
+        "Hong Kong",
+        "Monaco"
+      ],
+      "conf": "LOW",
+      "delta": 0.047,
+      "rank": 1
+    }
+  },
+  {
+    "q": "sushi ramen Japanese food",
+    "cat": "brand",
+    "exp": "Japan",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Japan",
+        "Thailand",
+        "Northern Mariana Islands",
+        "Singapore",
+        "Taiwan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2376,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Japan",
+        "Thailand",
+        "Laos",
+        "Taiwan",
+        "Guam"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2331,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Japan",
+        "Thailand",
+        "Northern Mariana Islands",
+        "Singapore",
+        "Taiwan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2376,
+      "rank": 1
+    }
+  },
+  {
+    "q": "espresso coffee cafe culture",
+    "cat": "brand",
+    "exp": "Italy",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Eritrea",
+        "Monaco",
+        "Martinique",
+        "Austria",
+        "Djibouti"
+      ],
+      "conf": "LOW",
+      "delta": 0.0383,
+      "rank": 18
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Eritrea",
+        "Ethiopia",
+        "Italy",
+        "Uruguay",
+        "United Arab Emirates"
+      ],
+      "conf": "MED",
+      "delta": 0.0892,
+      "rank": 3
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Eritrea",
+        "Monaco",
+        "Martinique",
+        "Austria",
+        "Djibouti"
+      ],
+      "conf": "LOW",
+      "delta": 0.0383,
+      "rank": 18
+    }
+  },
+  {
+    "q": "champagne sparkling wine bubbles",
+    "cat": "brand",
+    "exp": "France",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Luxembourg",
+        "France",
+        "Monaco",
+        "Switzerland",
+        "Bulgaria"
+      ],
+      "conf": "MED",
+      "delta": 0.0859,
+      "rank": 2
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "France",
+        "Luxembourg",
+        "Czechia",
+        "French Polynesia",
+        "Armenia"
+      ],
+      "conf": "MED",
+      "delta": 0.0594,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Luxembourg",
+        "France",
+        "Monaco",
+        "Switzerland",
+        "Bulgaria"
+      ],
+      "conf": "MED",
+      "delta": 0.0859,
+      "rank": 2
+    }
+  },
+  {
+    "q": "Trappist craft beer Belgium",
+    "cat": "brand",
+    "exp": "Belgium",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Belgium",
+        "Luxembourg",
+        "Netherlands",
+        "Rwanda",
+        "Czechia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2248,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Belgium",
+        "Ireland",
+        "Czechia",
+        "Netherlands",
+        "Luxembourg"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2775,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Belgium",
+        "Luxembourg",
+        "Netherlands",
+        "Rwanda",
+        "Czechia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2248,
+      "rank": 1
+    }
+  },
+  {
+    "q": "pilsner lager beer Bohemia",
+    "cat": "brand",
+    "exp": "Czechia",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Czechia",
+        "Poland",
+        "Germany",
+        "Austria",
+        "Slovakia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3052,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Czechia",
+        "Ireland",
+        "Germany",
+        "Poland",
+        "Slovenia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3705,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Czechia",
+        "Poland",
+        "Germany",
+        "Austria",
+        "Slovakia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3052,
+      "rank": 1
+    }
+  },
+  {
+    "q": "rose oil perfume attar Bulgaria",
+    "cat": "brand",
+    "exp": "Bulgaria",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Bulgaria",
+        "Azerbaijan",
+        "Romania",
+        "Lebanon",
+        "Georgia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1711,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Bulgaria",
+        "Comoros",
+        "Azerbaijan",
+        "Romania",
+        "Algeria"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3512,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Bulgaria",
+        "Azerbaijan",
+        "Romania",
+        "Lebanon",
+        "Georgia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1711,
+      "rank": 1
+    }
+  },
+  {
+    "q": "Formula One Grand Prix racing",
+    "cat": "brand",
+    "exp": "United Kingdom",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Monaco",
+        "Macau",
+        "United Arab Emirates",
+        "Bahrain",
+        "Luxembourg"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1696,
+      "rank": 14
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Bahrain",
+        "Monaco",
+        "Qatar",
+        "Isle of Man",
+        "Grenada"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2718,
+      "rank": 9
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Monaco",
+        "Macau",
+        "United Arab Emirates",
+        "Bahrain",
+        "Luxembourg"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1696,
+      "rank": 14
+    }
+  },
+  {
+    "q": "rugby All Blacks haka",
+    "cat": "brand",
+    "exp": "New Zealand",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "New Zealand",
+        "Niue",
+        "Samoa",
+        "Tonga",
+        "Tokelau"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1385,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "New Zealand",
+        "Tonga",
+        "Fiji",
+        "American Samoa",
+        "Cook Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3011,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "New Zealand",
+        "Niue",
+        "Samoa",
+        "Tonga",
+        "Tokelau"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1385,
+      "rank": 1
+    }
+  },
+  {
+    "q": "carnival samba Rio festival",
+    "cat": "brand",
+    "exp": "Brazil",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Brazil",
+        "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+        "Trinidad and Tobago",
+        "Macau",
+        "Suriname"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1734,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Brazil",
+        "Angola",
+        "Congo",
+        "Portugal",
+        "Trinidad and Tobago"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2846,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Brazil",
+        "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+        "Trinidad and Tobago",
+        "Macau",
+        "Suriname"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1734,
+      "rank": 1
+    }
+  },
+  {
+    "q": "Muay Thai kickboxing martial art",
+    "cat": "brand",
+    "exp": "Thailand",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Thailand",
+        "Myanmar",
+        "Cambodia",
+        "Malaysia",
+        "Taiwan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2325,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Thailand",
+        "Cambodia",
+        "Malaysia",
+        "Myanmar",
+        "Jamaica"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2791,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Thailand",
+        "Myanmar",
+        "Cambodia",
+        "Malaysia",
+        "Taiwan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2325,
+      "rank": 1
+    }
+  },
+  {
+    "q": "eagle hunting nomadic Kyrgyzstan",
+    "cat": "brand",
+    "exp": "Kyrgyzstan",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Kyrgyzstan",
+        "Kazakhstan",
+        "Mongolia",
+        "Turkmenistan",
+        "Uzbekistan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2554,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Kyrgyzstan",
+        "Kazakhstan",
+        "Mongolia",
+        "Afghanistan",
+        "Niger"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3678,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Kyrgyzstan",
+        "Kazakhstan",
+        "Mongolia",
+        "Turkmenistan",
+        "Uzbekistan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2554,
+      "rank": 1
+    }
+  },
+  {
+    "q": "duduk woodwind Armenia music",
+    "cat": "brand",
+    "exp": "Armenia",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Armenia",
+        "Azerbaijan",
+        "Lebanon",
+        "Turkmenistan",
+        "Syria"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2101,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Armenia",
+        "Tajikistan",
+        "Burundi",
+        "Azerbaijan",
+        "Iraq"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3205,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Armenia",
+        "Azerbaijan",
+        "Lebanon",
+        "Turkmenistan",
+        "Syria"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2101,
+      "rank": 1
+    }
+  },
+  {
+    "q": "kava ceremony Fiji Pacific",
+    "cat": "brand",
+    "exp": "Fiji",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Vanuatu",
+        "Samoa",
+        "Fiji",
+        "Niue",
+        "Wallis and Futuna"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1274,
+      "rank": 3
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Fiji",
+        "Tonga",
+        "Wallis and Futuna",
+        "American Samoa",
+        "Samoa"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2969,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Vanuatu",
+        "Samoa",
+        "Fiji",
+        "Niue",
+        "Wallis and Futuna"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1274,
+      "rank": 3
+    }
+  },
+  {
+    "q": "yurt nomadic steppe Mongolia",
+    "cat": "brand",
+    "exp": "Mongolia",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Mongolia",
+        "Turkmenistan",
+        "Kyrgyzstan",
+        "Uzbekistan",
+        "Kazakhstan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2948,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Mongolia",
+        "Kazakhstan",
+        "Kyrgyzstan",
+        "Niger",
+        "Mauritania"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3407,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Mongolia",
+        "Turkmenistan",
+        "Kyrgyzstan",
+        "Uzbekistan",
+        "Kazakhstan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2948,
+      "rank": 1
+    }
+  },
+  {
+    "q": "Oktoberfest beer Bavaria Germany",
+    "cat": "brand",
+    "exp": "Germany",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Germany",
+        "Austria",
+        "Czechia",
+        "Luxembourg",
+        "Hungary"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2554,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Germany",
+        "Czechia",
+        "Ireland",
+        "Slovenia",
+        "Denmark"
+      ],
+      "conf": "HIGH",
+      "delta": 0.243,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Germany",
+        "Austria",
+        "Czechia",
+        "Luxembourg",
+        "Hungary"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2554,
+      "rank": 1
+    }
+  },
+  {
+    "q": "Fado music Portugal melancholy",
+    "cat": "brand",
+    "exp": "Portugal",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Portugal",
+        "Cape Verde",
+        "Guinea-Bissau",
+        "Brazil",
+        "S\u00e3o Tom\u00e9 and Pr\u00edncipe"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2225,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Portugal",
+        "Cape Verde",
+        "Mozambique",
+        "Angola",
+        "S\u00e3o Tom\u00e9 and Pr\u00edncipe"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3399,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Portugal",
+        "Cape Verde",
+        "Guinea-Bissau",
+        "Brazil",
+        "S\u00e3o Tom\u00e9 and Pr\u00edncipe"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2225,
+      "rank": 1
+    }
+  },
+  {
+    "q": "capoeira Afro-Brazilian martial art",
+    "cat": "brand",
+    "exp": "Brazil",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Brazil",
+        "Cape Verde",
+        "Angola",
+        "Guinea-Bissau",
+        "Guinea"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1014,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Brazil",
+        "Angola",
+        "Congo",
+        "Cape Verde",
+        "Guinea-Bissau"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1557,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Brazil",
+        "Cape Verde",
+        "Angola",
+        "Guinea-Bissau",
+        "Guinea"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1014,
+      "rank": 1
+    }
+  },
+  {
+    "q": "Diwali festival lights India",
+    "cat": "brand",
+    "exp": "India",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "India",
+        "Nepal",
+        "Bangladesh",
+        "Pakistan",
+        "Sri Lanka"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2009,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "India",
+        "Bangladesh",
+        "Pakistan",
+        "Indonesia",
+        "Malawi"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1455,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "India",
+        "Nepal",
+        "Bangladesh",
+        "Pakistan",
+        "Sri Lanka"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2009,
+      "rank": 1
+    }
+  },
+  {
+    "q": "fjords glaciers dramatic scenery",
+    "cat": "travel",
+    "exp": "Norway",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Norway",
+        "Iceland",
+        "Greenland",
+        "Faroe Islands",
+        "South Georgia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1767,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Norway",
+        "Greenland",
+        "Iceland",
+        "Faroe Islands",
+        "Svalbard and Jan Mayen"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2265,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Norway",
+        "Iceland",
+        "Greenland",
+        "Faroe Islands",
+        "South Georgia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1767,
+      "rank": 1
+    }
+  },
+  {
+    "q": "tropical beach overwater bungalow",
+    "cat": "travel",
+    "exp": "Maldives",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Cayman Islands",
+        "Bahamas",
+        "Turks and Caicos Islands",
+        "Caribbean Netherlands",
+        "Bermuda"
+      ],
+      "conf": "MED",
+      "delta": 0.0523,
+      "rank": 10
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Maldives",
+        "Turks and Caicos Islands",
+        "Palau",
+        "Cayman Islands",
+        "British Virgin Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1475,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Cayman Islands",
+        "Bahamas",
+        "Turks and Caicos Islands",
+        "Caribbean Netherlands",
+        "Bermuda"
+      ],
+      "conf": "MED",
+      "delta": 0.0523,
+      "rank": 10
+    }
+  },
+  {
+    "q": "safari wildlife Big Five Africa",
+    "cat": "travel",
+    "exp": "Kenya",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "South Africa",
+        "South Sudan",
+        "Zimbabwe",
+        "Kenya",
+        "Tanzania"
+      ],
+      "conf": "MED",
+      "delta": 0.0744,
+      "rank": 4
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Botswana",
+        "South Africa",
+        "Tanzania",
+        "Namibia",
+        "Central African Republic"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1872,
+      "rank": 6
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "South Africa",
+        "South Sudan",
+        "Zimbabwe",
+        "Kenya",
+        "Tanzania"
+      ],
+      "conf": "MED",
+      "delta": 0.0744,
+      "rank": 4
+    }
+  },
+  {
+    "q": "ancient ruins temples archaeology",
+    "cat": "travel",
+    "exp": "Greece",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Cambodia",
+        "Laos",
+        "Iraq",
+        "Egypt",
+        "T\u00fcrkiye"
+      ],
+      "conf": "MED",
+      "delta": 0.0727,
+      "rank": 17
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Guatemala",
+        "Iraq",
+        "Cambodia",
+        "Laos",
+        "Uzbekistan"
+      ],
+      "conf": "MED",
+      "delta": 0.0928,
+      "rank": 37
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Cambodia",
+        "Laos",
+        "Iraq",
+        "Egypt",
+        "T\u00fcrkiye"
+      ],
+      "conf": "MED",
+      "delta": 0.0727,
+      "rank": 17
+    }
+  },
+  {
+    "q": "cherry blossom spring Japan",
+    "cat": "travel",
+    "exp": "Japan",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Japan",
+        "Taiwan",
+        "North Korea",
+        "South Korea",
+        "Northern Mariana Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2368,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Japan",
+        "Bhutan",
+        "Vietnam",
+        "Papua New Guinea",
+        "Palau"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1964,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Japan",
+        "Taiwan",
+        "North Korea",
+        "South Korea",
+        "Northern Mariana Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2368,
+      "rank": 1
+    }
+  },
+  {
+    "q": "Northern Lights aurora borealis",
+    "cat": "travel",
+    "exp": "Norway",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Norway",
+        "Finland",
+        "Greenland",
+        "Svalbard and Jan Mayen",
+        "Faroe Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1587,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Iceland",
+        "Greenland",
+        "Norway",
+        "Svalbard and Jan Mayen",
+        "Antarctica"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2511,
+      "rank": 3
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Norway",
+        "Finland",
+        "Greenland",
+        "Svalbard and Jan Mayen",
+        "Faroe Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1587,
+      "rank": 1
+    }
+  },
+  {
+    "q": "street food night market Asia",
+    "cat": "travel",
+    "exp": "Thailand",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Hong Kong",
+        "Thailand",
+        "Singapore",
+        "Taiwan",
+        "Macau"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1186,
+      "rank": 2
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Taiwan",
+        "Hong Kong",
+        "Thailand",
+        "Singapore",
+        "Myanmar"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2119,
+      "rank": 3
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Hong Kong",
+        "Thailand",
+        "Singapore",
+        "Taiwan",
+        "Macau"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1186,
+      "rank": 2
+    }
+  },
+  {
+    "q": "ski resort Alpine mountains winter",
+    "cat": "travel",
+    "exp": "Austria",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Austria",
+        "Switzerland",
+        "Andorra",
+        "Albania",
+        "Liechtenstein"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1462,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Andorra",
+        "Switzerland",
+        "Austria",
+        "Kyrgyzstan",
+        "Svalbard and Jan Mayen"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2158,
+      "rank": 3
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Austria",
+        "Switzerland",
+        "Andorra",
+        "Albania",
+        "Liechtenstein"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1462,
+      "rank": 1
+    }
+  },
+  {
+    "q": "wine tasting vineyard cellar tour",
+    "cat": "travel",
+    "exp": "France",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Georgia",
+        "Pitcairn Islands",
+        "Vatican City",
+        "Tunisia",
+        "Guernsey"
+      ],
+      "conf": "MED",
+      "delta": 0.0672,
+      "rank": 7
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Moldova",
+        "Georgia",
+        "Armenia",
+        "Cyprus",
+        "South Africa"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1906,
+      "rank": 8
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Georgia",
+        "Pitcairn Islands",
+        "Vatican City",
+        "Tunisia",
+        "Guernsey"
+      ],
+      "conf": "MED",
+      "delta": 0.0672,
+      "rank": 7
+    }
+  },
+  {
+    "q": "coral reef scuba diving tropical",
+    "cat": "travel",
+    "exp": "Australia",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Cura\u00e7ao",
+        "Niue",
+        "Maldives",
+        "Cocos (Keeling) Islands",
+        "Cayman Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0576,
+      "rank": 98
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Palau",
+        "Cocos (Keeling) Islands",
+        "Cura\u00e7ao",
+        "Niue",
+        "Cayman Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1167,
+      "rank": 43
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Cura\u00e7ao",
+        "Niue",
+        "Maldives",
+        "Cocos (Keeling) Islands",
+        "Cayman Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0576,
+      "rank": 98
+    }
+  },
+  {
+    "q": "religious pilgrimage holy city Islam",
+    "cat": "travel",
+    "exp": "Saudi Arabia",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Saudi Arabia",
+        "Qatar",
+        "Palestine",
+        "Iran",
+        "United Arab Emirates"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1228,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Saudi Arabia",
+        "Mali",
+        "Mauritania",
+        "United Arab Emirates",
+        "Palestine"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2614,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Saudi Arabia",
+        "Qatar",
+        "Palestine",
+        "Iran",
+        "United Arab Emirates"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1228,
+      "rank": 1
+    }
+  },
+  {
+    "q": "backpacker budget travel Southeast Asia",
+    "cat": "travel",
+    "exp": "Thailand",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Thailand",
+        "Cambodia",
+        "Laos",
+        "Myanmar",
+        "Indonesia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1398,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Thailand",
+        "Myanmar",
+        "Laos",
+        "Cambodia",
+        "Vietnam"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1463,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Thailand",
+        "Cambodia",
+        "Laos",
+        "Myanmar",
+        "Indonesia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1398,
+      "rank": 1
+    }
+  },
+  {
+    "q": "luxury safari lodge tented camp",
+    "cat": "travel",
+    "exp": "Tanzania",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "French Southern and Antarctic Lands",
+        "South Africa",
+        "Tanzania",
+        "Western Sahara",
+        "Seychelles"
+      ],
+      "conf": "LOW",
+      "delta": 0.0453,
+      "rank": 3
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Botswana",
+        "South Africa",
+        "Tanzania",
+        "Namibia",
+        "Madagascar"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1072,
+      "rank": 3
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "French Southern and Antarctic Lands",
+        "South Africa",
+        "Tanzania",
+        "Western Sahara",
+        "Seychelles"
+      ],
+      "conf": "LOW",
+      "delta": 0.0453,
+      "rank": 3
+    }
+  },
+  {
+    "q": "island hopping Caribbean beach",
+    "cat": "travel",
+    "exp": "Bahamas",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Saint Barth\u00e9lemy",
+        "Cayman Islands",
+        "British Virgin Islands",
+        "Cura\u00e7ao",
+        "Caribbean Netherlands"
+      ],
+      "conf": "MED",
+      "delta": 0.0877,
+      "rank": 16
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Aruba",
+        "Cayman Islands",
+        "Turks and Caicos Islands",
+        "Anguilla",
+        "Antigua and Barbuda"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1791,
+      "rank": 13
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Saint Barth\u00e9lemy",
+        "Cayman Islands",
+        "British Virgin Islands",
+        "Cura\u00e7ao",
+        "Caribbean Netherlands"
+      ],
+      "conf": "MED",
+      "delta": 0.0877,
+      "rank": 16
+    }
+  },
+  {
+    "q": "ancient walled city medina souk",
+    "cat": "travel",
+    "exp": "Morocco",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Morocco",
+        "Tunisia",
+        "Libya",
+        "Western Sahara",
+        "Algeria"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1259,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Morocco",
+        "Tunisia",
+        "Oman",
+        "Yemen",
+        "Algeria"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1828,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Morocco",
+        "Tunisia",
+        "Libya",
+        "Western Sahara",
+        "Algeria"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1259,
+      "rank": 1
+    }
+  },
+  {
+    "q": "hot spring geothermal bathing pool",
+    "cat": "travel",
+    "exp": "Iceland",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Japan",
+        "Dominica",
+        "Georgia",
+        "Philippines",
+        "Iceland"
+      ],
+      "conf": "MED",
+      "delta": 0.0614,
+      "rank": 5
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Dominica",
+        "Vanuatu",
+        "Hungary",
+        "Iceland",
+        "Palau"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1166,
+      "rank": 4
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Japan",
+        "Dominica",
+        "Georgia",
+        "Philippines",
+        "Iceland"
+      ],
+      "conf": "MED",
+      "delta": 0.0614,
+      "rank": 5
+    }
+  },
+  {
+    "q": "desert sand dunes Sahara camel",
+    "cat": "travel",
+    "exp": "Morocco",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Mauritania",
+        "Western Sahara",
+        "Algeria",
+        "Morocco",
+        "Sudan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.111,
+      "rank": 4
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Mauritania",
+        "Namibia",
+        "Niger",
+        "Chad",
+        "Western Sahara"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1347,
+      "rank": 13
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Mauritania",
+        "Western Sahara",
+        "Algeria",
+        "Morocco",
+        "Sudan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.111,
+      "rank": 4
+    }
+  },
+  {
+    "q": "Buddhist temple monastery meditation",
+    "cat": "travel",
+    "exp": "Thailand",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Bhutan",
+        "Myanmar",
+        "Sri Lanka",
+        "Nepal",
+        "Mongolia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1143,
+      "rank": 6
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Myanmar",
+        "Nepal",
+        "Bhutan",
+        "Thailand",
+        "Laos"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1745,
+      "rank": 4
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Bhutan",
+        "Myanmar",
+        "Sri Lanka",
+        "Nepal",
+        "Mongolia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1143,
+      "rank": 6
+    }
+  },
+  {
+    "q": "whale watching marine wildlife",
+    "cat": "travel",
+    "exp": "Iceland",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "French Southern and Antarctic Lands",
+        "Bouvet Island",
+        "Antarctica",
+        "South Georgia",
+        "Falkland Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.109,
+      "rank": 18
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Palau",
+        "Falkland Islands",
+        "Mayotte",
+        "Christmas Island",
+        "French Southern and Antarctic Lands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1262,
+      "rank": 28
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "French Southern and Antarctic Lands",
+        "Bouvet Island",
+        "Antarctica",
+        "South Georgia",
+        "Falkland Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.109,
+      "rank": 18
+    }
+  },
+  {
+    "q": "volcano hiking active lava crater",
+    "cat": "travel",
+    "exp": "Iceland",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Heard Island and McDonald Islands",
+        "Bouvet Island",
+        "Montserrat",
+        "Pitcairn Islands",
+        "R\u00e9union"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1145,
+      "rank": 20
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Vanuatu",
+        "R\u00e9union",
+        "Montserrat",
+        "Heard Island and McDonald Islands",
+        "Dominica"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1673,
+      "rank": 9
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Heard Island and McDonald Islands",
+        "Bouvet Island",
+        "Montserrat",
+        "Pitcairn Islands",
+        "R\u00e9union"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1145,
+      "rank": 20
+    }
+  },
+  {
+    "q": "tea plantation highland mist",
+    "cat": "travel",
+    "exp": "Sri Lanka",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Sri Lanka",
+        "Bhutan",
+        "Rwanda",
+        "Taiwan",
+        "Norfolk Island"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1024,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Sri Lanka",
+        "Bhutan",
+        "Yemen",
+        "Malawi",
+        "Belarus"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1239,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Sri Lanka",
+        "Bhutan",
+        "Rwanda",
+        "Taiwan",
+        "Norfolk Island"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1024,
+      "rank": 1
+    }
+  },
+  {
+    "q": "ancient spice market bazaar Istanbul",
+    "cat": "travel",
+    "exp": "Turkey",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "T\u00fcrkiye",
+        "Azerbaijan",
+        "Uzbekistan",
+        "Iran",
+        "Tunisia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1432,
+      "rank": -1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "T\u00fcrkiye",
+        "Syria",
+        "Yemen",
+        "Uzbekistan",
+        "Bosnia and Herzegovina"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2272,
+      "rank": -1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "T\u00fcrkiye",
+        "Azerbaijan",
+        "Uzbekistan",
+        "Iran",
+        "Tunisia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1432,
+      "rank": -1
+    }
+  },
+  {
+    "q": "cave diving cenote underground",
+    "cat": "travel",
+    "exp": "Mexico",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Cura\u00e7ao",
+        "Cayman Islands",
+        "Christmas Island",
+        "Belize",
+        "Aruba"
+      ],
+      "conf": "MED",
+      "delta": 0.0926,
+      "rank": 9
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Belize",
+        "Honduras",
+        "Palau",
+        "Cura\u00e7ao",
+        "Vanuatu"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1712,
+      "rank": 31
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Cura\u00e7ao",
+        "Cayman Islands",
+        "Christmas Island",
+        "Belize",
+        "Aruba"
+      ],
+      "conf": "MED",
+      "delta": 0.0926,
+      "rank": 9
+    }
+  },
+  {
+    "q": "cycling infrastructure bike friendly",
+    "cat": "travel",
+    "exp": "Netherlands",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Cyprus",
+        "Jersey",
+        "Denmark",
+        "Guernsey",
+        "Cocos (Keeling) Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0595,
+      "rank": 6
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Netherlands",
+        "Belgium",
+        "Vietnam",
+        "Denmark",
+        "Pakistan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1918,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Cyprus",
+        "Jersey",
+        "Denmark",
+        "Guernsey",
+        "Cocos (Keeling) Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0595,
+      "rank": 6
+    }
+  },
+  {
+    "q": "waterfall jungle rainforest trekking",
+    "cat": "travel",
+    "exp": "Costa Rica",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Guyana",
+        "Jamaica",
+        "French Guiana",
+        "Rwanda",
+        "Dominica"
+      ],
+      "conf": "MED",
+      "delta": 0.0558,
+      "rank": 12
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Guyana",
+        "DR Congo",
+        "Dominica",
+        "Palau",
+        "Venezuela"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1142,
+      "rank": 14
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Guyana",
+        "Jamaica",
+        "French Guiana",
+        "Rwanda",
+        "Dominica"
+      ],
+      "conf": "MED",
+      "delta": 0.0558,
+      "rank": 12
+    }
+  },
+  {
+    "q": "carnival costume parade festival",
+    "cat": "travel",
+    "exp": "Brazil",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Macau",
+        "Trinidad and Tobago",
+        "Aruba",
+        "Antigua and Barbuda",
+        "Saint Barth\u00e9lemy"
+      ],
+      "conf": "MED",
+      "delta": 0.0676,
+      "rank": 20
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Bahamas",
+        "Aruba",
+        "Fiji",
+        "Brazil",
+        "Papua New Guinea"
+      ],
+      "conf": "HIGH",
+      "delta": 0.126,
+      "rank": 4
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Macau",
+        "Trinidad and Tobago",
+        "Aruba",
+        "Antigua and Barbuda",
+        "Saint Barth\u00e9lemy"
+      ],
+      "conf": "MED",
+      "delta": 0.0676,
+      "rank": 20
+    }
+  },
+  {
+    "q": "medieval castle fortress city",
+    "cat": "travel",
+    "exp": "Czech Republic",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Gibraltar",
+        "\u00c5land Islands",
+        "San Marino",
+        "Luxembourg",
+        "Czechia"
+      ],
+      "conf": "MED",
+      "delta": 0.0977,
+      "rank": -1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Luxembourg",
+        "San Marino",
+        "Malta",
+        "Slovakia",
+        "Gibraltar"
+      ],
+      "conf": "MED",
+      "delta": 0.0952,
+      "rank": -1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Gibraltar",
+        "\u00c5land Islands",
+        "San Marino",
+        "Luxembourg",
+        "Czechia"
+      ],
+      "conf": "MED",
+      "delta": 0.0977,
+      "rank": -1
+    }
+  },
+  {
+    "q": "salt flat mirror reflection Uyuni",
+    "cat": "travel",
+    "exp": "Bolivia",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Bolivia",
+        "Uzbekistan",
+        "Uruguay",
+        "Peru",
+        "Kyrgyzstan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1478,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Bolivia",
+        "Chile",
+        "Niger",
+        "Jordan",
+        "Djibouti"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3229,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Bolivia",
+        "Uzbekistan",
+        "Uruguay",
+        "Peru",
+        "Kyrgyzstan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1478,
+      "rank": 1
+    }
+  },
+  {
+    "q": "river cruise historic bridges",
+    "cat": "travel",
+    "exp": "Austria",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Cambodia",
+        "Gibraltar",
+        "Iraq",
+        "Jordan",
+        "Croatia"
+      ],
+      "conf": "LOW",
+      "delta": 0.0296,
+      "rank": 245
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Bosnia and Herzegovina",
+        "Gambia",
+        "Antigua and Barbuda",
+        "Panama",
+        "Iraq"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1154,
+      "rank": 240
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Cambodia",
+        "Gibraltar",
+        "Iraq",
+        "Jordan",
+        "Croatia"
+      ],
+      "conf": "LOW",
+      "delta": 0.0296,
+      "rank": 245
+    }
+  },
+  {
+    "q": "whale shark encounter swimming",
+    "cat": "travel",
+    "exp": "Philippines",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Cura\u00e7ao",
+        "Maldives",
+        "United Arab Emirates",
+        "Cayman Islands",
+        "Aruba"
+      ],
+      "conf": "LOW",
+      "delta": 0.0465,
+      "rank": 56
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Palau",
+        "Djibouti",
+        "Mayotte",
+        "Cayman Islands",
+        "Marshall Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1846,
+      "rank": 107
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Cura\u00e7ao",
+        "Maldives",
+        "United Arab Emirates",
+        "Cayman Islands",
+        "Aruba"
+      ],
+      "conf": "LOW",
+      "delta": 0.0465,
+      "rank": 56
+    }
+  },
+  {
+    "q": "classical music opera symphony Vienna",
+    "cat": "culture",
+    "exp": "Austria",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Austria",
+        "Switzerland",
+        "Liechtenstein",
+        "Slovenia",
+        "Germany"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2498,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Austria",
+        "Germany",
+        "Russia",
+        "Czechia",
+        "Finland"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3537,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Austria",
+        "Switzerland",
+        "Liechtenstein",
+        "Slovenia",
+        "Germany"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2498,
+      "rank": 1
+    }
+  },
+  {
+    "q": "jazz blues soul American roots",
+    "cat": "culture",
+    "exp": "United States",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "United States",
+        "Mali",
+        "South Africa",
+        "Jamaica",
+        "Liberia"
+      ],
+      "conf": "MED",
+      "delta": 0.0671,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Jamaica",
+        "Gambia",
+        "Trinidad and Tobago",
+        "United States",
+        "Ghana"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1172,
+      "rank": 4
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "United States",
+        "Mali",
+        "South Africa",
+        "Jamaica",
+        "Liberia"
+      ],
+      "conf": "MED",
+      "delta": 0.0671,
+      "rank": 1
+    }
+  },
+  {
+    "q": "hip hop rap urban culture",
+    "cat": "culture",
+    "exp": "United States",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "South Korea",
+        "North Korea",
+        "Iraq",
+        "Mali",
+        "South Africa"
+      ],
+      "conf": "LOW",
+      "delta": 0.0482,
+      "rank": 7
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "United States",
+        "Congo",
+        "Angola",
+        "Jamaica",
+        "Iraq"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1464,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "South Korea",
+        "North Korea",
+        "Iraq",
+        "Mali",
+        "South Africa"
+      ],
+      "conf": "LOW",
+      "delta": 0.0482,
+      "rank": 7
+    }
+  },
+  {
+    "q": "folk dance traditional costume",
+    "cat": "culture",
+    "exp": "Hungary",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Turkmenistan",
+        "Mongolia",
+        "Vietnam",
+        "Burkina Faso",
+        "Georgia"
+      ],
+      "conf": "MED",
+      "delta": 0.0656,
+      "rank": 140
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Fiji",
+        "Myanmar",
+        "Cambodia",
+        "Benin",
+        "Afghanistan"
+      ],
+      "conf": "MED",
+      "delta": 0.0899,
+      "rank": 186
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Turkmenistan",
+        "Mongolia",
+        "Vietnam",
+        "Burkina Faso",
+        "Georgia"
+      ],
+      "conf": "MED",
+      "delta": 0.0656,
+      "rank": 140
+    }
+  },
+  {
+    "q": "coffee origin specialty Ethiopia",
+    "cat": "culture",
+    "exp": "Ethiopia",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Ethiopia",
+        "Eritrea",
+        "Djibouti",
+        "Somalia",
+        "Kenya"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2755,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Ethiopia",
+        "Kenya",
+        "Eritrea",
+        "Yemen",
+        "Burundi"
+      ],
+      "conf": "HIGH",
+      "delta": 0.369,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Ethiopia",
+        "Eritrea",
+        "Djibouti",
+        "Somalia",
+        "Kenya"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2755,
+      "rank": 1
+    }
+  },
+  {
+    "q": "spice cinnamon pepper Sri Lanka",
+    "cat": "culture",
+    "exp": "Sri Lanka",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Sri Lanka",
+        "Grenada",
+        "Singapore",
+        "Bangladesh",
+        "Mauritius"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2529,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Sri Lanka",
+        "Grenada",
+        "Yemen",
+        "Comoros",
+        "Indonesia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2479,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Sri Lanka",
+        "Grenada",
+        "Singapore",
+        "Bangladesh",
+        "Mauritius"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2529,
+      "rank": 1
+    }
+  },
+  {
+    "q": "cocoa chocolate West Africa production",
+    "cat": "culture",
+    "exp": "Ivory Coast",
+    "auto": {
+      "tag": "auto:hybrid",
+      "top5": [
+        "Ivory Coast",
+        "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+        "Liberia",
+        "Nigeria",
+        "Equatorial Guinea"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1596,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Ivory Coast",
+        "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+        "Grenada",
+        "Ghana",
+        "Gabon"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3023,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Ivory Coast",
+        "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+        "Liberia",
+        "Ghana",
+        "Equatorial Guinea"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1398,
+      "rank": 1
+    }
+  },
+  {
+    "q": "tea ceremony ritual culture",
+    "cat": "culture",
+    "exp": "Japan",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Japan",
+        "Taiwan",
+        "South Korea",
+        "Sri Lanka",
+        "Bhutan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1345,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Sri Lanka",
+        "China",
+        "Myanmar",
+        "T\u00fcrkiye",
+        "Japan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1313,
+      "rank": 5
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Japan",
+        "Taiwan",
+        "South Korea",
+        "Sri Lanka",
+        "Bhutan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1345,
+      "rank": 1
+    }
+  },
+  {
+    "q": "cheese wine French cuisine gourmet",
+    "cat": "culture",
+    "exp": "France",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "France",
+        "Martinique",
+        "French Guiana",
+        "Saint Pierre and Miquelon",
+        "Guernsey"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1708,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "France",
+        "Cyprus",
+        "Luxembourg",
+        "Georgia",
+        "Moldova"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2109,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "France",
+        "Martinique",
+        "French Guiana",
+        "Saint Pierre and Miquelon",
+        "Guernsey"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1708,
+      "rank": 1
+    }
+  },
+  {
+    "q": "pasta pizza Mediterranean Italian",
+    "cat": "culture",
+    "exp": "Italy",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Italy",
+        "Malta",
+        "Greece",
+        "Libya",
+        "Spain"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2008,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Italy",
+        "Palestine",
+        "Cyprus",
+        "Tunisia",
+        "Libya"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1614,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Italy",
+        "Malta",
+        "Greece",
+        "Libya",
+        "Spain"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2008,
+      "rank": 1
+    }
+  },
+  {
+    "q": "kebab shawarma street food",
+    "cat": "culture",
+    "exp": "Turkey",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Syria",
+        "T\u00fcrkiye",
+        "Saudi Arabia",
+        "Kuwait",
+        "Egypt"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1122,
+      "rank": -1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Syria",
+        "Lebanon",
+        "T\u00fcrkiye",
+        "Libya",
+        "Kuwait"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1718,
+      "rank": -1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Syria",
+        "T\u00fcrkiye",
+        "Saudi Arabia",
+        "Kuwait",
+        "Egypt"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1122,
+      "rank": -1
+    }
+  },
+  {
+    "q": "tapas wine bar culture Spain",
+    "cat": "culture",
+    "exp": "Spain",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Spain",
+        "Gibraltar",
+        "Portugal",
+        "Morocco",
+        "Andorra"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2346,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Spain",
+        "Portugal",
+        "Uruguay",
+        "Georgia",
+        "Cuba"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3386,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Spain",
+        "Gibraltar",
+        "Portugal",
+        "Morocco",
+        "Andorra"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2346,
+      "rank": 1
+    }
+  },
+  {
+    "q": "cricket test match South Asia",
+    "cat": "culture",
+    "exp": "India",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Pakistan",
+        "India",
+        "Bangladesh",
+        "Sri Lanka",
+        "Afghanistan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1878,
+      "rank": 2
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "India",
+        "Pakistan",
+        "Bangladesh",
+        "Tajikistan",
+        "Afghanistan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1569,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Pakistan",
+        "India",
+        "Bangladesh",
+        "Sri Lanka",
+        "Afghanistan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1878,
+      "rank": 2
+    }
+  },
+  {
+    "q": "football soccer samba style champions",
+    "cat": "culture",
+    "exp": "Brazil",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Brazil",
+        "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+        "Angola",
+        "Suriname",
+        "Cape Verde"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1269,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Brazil",
+        "Angola",
+        "Argentina",
+        "Spain",
+        "Cameroon"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2625,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Brazil",
+        "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+        "Angola",
+        "Suriname",
+        "Cape Verde"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1269,
+      "rank": 1
+    }
+  },
+  {
+    "q": "sumo wrestling Japan martial art",
+    "cat": "culture",
+    "exp": "Japan",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Japan",
+        "Mongolia",
+        "Thailand",
+        "Taiwan",
+        "China"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2603,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Japan",
+        "Thailand",
+        "Fiji",
+        "Tonga",
+        "Mexico"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2079,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Japan",
+        "Mongolia",
+        "Thailand",
+        "Taiwan",
+        "China"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2603,
+      "rank": 1
+    }
+  },
+  {
+    "q": "chess grandmaster classical tournament",
+    "cat": "culture",
+    "exp": "Russia",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Monaco",
+        "Switzerland",
+        "Luxembourg",
+        "Georgia",
+        "Guatemala"
+      ],
+      "conf": "MED",
+      "delta": 0.0567,
+      "rank": 19
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Armenia",
+        "Russia",
+        "Austria",
+        "Monaco",
+        "Greece"
+      ],
+      "conf": "MED",
+      "delta": 0.0908,
+      "rank": 2
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Monaco",
+        "Switzerland",
+        "Luxembourg",
+        "Georgia",
+        "Guatemala"
+      ],
+      "conf": "MED",
+      "delta": 0.0567,
+      "rank": 19
+    }
+  },
+  {
+    "q": "cycling Tour de France peloton",
+    "cat": "culture",
+    "exp": "France",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "France",
+        "R\u00e9union",
+        "French Polynesia",
+        "Luxembourg",
+        "Saint Pierre and Miquelon"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1787,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "France",
+        "Belgium",
+        "Netherlands",
+        "Isle of Man",
+        "Portugal"
+      ],
+      "conf": "HIGH",
+      "delta": 0.197,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "France",
+        "R\u00e9union",
+        "French Polynesia",
+        "Luxembourg",
+        "Saint Pierre and Miquelon"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1787,
+      "rank": 1
+    }
+  },
+  {
+    "q": "marathon long distance running East Africa",
+    "cat": "culture",
+    "exp": "Kenya",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Kenya",
+        "Somalia",
+        "Ethiopia",
+        "Eritrea",
+        "Djibouti"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2092,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Kenya",
+        "Ethiopia",
+        "Tanzania",
+        "Uganda",
+        "Djibouti"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3227,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Kenya",
+        "Somalia",
+        "Ethiopia",
+        "Eritrea",
+        "Djibouti"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2092,
+      "rank": 1
+    }
+  },
+  {
+    "q": "carnival masquerade steelpan music",
+    "cat": "culture",
+    "exp": "Trinidad and Tobago",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Trinidad and Tobago",
+        "Dominica",
+        "Grenada",
+        "Antigua and Barbuda",
+        "Anguilla"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1357,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Trinidad and Tobago",
+        "Grenada",
+        "Jamaica",
+        "Barbados",
+        "Puerto Rico"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3007,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Trinidad and Tobago",
+        "Dominica",
+        "Grenada",
+        "Antigua and Barbuda",
+        "Anguilla"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1357,
+      "rank": 1
+    }
+  },
+  {
+    "q": "polyphonic choral singing tradition",
+    "cat": "culture",
+    "exp": "Georgia",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Tuvalu",
+        "Latvia",
+        "Faroe Islands",
+        "Switzerland",
+        "\u00c5land Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0614,
+      "rank": 11
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Georgia",
+        "Tonga",
+        "Estonia",
+        "Moldova",
+        "Papua New Guinea"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1549,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Tuvalu",
+        "Latvia",
+        "Faroe Islands",
+        "Switzerland",
+        "\u00c5land Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0614,
+      "rank": 11
+    }
+  },
+  {
+    "q": "throat singing khoomei overtone",
+    "cat": "culture",
+    "exp": "Mongolia",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Mongolia",
+        "Kyrgyzstan",
+        "Uzbekistan",
+        "Oman",
+        "Kazakhstan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1333,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Mongolia",
+        "Tajikistan",
+        "Kyrgyzstan",
+        "Tonga",
+        "Kazakhstan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2174,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Mongolia",
+        "Kyrgyzstan",
+        "Uzbekistan",
+        "Oman",
+        "Kazakhstan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1333,
+      "rank": 1
+    }
+  },
+  {
+    "q": "tango milonga dance halls",
+    "cat": "culture",
+    "exp": "Argentina",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Argentina",
+        "Uruguay",
+        "Trinidad and Tobago",
+        "Paraguay",
+        "Puerto Rico"
+      ],
+      "conf": "HIGH",
+      "delta": 0.129,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Uruguay",
+        "Argentina",
+        "Spain",
+        "Angola",
+        "Dominican Republic"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2219,
+      "rank": 2
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Argentina",
+        "Uruguay",
+        "Trinidad and Tobago",
+        "Paraguay",
+        "Puerto Rico"
+      ],
+      "conf": "HIGH",
+      "delta": 0.129,
+      "rank": 1
+    }
+  },
+  {
+    "q": "batik textile ikat fabric craft",
+    "cat": "culture",
+    "exp": "Indonesia",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Indonesia",
+        "Thailand",
+        "Turkmenistan",
+        "Cambodia",
+        "Burkina Faso"
+      ],
+      "conf": "MED",
+      "delta": 0.0898,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Indonesia",
+        "Cambodia",
+        "Samoa",
+        "Afghanistan",
+        "Malaysia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1262,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Indonesia",
+        "Thailand",
+        "Turkmenistan",
+        "Cambodia",
+        "Burkina Faso"
+      ],
+      "conf": "MED",
+      "delta": 0.0898,
+      "rank": 1
+    }
+  },
+  {
+    "q": "yoga ayurveda Vedic wellness India",
+    "cat": "culture",
+    "exp": "India",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "India",
+        "Sri Lanka",
+        "Nepal",
+        "Pakistan",
+        "Maldives"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1989,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "India",
+        "Thailand",
+        "Sri Lanka",
+        "Indonesia",
+        "Nepal"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2029,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "India",
+        "Sri Lanka",
+        "Nepal",
+        "Pakistan",
+        "Maldives"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1989,
+      "rank": 1
+    }
+  },
+  {
+    "q": "sake rice wine fermented Japan",
+    "cat": "culture",
+    "exp": "Japan",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Japan",
+        "South Korea",
+        "Taiwan",
+        "North Korea",
+        "Cambodia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2656,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Japan",
+        "Laos",
+        "Slovenia",
+        "Fiji",
+        "Barbados"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1383,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Japan",
+        "South Korea",
+        "Taiwan",
+        "North Korea",
+        "Cambodia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2656,
+      "rank": 1
+    }
+  },
+  {
+    "q": "kimchi fermented vegetable Korea",
+    "cat": "culture",
+    "exp": "South Korea",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "North Korea",
+        "South Korea",
+        "Vietnam",
+        "Myanmar",
+        "Georgia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2698,
+      "rank": 2
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "North Korea",
+        "South Korea",
+        "Ukraine",
+        "Myanmar",
+        "China"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2586,
+      "rank": 2
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "North Korea",
+        "South Korea",
+        "Vietnam",
+        "Myanmar",
+        "Georgia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2698,
+      "rank": 2
+    }
+  },
+  {
+    "q": "ramen noodle soup broth Japan",
+    "cat": "culture",
+    "exp": "Japan",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Japan",
+        "North Korea",
+        "Cambodia",
+        "South Korea",
+        "Taiwan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2421,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Japan",
+        "Laos",
+        "Myanmar",
+        "Togo",
+        "North Korea"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1769,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Japan",
+        "North Korea",
+        "Cambodia",
+        "South Korea",
+        "Taiwan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2421,
+      "rank": 1
+    }
+  },
+  {
+    "q": "bagpipe highland music Celtic",
+    "cat": "culture",
+    "exp": "United Kingdom",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Ireland",
+        "United Kingdom",
+        "Isle of Man",
+        "Latvia",
+        "Faroe Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.171,
+      "rank": 2
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Ireland",
+        "United Kingdom",
+        "Iceland",
+        "Trinidad and Tobago",
+        "Isle of Man"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1617,
+      "rank": 2
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Ireland",
+        "United Kingdom",
+        "Isle of Man",
+        "Latvia",
+        "Faroe Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.171,
+      "rank": 2
+    }
+  },
+  {
+    "q": "mural fresco sacred art painting",
+    "cat": "culture",
+    "exp": "Mexico",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Vatican City",
+        "San Marino",
+        "Mongolia",
+        "Georgia",
+        "Moldova"
+      ],
+      "conf": "MED",
+      "delta": 0.0816,
+      "rank": 13
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Palestine",
+        "Vatican City",
+        "Mali",
+        "Moldova",
+        "Mexico"
+      ],
+      "conf": "MED",
+      "delta": 0.0866,
+      "rank": 5
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Vatican City",
+        "San Marino",
+        "Mongolia",
+        "Georgia",
+        "Moldova"
+      ],
+      "conf": "MED",
+      "delta": 0.0816,
+      "rank": 13
+    }
+  },
+  {
+    "q": "polo horse sport equestrian",
+    "cat": "culture",
+    "exp": "Argentina",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Mongolia",
+        "Poland",
+        "Monaco",
+        "Andorra",
+        "Panama"
+      ],
+      "conf": "MED",
+      "delta": 0.0529,
+      "rank": 72
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Mongolia",
+        "Afghanistan",
+        "Isle of Man",
+        "Tonga",
+        "Monaco"
+      ],
+      "conf": "MED",
+      "delta": 0.0843,
+      "rank": 8
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Mongolia",
+        "Poland",
+        "Monaco",
+        "Andorra",
+        "Panama"
+      ],
+      "conf": "MED",
+      "delta": 0.0529,
+      "rank": 72
+    }
+  },
+  {
+    "q": "military spending defense budget",
+    "cat": "factual",
+    "exp": "United States",
+    "auto": {
+      "tag": "factual:military_spending_usd",
+      "top5": [
+        "United States",
+        "China",
+        "Russia",
+        "Germany",
+        "India"
+      ],
+      "conf": "HIGH",
+      "delta": 0.9781,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Guam",
+        "Liechtenstein",
+        "United States",
+        "Solomon Islands",
+        "United States Minor Outlying Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0567,
+      "rank": 3
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "United States",
+        "Brunei",
+        "Germany",
+        "Spain",
+        "United Kingdom"
+      ],
+      "conf": "MED",
+      "delta": 0.0631,
+      "rank": 1
+    }
+  },
+  {
+    "q": "nuclear weapons warheads arsenal",
+    "cat": "factual",
+    "exp": "Russia",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "North Korea",
+        "Ukraine",
+        "Russia",
+        "Armenia",
+        "United Kingdom"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1257,
+      "rank": 3
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Marshall Islands",
+        "Laos",
+        "Svalbard and Jan Mayen",
+        "North Korea",
+        "Liechtenstein"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1519,
+      "rank": 12
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "North Korea",
+        "Ukraine",
+        "Russia",
+        "Armenia",
+        "United Kingdom"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1257,
+      "rank": 3
+    }
+  },
+  {
+    "q": "oil gas petroleum exporter",
+    "cat": "factual",
+    "exp": "Saudi Arabia",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Qatar",
+        "Kuwait",
+        "Azerbaijan",
+        "Brunei",
+        "Bahrain"
+      ],
+      "conf": "MED",
+      "delta": 0.0887,
+      "rank": 10
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Kuwait",
+        "Norway",
+        "Qatar",
+        "Azerbaijan",
+        "Saudi Arabia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1207,
+      "rank": 5
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Qatar",
+        "Kuwait",
+        "Azerbaijan",
+        "Brunei",
+        "Bahrain"
+      ],
+      "conf": "MED",
+      "delta": 0.0887,
+      "rank": 10
+    }
+  },
+  {
+    "q": "renewable energy solar wind capacity",
+    "cat": "factual",
+    "exp": "China",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Spain",
+        "Australia",
+        "United Kingdom",
+        "Argentina",
+        "Guadeloupe"
+      ],
+      "conf": "MED",
+      "delta": 0.0592,
+      "rank": 37
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Iceland",
+        "Tokelau",
+        "Cape Verde",
+        "Aruba",
+        "Germany"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1446,
+      "rank": 122
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Spain",
+        "Australia",
+        "United Kingdom",
+        "Argentina",
+        "Guadeloupe"
+      ],
+      "conf": "MED",
+      "delta": 0.0592,
+      "rank": 37
+    }
+  },
+  {
+    "q": "internet users connectivity",
+    "cat": "factual",
+    "exp": "China",
+    "auto": {
+      "tag": "factual:internet_users_share",
+      "top5": [
+        "Saudi Arabia",
+        "United Arab Emirates",
+        "Bahrain",
+        "Iceland",
+        "Denmark"
+      ],
+      "conf": "LOW",
+      "delta": 0.03,
+      "rank": 47
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Niue",
+        "Tokelau",
+        "Tuvalu",
+        "Estonia",
+        "Marshall Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.211,
+      "rank": 154
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Guam",
+        "Northern Mariana Islands",
+        "Cyprus",
+        "Faroe Islands",
+        "Tuvalu"
+      ],
+      "conf": "LOW",
+      "delta": 0.046,
+      "rank": 29
+    }
+  },
+  {
+    "q": "life expectancy longevity health",
+    "cat": "factual",
+    "exp": "Japan",
+    "auto": {
+      "tag": "factual:life_expectancy",
+      "top5": [
+        "Monaco",
+        "San Marino",
+        "Hong Kong",
+        "Japan",
+        "Saint Barth\u00e9lemy"
+      ],
+      "conf": "LOW",
+      "delta": 0.0359,
+      "rank": 4
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Saint Helena, Ascension and Tristan da Cunha",
+        "Samoa",
+        "Tuvalu",
+        "Estonia",
+        "Denmark"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1147,
+      "rank": 99
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Guernsey",
+        "United States",
+        "Jersey",
+        "Japan",
+        "Hong Kong"
+      ],
+      "conf": "MED",
+      "delta": 0.0631,
+      "rank": 4
+    }
+  },
+  {
+    "q": "years schooling education level",
+    "cat": "factual",
+    "exp": "Germany",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Jersey",
+        "\u00c5land Islands",
+        "Niue",
+        "Saint Helena, Ascension and Tristan da Cunha",
+        "Sudan"
+      ],
+      "conf": "MED",
+      "delta": 0.0601,
+      "rank": 157
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Finland",
+        "Isle of Man",
+        "Mauritania",
+        "New Zealand",
+        "Marshall Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0727,
+      "rank": 211
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Jersey",
+        "\u00c5land Islands",
+        "Niue",
+        "Saint Helena, Ascension and Tristan da Cunha",
+        "Sudan"
+      ],
+      "conf": "MED",
+      "delta": 0.0601,
+      "rank": 157
+    }
+  },
+  {
+    "q": "tourist arrivals visitors",
+    "cat": "factual",
+    "exp": "France",
+    "auto": {
+      "tag": "factual:tourist_arrivals",
+      "top5": [
+        "Spain",
+        "United States",
+        "Italy",
+        "T\u00fcrkiye",
+        "France"
+      ],
+      "conf": "HIGH",
+      "delta": 0.8289,
+      "rank": 5
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Sint Maarten",
+        "Turks and Caicos Islands",
+        "Cayman Islands",
+        "Aruba",
+        "Antigua and Barbuda"
+      ],
+      "conf": "MED",
+      "delta": 0.0756,
+      "rank": 32
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Turks and Caicos Islands",
+        "British Virgin Islands",
+        "Aruba",
+        "Bermuda",
+        "Jamaica"
+      ],
+      "conf": "MED",
+      "delta": 0.0774,
+      "rank": 103
+    }
+  },
+  {
+    "q": "airline passengers aviation hub",
+    "cat": "factual",
+    "exp": "United States",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "United Arab Emirates",
+        "Hong Kong",
+        "Kuwait",
+        "Panama",
+        "Bahrain"
+      ],
+      "conf": "MED",
+      "delta": 0.0502,
+      "rank": 175
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Singapore",
+        "Sint Maarten",
+        "Qatar",
+        "Saudi Arabia",
+        "Papua New Guinea"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1575,
+      "rank": 6
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "United Arab Emirates",
+        "Hong Kong",
+        "Kuwait",
+        "Panama",
+        "Bahrain"
+      ],
+      "conf": "MED",
+      "delta": 0.0502,
+      "rank": 175
+    }
+  },
+  {
+    "q": "health expenditure spending GDP",
+    "cat": "factual",
+    "exp": "United States",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Nepal",
+        "Gabon",
+        "United States",
+        "Norway",
+        "Finland"
+      ],
+      "conf": "LOW",
+      "delta": 0.04,
+      "rank": 3
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Gabon",
+        "Nauru",
+        "Switzerland",
+        "Bhutan",
+        "Philippines"
+      ],
+      "conf": "LOW",
+      "delta": 0.047,
+      "rank": 15
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Nepal",
+        "Gabon",
+        "United States",
+        "Norway",
+        "Finland"
+      ],
+      "conf": "LOW",
+      "delta": 0.04,
+      "rank": 3
+    }
+  },
+  {
+    "q": "wheat barley grain export",
+    "cat": "factual",
+    "exp": "Russia",
+    "auto": {
+      "tag": "auto:hybrid",
+      "top5": [
+        "Ukraine",
+        "Kazakhstan",
+        "Belarus",
+        "Lithuania",
+        "Zimbabwe"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1591,
+      "rank": 54
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Belarus",
+        "Ukraine",
+        "Lithuania",
+        "Somalia",
+        "Iraq"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1093,
+      "rank": 60
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Ukraine",
+        "Belarus",
+        "Kazakhstan",
+        "Lithuania",
+        "Poland"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1039,
+      "rank": 105
+    }
+  },
+  {
+    "q": "democracy freedom press index",
+    "cat": "factual",
+    "exp": "Norway",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Tajikistan",
+        "Morocco",
+        "Iceland",
+        "Cameroon",
+        "S\u00e3o Tom\u00e9 and Pr\u00edncipe"
+      ],
+      "conf": "MED",
+      "delta": 0.0672,
+      "rank": 19
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Timor-Leste",
+        "Niue",
+        "Estonia",
+        "Western Sahara",
+        "Qatar"
+      ],
+      "conf": "MED",
+      "delta": 0.0824,
+      "rank": 33
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Tajikistan",
+        "Morocco",
+        "Iceland",
+        "Cameroon",
+        "S\u00e3o Tom\u00e9 and Pr\u00edncipe"
+      ],
+      "conf": "MED",
+      "delta": 0.0672,
+      "rank": 19
+    }
+  },
+  {
+    "q": "happiness wellbeing satisfaction",
+    "cat": "factual",
+    "exp": "Finland",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Finland",
+        "Iceland",
+        "Netherlands",
+        "Fiji",
+        "Sweden"
+      ],
+      "conf": "MED",
+      "delta": 0.0582,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Denmark",
+        "Bhutan",
+        "Finland",
+        "Sweden",
+        "Aruba"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1563,
+      "rank": 3
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Finland",
+        "Iceland",
+        "Netherlands",
+        "Fiji",
+        "Sweden"
+      ],
+      "conf": "MED",
+      "delta": 0.0582,
+      "rank": 1
+    }
+  },
+  {
+    "q": "carbon emissions climate footprint",
+    "cat": "factual",
+    "exp": "China",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Netherlands",
+        "Australia",
+        "United Kingdom",
+        "Brazil",
+        "Ireland"
+      ],
+      "conf": "MED",
+      "delta": 0.0529,
+      "rank": 39
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Bhutan",
+        "DR Congo",
+        "Cocos (Keeling) Islands",
+        "French Guiana",
+        "Tuvalu"
+      ],
+      "conf": "MED",
+      "delta": 0.085,
+      "rank": 115
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Netherlands",
+        "Australia",
+        "United Kingdom",
+        "Brazil",
+        "Ireland"
+      ],
+      "conf": "MED",
+      "delta": 0.0529,
+      "rank": 39
+    }
+  },
+  {
+    "q": "passport visa travel freedom",
+    "cat": "factual",
+    "exp": "Japan",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Azerbaijan",
+        "Monaco",
+        "Fiji",
+        "Saint Pierre and Miquelon",
+        "Bahrain"
+      ],
+      "conf": "MED",
+      "delta": 0.0565,
+      "rank": 226
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Sint Maarten",
+        "Andorra",
+        "Niue",
+        "Aruba",
+        "Iceland"
+      ],
+      "conf": "MED",
+      "delta": 0.0685,
+      "rank": 202
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Azerbaijan",
+        "Monaco",
+        "Fiji",
+        "Saint Pierre and Miquelon",
+        "Bahrain"
+      ],
+      "conf": "MED",
+      "delta": 0.0565,
+      "rank": 226
+    }
+  },
+  {
+    "q": "startup unicorn tech investment",
+    "cat": "factual",
+    "exp": "United States",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Hong Kong",
+        "Australia",
+        "Singapore",
+        "South Korea",
+        "United Arab Emirates"
+      ],
+      "conf": "MED",
+      "delta": 0.0505,
+      "rank": 8
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "United States",
+        "Israel",
+        "Singapore",
+        "Kenya",
+        "Sweden"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1581,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Hong Kong",
+        "Australia",
+        "Singapore",
+        "South Korea",
+        "United Arab Emirates"
+      ],
+      "conf": "MED",
+      "delta": 0.0505,
+      "rank": 8
+    }
+  },
+  {
+    "q": "navy aircraft carrier warship fleet",
+    "cat": "factual",
+    "exp": "United States",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Saint Helena, Ascension and Tristan da Cunha",
+        "British Indian Ocean Territory",
+        "United States Minor Outlying Islands",
+        "Wallis and Futuna",
+        "Guam"
+      ],
+      "conf": "MED",
+      "delta": 0.0745,
+      "rank": 13
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "United States Minor Outlying Islands",
+        "\u00c5land Islands",
+        "Cocos (Keeling) Islands",
+        "Falkland Islands",
+        "Solomon Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1245,
+      "rank": 18
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Saint Helena, Ascension and Tristan da Cunha",
+        "British Indian Ocean Territory",
+        "United States Minor Outlying Islands",
+        "Wallis and Futuna",
+        "Guam"
+      ],
+      "conf": "MED",
+      "delta": 0.0745,
+      "rank": 13
+    }
+  },
+  {
+    "q": "Olympic gold medals",
+    "cat": "factual",
+    "exp": "United States",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Trinidad and Tobago",
+        "Saint Lucia",
+        "Monaco",
+        "Kyrgyzstan",
+        "Uzbekistan"
+      ],
+      "conf": "MED",
+      "delta": 0.0843,
+      "rank": 23
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Fiji",
+        "Russia",
+        "Greece",
+        "Jamaica",
+        "Ethiopia"
+      ],
+      "conf": "MED",
+      "delta": 0.0898,
+      "rank": 13
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Trinidad and Tobago",
+        "Saint Lucia",
+        "Monaco",
+        "Kyrgyzstan",
+        "Uzbekistan"
+      ],
+      "conf": "MED",
+      "delta": 0.0843,
+      "rank": 23
+    }
+  },
+  {
+    "q": "cocoa bean export production",
+    "cat": "factual",
+    "exp": "Ivory Coast",
+    "auto": {
+      "tag": "auto:hybrid",
+      "top5": [
+        "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+        "Ivory Coast",
+        "Solomon Islands",
+        "Togo",
+        "Colombia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1467,
+      "rank": 2
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Ivory Coast",
+        "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+        "Grenada",
+        "Ecuador",
+        "Guinea-Bissau"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2061,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+        "Ivory Coast",
+        "Solomon Islands",
+        "Colombia",
+        "Uganda"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1082,
+      "rank": 2
+    }
+  },
+  {
+    "q": "space exploration satellites launch",
+    "cat": "factual",
+    "exp": "United States",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "French Southern and Antarctic Lands",
+        "Bouvet Island",
+        "Svalbard and Jan Mayen",
+        "Saint Kitts and Nevis",
+        "Botswana"
+      ],
+      "conf": "MED",
+      "delta": 0.0667,
+      "rank": 53
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "French Guiana",
+        "Kazakhstan",
+        "Russia",
+        "United States",
+        "Svalbard and Jan Mayen"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2486,
+      "rank": 4
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "French Southern and Antarctic Lands",
+        "Bouvet Island",
+        "Svalbard and Jan Mayen",
+        "Saint Kitts and Nevis",
+        "Botswana"
+      ],
+      "conf": "MED",
+      "delta": 0.0667,
+      "rank": 53
+    }
+  },
+  {
+    "q": "archipelago island chain Pacific",
+    "cat": "semantic",
+    "exp": "Indonesia",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Northern Mariana Islands",
+        "United States Minor Outlying Islands",
+        "Palau",
+        "Pitcairn Islands",
+        "Micronesia"
+      ],
+      "conf": "MED",
+      "delta": 0.0976,
+      "rank": 33
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Northern Mariana Islands",
+        "Micronesia",
+        "Wallis and Futuna",
+        "Tokelau",
+        "United States Minor Outlying Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1645,
+      "rank": 105
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Northern Mariana Islands",
+        "United States Minor Outlying Islands",
+        "Palau",
+        "Pitcairn Islands",
+        "Micronesia"
+      ],
+      "conf": "MED",
+      "delta": 0.0976,
+      "rank": 33
+    }
+  },
+  {
+    "q": "Nordic welfare state social democracy",
+    "cat": "semantic",
+    "exp": "Sweden",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Norway",
+        "Sweden",
+        "Denmark",
+        "Finland",
+        "Iceland"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2642,
+      "rank": 2
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Sweden",
+        "Norway",
+        "Denmark",
+        "Estonia",
+        "Finland"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2267,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Norway",
+        "Sweden",
+        "Denmark",
+        "Finland",
+        "Iceland"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2642,
+      "rank": 2
+    }
+  },
+  {
+    "q": "constitutional monarchy parliament",
+    "cat": "semantic",
+    "exp": "United Kingdom",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Luxembourg",
+        "United Kingdom",
+        "Bhutan",
+        "Norway",
+        "Liechtenstein"
+      ],
+      "conf": "MED",
+      "delta": 0.0535,
+      "rank": 2
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Brunei",
+        "Isle of Man",
+        "Andorra",
+        "Iceland",
+        "Eswatini"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1273,
+      "rank": 13
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Luxembourg",
+        "United Kingdom",
+        "Bhutan",
+        "Norway",
+        "Liechtenstein"
+      ],
+      "conf": "MED",
+      "delta": 0.0535,
+      "rank": 2
+    }
+  },
+  {
+    "q": "communist one party authoritarian",
+    "cat": "semantic",
+    "exp": "China",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "China",
+        "North Korea",
+        "Cuba",
+        "Laos",
+        "Turkmenistan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2122,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "North Korea",
+        "China",
+        "Albania",
+        "San Marino",
+        "Brunei"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1227,
+      "rank": 2
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "China",
+        "North Korea",
+        "Cuba",
+        "Laos",
+        "Turkmenistan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2122,
+      "rank": 1
+    }
+  },
+  {
+    "q": "tax haven offshore banking secrecy",
+    "cat": "semantic",
+    "exp": "Luxembourg",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Cayman Islands",
+        "Gibraltar",
+        "Isle of Man",
+        "British Virgin Islands",
+        "Bermuda"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1377,
+      "rank": 38
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Cayman Islands",
+        "Turks and Caicos Islands",
+        "Nauru",
+        "British Virgin Islands",
+        "Jersey"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2357,
+      "rank": 43
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Cayman Islands",
+        "Gibraltar",
+        "Isle of Man",
+        "British Virgin Islands",
+        "Bermuda"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1377,
+      "rank": 38
+    }
+  },
+  {
+    "q": "manufacturing electronics export hub",
+    "cat": "semantic",
+    "exp": "South Korea",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Taiwan",
+        "Hong Kong",
+        "South Korea",
+        "Hungary",
+        "Nigeria"
+      ],
+      "conf": "MED",
+      "delta": 0.0843,
+      "rank": 3
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Taiwan",
+        "South Korea",
+        "Germany",
+        "Poland",
+        "United States"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2385,
+      "rank": 2
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Taiwan",
+        "Hong Kong",
+        "South Korea",
+        "Hungary",
+        "Nigeria"
+      ],
+      "conf": "MED",
+      "delta": 0.0843,
+      "rank": 3
+    }
+  },
+  {
+    "q": "digital governance e-residency Skype",
+    "cat": "semantic",
+    "exp": "Estonia",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Iceland",
+        "Faroe Islands",
+        "Denmark",
+        "Estonia",
+        "Liechtenstein"
+      ],
+      "conf": "MED",
+      "delta": 0.0763,
+      "rank": 4
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Estonia",
+        "Niue",
+        "Faroe Islands",
+        "Tuvalu",
+        "Sweden"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3743,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Iceland",
+        "Faroe Islands",
+        "Denmark",
+        "Estonia",
+        "Liechtenstein"
+      ],
+      "conf": "MED",
+      "delta": 0.0763,
+      "rank": 4
+    }
+  },
+  {
+    "q": "rainforest deforestation Amazon basin",
+    "cat": "semantic",
+    "exp": "Brazil",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Brazil",
+        "French Guiana",
+        "Guyana",
+        "Peru",
+        "Suriname"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1433,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "DR Congo",
+        "French Guiana",
+        "Brazil",
+        "Guyana",
+        "Central African Republic"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1382,
+      "rank": 3
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Brazil",
+        "French Guiana",
+        "Guyana",
+        "Peru",
+        "Suriname"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1433,
+      "rank": 1
+    }
+  },
+  {
+    "q": "canal waterway strategic chokepoint",
+    "cat": "semantic",
+    "exp": "Panama",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Panama",
+        "Gibraltar",
+        "Egypt",
+        "Cura\u00e7ao",
+        "Aruba"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1132,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Panama",
+        "Djibouti",
+        "Egypt",
+        "Gibraltar",
+        "Saint Helena, Ascension and Tristan da Cunha"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1888,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Panama",
+        "Gibraltar",
+        "Egypt",
+        "Cura\u00e7ao",
+        "Aruba"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1132,
+      "rank": 1
+    }
+  },
+  {
+    "q": "ancient empire Nile civilization pyramid",
+    "cat": "semantic",
+    "exp": "Egypt",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Egypt",
+        "Sudan",
+        "Mali",
+        "Nigeria",
+        "South Sudan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2406,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Sudan",
+        "Egypt",
+        "Chad",
+        "Libya",
+        "Guatemala"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2583,
+      "rank": 2
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Egypt",
+        "Sudan",
+        "Mali",
+        "Nigeria",
+        "South Sudan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2406,
+      "rank": 1
+    }
+  },
+  {
+    "q": "earthquake seismic ring of fire Pacific",
+    "cat": "semantic",
+    "exp": "Japan",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Japan",
+        "Philippines",
+        "Guam",
+        "Northern Mariana Islands",
+        "Ecuador"
+      ],
+      "conf": "MED",
+      "delta": 0.0864,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Northern Mariana Islands",
+        "Guam",
+        "Kiribati",
+        "Montserrat",
+        "Micronesia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1107,
+      "rank": 45
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Japan",
+        "Philippines",
+        "Guam",
+        "Northern Mariana Islands",
+        "Ecuador"
+      ],
+      "conf": "MED",
+      "delta": 0.0864,
+      "rank": 1
+    }
+  },
+  {
+    "q": "monsoon rice paddy flood delta",
+    "cat": "semantic",
+    "exp": "Bangladesh",
+    "auto": {
+      "tag": "auto:hybrid",
+      "top5": [
+        "Bangladesh",
+        "Myanmar",
+        "Cambodia",
+        "Vietnam",
+        "Thailand"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2261,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Bangladesh",
+        "South Sudan",
+        "Botswana",
+        "Sierra Leone",
+        "Maldives"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1032,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Bangladesh",
+        "Myanmar",
+        "Cambodia",
+        "India",
+        "Thailand"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1759,
+      "rank": 1
+    }
+  },
+  {
+    "q": "refugee asylum humanitarian crisis",
+    "cat": "semantic",
+    "exp": "Germany",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Palestine",
+        "Western Sahara",
+        "Chad",
+        "Sudan",
+        "Syria"
+      ],
+      "conf": "MED",
+      "delta": 0.0582,
+      "rank": 130
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Laos",
+        "Honduras",
+        "British Indian Ocean Territory",
+        "Tuvalu",
+        "Djibouti"
+      ],
+      "conf": "LOW",
+      "delta": 0.0475,
+      "rank": 216
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Palestine",
+        "Western Sahara",
+        "Chad",
+        "Sudan",
+        "Syria"
+      ],
+      "conf": "MED",
+      "delta": 0.0582,
+      "rank": 130
+    }
+  },
+  {
+    "q": "carbon neutral environmental biodiversity",
+    "cat": "semantic",
+    "exp": "Bhutan",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "British Indian Ocean Territory",
+        "Brazil",
+        "Belize",
+        "Ireland",
+        "Caribbean Netherlands"
+      ],
+      "conf": "LOW",
+      "delta": 0.0416,
+      "rank": 25
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "British Indian Ocean Territory",
+        "Costa Rica",
+        "Bhutan",
+        "Svalbard and Jan Mayen",
+        "New Caledonia"
+      ],
+      "conf": "MED",
+      "delta": 0.0993,
+      "rank": 3
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "British Indian Ocean Territory",
+        "Brazil",
+        "Belize",
+        "Ireland",
+        "Caribbean Netherlands"
+      ],
+      "conf": "LOW",
+      "delta": 0.0416,
+      "rank": 25
+    }
+  },
+  {
+    "q": "post-Soviet transition democracy",
+    "cat": "semantic",
+    "exp": "Ukraine",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Uzbekistan",
+        "Russia",
+        "Tajikistan",
+        "Turkmenistan",
+        "Georgia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1157,
+      "rank": 8
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Estonia",
+        "Latvia",
+        "Poland",
+        "Russia",
+        "Ukraine"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1406,
+      "rank": 5
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Uzbekistan",
+        "Russia",
+        "Tajikistan",
+        "Turkmenistan",
+        "Georgia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1157,
+      "rank": 8
+    }
+  },
+  {
+    "q": "medieval gothic baroque historic centre",
+    "cat": "semantic",
+    "exp": "Czech Republic",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Poland",
+        "Germany",
+        "Czechia",
+        "Malta",
+        "Vatican City"
+      ],
+      "conf": "MED",
+      "delta": 0.0847,
+      "rank": -1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Malta",
+        "Czechia",
+        "Belgium",
+        "Poland",
+        "Lithuania"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1117,
+      "rank": -1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Poland",
+        "Germany",
+        "Czechia",
+        "Malta",
+        "Vatican City"
+      ],
+      "conf": "MED",
+      "delta": 0.0847,
+      "rank": -1
+    }
+  },
+  {
+    "q": "peninsula maritime port shipping",
+    "cat": "semantic",
+    "exp": "Singapore",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Panama",
+        "Guam",
+        "Philippines",
+        "\u00c5land Islands",
+        "Gibraltar"
+      ],
+      "conf": "MED",
+      "delta": 0.0677,
+      "rank": 84
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "\u00c5land Islands",
+        "Gibraltar",
+        "Liberia",
+        "Panama",
+        "Djibouti"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1003,
+      "rank": 29
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Panama",
+        "Guam",
+        "Philippines",
+        "\u00c5land Islands",
+        "Gibraltar"
+      ],
+      "conf": "MED",
+      "delta": 0.0677,
+      "rank": 84
+    }
+  },
+  {
+    "q": "theocracy Islamic republic clergy",
+    "cat": "semantic",
+    "exp": "Iran",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Iran",
+        "Turkmenistan",
+        "Afghanistan",
+        "Yemen",
+        "Iraq"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2083,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Iran",
+        "Azerbaijan",
+        "Turkmenistan",
+        "Mauritania",
+        "Vatican City"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1323,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Iran",
+        "Turkmenistan",
+        "Afghanistan",
+        "Yemen",
+        "Iraq"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2083,
+      "rank": 1
+    }
+  },
+  {
+    "q": "federal multicultural immigration",
+    "cat": "semantic",
+    "exp": "Canada",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "United States",
+        "Canada",
+        "Malaysia",
+        "Micronesia",
+        "Australia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.108,
+      "rank": 2
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "United States",
+        "Suriname",
+        "Papua New Guinea",
+        "Philippines",
+        "Belize"
+      ],
+      "conf": "MED",
+      "delta": 0.088,
+      "rank": 8
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "United States",
+        "Canada",
+        "Malaysia",
+        "Micronesia",
+        "Australia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.108,
+      "rank": 2
+    }
+  },
+  {
+    "q": "microfinance rural poverty development",
+    "cat": "semantic",
+    "exp": "Bangladesh",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Malawi",
+        "Rwanda",
+        "Burundi",
+        "Zambia",
+        "Burkina Faso"
+      ],
+      "conf": "MED",
+      "delta": 0.0615,
+      "rank": 33
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Nauru",
+        "Rwanda",
+        "Sierra Leone",
+        "Madagascar",
+        "New Zealand"
+      ],
+      "conf": "MED",
+      "delta": 0.0941,
+      "rank": 13
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Malawi",
+        "Rwanda",
+        "Burundi",
+        "Zambia",
+        "Burkina Faso"
+      ],
+      "conf": "MED",
+      "delta": 0.0615,
+      "rank": 33
+    }
+  },
+  {
+    "q": "xyzzy nonsense gibberish",
+    "cat": "edge",
+    "exp": null,
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Svalbard and Jan Mayen",
+        "United States Minor Outlying Islands",
+        "Bouvet Island",
+        "Niue",
+        "Anguilla"
+      ],
+      "conf": "MED",
+      "delta": 0.061,
+      "rank": null
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Jersey",
+        "Madagascar",
+        "Bulgaria",
+        "Somalia",
+        "Papua New Guinea"
+      ],
+      "conf": "MED",
+      "delta": 0.0597,
+      "rank": null
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Svalbard and Jan Mayen",
+        "United States Minor Outlying Islands",
+        "Bouvet Island",
+        "Niue",
+        "Anguilla"
+      ],
+      "conf": "MED",
+      "delta": 0.061,
+      "rank": null
+    }
+  },
+  {
+    "q": "123 456 numbers only",
+    "cat": "edge",
+    "exp": null,
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Lebanon",
+        "Libya",
+        "Romania",
+        "Tunisia",
+        "Israel"
+      ],
+      "conf": "LOW",
+      "delta": 0.0452,
+      "rank": null
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Nauru",
+        "Iraq",
+        "Jersey",
+        "Libya",
+        "Bermuda"
+      ],
+      "conf": "LOW",
+      "delta": 0.0421,
+      "rank": null
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Lebanon",
+        "Libya",
+        "Romania",
+        "Tunisia",
+        "Israel"
+      ],
+      "conf": "LOW",
+      "delta": 0.0452,
+      "rank": null
+    }
+  },
+  {
+    "q": "the best country ever",
+    "cat": "edge",
+    "exp": null,
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Norway",
+        "Iceland",
+        "Denmark",
+        "Sweden",
+        "Canada"
+      ],
+      "conf": "LOW",
+      "delta": 0.0457,
+      "rank": null
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Montenegro",
+        "Bhutan",
+        "Singapore",
+        "Lesotho",
+        "Norway"
+      ],
+      "conf": "MED",
+      "delta": 0.0674,
+      "rank": null
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Norway",
+        "Iceland",
+        "Denmark",
+        "Sweden",
+        "Canada"
+      ],
+      "conf": "LOW",
+      "delta": 0.0457,
+      "rank": null
+    }
+  },
+  {
+    "q": "penguins ice cold south pole",
+    "cat": "edge",
+    "exp": null,
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Antarctica",
+        "South Georgia",
+        "Bouvet Island",
+        "Heard Island and McDonald Islands",
+        "French Southern and Antarctic Lands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3188,
+      "rank": null
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Antarctica",
+        "South Georgia",
+        "French Southern and Antarctic Lands",
+        "Heard Island and McDonald Islands",
+        "Bouvet Island"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3421,
+      "rank": null
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Antarctica",
+        "South Georgia",
+        "Bouvet Island",
+        "Heard Island and McDonald Islands",
+        "French Southern and Antarctic Lands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3188,
+      "rank": null
+    }
+  },
+  {
+    "q": "country shaped like a boot",
+    "cat": "edge",
+    "exp": "Italy",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Montenegro",
+        "Bosnia and Herzegovina",
+        "Guinea",
+        "Romania",
+        "Botswana"
+      ],
+      "conf": "LOW",
+      "delta": 0.0307,
+      "rank": 142
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Lesotho",
+        "Bermuda",
+        "Montenegro",
+        "Albania",
+        "Vietnam"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1361,
+      "rank": 165
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Montenegro",
+        "Bosnia and Herzegovina",
+        "Guinea",
+        "Romania",
+        "Botswana"
+      ],
+      "conf": "LOW",
+      "delta": 0.0307,
+      "rank": 142
+    }
+  },
+  {
+    "q": "smallest country world population",
+    "cat": "edge",
+    "exp": "Vatican City",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Monaco",
+        "San Marino",
+        "Vatican City",
+        "Tuvalu",
+        "Nauru"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1088,
+      "rank": 3
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Nauru",
+        "Tuvalu",
+        "Vatican City",
+        "Pitcairn Islands",
+        "San Marino"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2091,
+      "rank": 3
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Monaco",
+        "San Marino",
+        "Vatican City",
+        "Tuvalu",
+        "Nauru"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1088,
+      "rank": 3
+    }
+  },
+  {
+    "q": "where Santa Claus reindeer from",
+    "cat": "edge",
+    "exp": "Finland",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Svalbard and Jan Mayen",
+        "Greenland",
+        "Norway",
+        "South Georgia",
+        "Iceland"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1498,
+      "rank": 7
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Greenland",
+        "Norway",
+        "Iceland",
+        "Svalbard and Jan Mayen",
+        "Denmark"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1448,
+      "rank": 17
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Svalbard and Jan Mayen",
+        "Greenland",
+        "Norway",
+        "South Georgia",
+        "Iceland"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1498,
+      "rank": 7
+    }
+  },
+  {
+    "q": "pirates sea robbery ship hijack",
+    "cat": "edge",
+    "exp": null,
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Pitcairn Islands",
+        "Seychelles",
+        "Bouvet Island",
+        "Saint Pierre and Miquelon",
+        "Turks and Caicos Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0955,
+      "rank": null
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Pitcairn Islands",
+        "Saint Vincent and the Grenadines",
+        "Liberia",
+        "Anguilla",
+        "Mayotte"
+      ],
+      "conf": "HIGH",
+      "delta": 0.126,
+      "rank": null
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Pitcairn Islands",
+        "Seychelles",
+        "Bouvet Island",
+        "Saint Pierre and Miquelon",
+        "Turks and Caicos Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0955,
+      "rank": null
+    }
+  },
+  {
+    "q": "nuclear test explosion radiation legacy",
+    "cat": "edge",
+    "exp": null,
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Northern Mariana Islands",
+        "Martinique",
+        "North Korea",
+        "Nauru",
+        "Uzbekistan"
+      ],
+      "conf": "MED",
+      "delta": 0.0697,
+      "rank": null
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Marshall Islands",
+        "Laos",
+        "Guam",
+        "Northern Mariana Islands",
+        "Montserrat"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2516,
+      "rank": null
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Northern Mariana Islands",
+        "Martinique",
+        "North Korea",
+        "Nauru",
+        "Uzbekistan"
+      ],
+      "conf": "MED",
+      "delta": 0.0697,
+      "rank": null
+    }
+  },
+  {
+    "q": "world most remote island uninhabited",
+    "cat": "edge",
+    "exp": "Bouvet Island",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Bouvet Island",
+        "Heard Island and McDonald Islands",
+        "French Southern and Antarctic Lands",
+        "Pitcairn Islands",
+        "South Georgia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2279,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Bouvet Island",
+        "Pitcairn Islands",
+        "French Southern and Antarctic Lands",
+        "Heard Island and McDonald Islands",
+        "Tokelau"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3118,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Bouvet Island",
+        "Heard Island and McDonald Islands",
+        "French Southern and Antarctic Lands",
+        "Pitcairn Islands",
+        "South Georgia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2279,
+      "rank": 1
+    }
+  },
+  {
+    "q": "country with most languages spoken",
+    "cat": "edge",
+    "exp": "Papua New Guinea",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Guyana",
+        "Malaysia",
+        "Papua New Guinea",
+        "India",
+        "Tajikistan"
+      ],
+      "conf": "MED",
+      "delta": 0.0502,
+      "rank": 3
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Papua New Guinea",
+        "Vanuatu",
+        "Equatorial Guinea",
+        "Suriname",
+        "India"
+      ],
+      "conf": "HIGH",
+      "delta": 0.149,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Guyana",
+        "Malaysia",
+        "Papua New Guinea",
+        "India",
+        "Tajikistan"
+      ],
+      "conf": "MED",
+      "delta": 0.0502,
+      "rank": 3
+    }
+  },
+  {
+    "q": "double landlocked by landlocked nations",
+    "cat": "edge",
+    "exp": "Liechtenstein",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Uzbekistan",
+        "Lesotho",
+        "Niger",
+        "Tajikistan",
+        "Turkmenistan"
+      ],
+      "conf": "MED",
+      "delta": 0.0739,
+      "rank": 9
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Liechtenstein",
+        "Lesotho",
+        "Nauru",
+        "Djibouti",
+        "Mauritania"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1796,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Uzbekistan",
+        "Lesotho",
+        "Niger",
+        "Tajikistan",
+        "Turkmenistan"
+      ],
+      "conf": "MED",
+      "delta": 0.0739,
+      "rank": 9
+    }
+  },
+  {
+    "q": "red crabs migrate island annually",
+    "cat": "edge",
+    "exp": "Christmas Island",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Christmas Island",
+        "Cocos (Keeling) Islands",
+        "Anguilla",
+        "British Indian Ocean Territory",
+        "Norfolk Island"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1239,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Christmas Island",
+        "Bahamas",
+        "Cocos (Keeling) Islands",
+        "Grenada",
+        "Antigua and Barbuda"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3745,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Christmas Island",
+        "Cocos (Keeling) Islands",
+        "Anguilla",
+        "British Indian Ocean Territory",
+        "Norfolk Island"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1239,
+      "rank": 1
+    }
+  },
+  {
+    "q": "door to hell burning gas crater desert",
+    "cat": "edge",
+    "exp": "Turkmenistan",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Turkmenistan",
+        "Bahrain",
+        "Qatar",
+        "Kuwait",
+        "Iran"
+      ],
+      "conf": "MED",
+      "delta": 0.0688,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Turkmenistan",
+        "Jordan",
+        "Djibouti",
+        "Azerbaijan",
+        "Montserrat"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3052,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Turkmenistan",
+        "Bahrain",
+        "Qatar",
+        "Kuwait",
+        "Iran"
+      ],
+      "conf": "MED",
+      "delta": 0.0688,
+      "rank": 1
+    }
+  },
+  {
+    "q": "country entirely surrounded by Italy",
+    "cat": "edge",
+    "exp": "Vatican City",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "San Marino",
+        "Italy",
+        "Monaco",
+        "Liechtenstein",
+        "Malta"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2287,
+      "rank": 6
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "San Marino",
+        "Liechtenstein",
+        "Lesotho",
+        "Montenegro",
+        "Andorra"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1939,
+      "rank": 7
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "San Marino",
+        "Italy",
+        "Monaco",
+        "Liechtenstein",
+        "Malta"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2287,
+      "rank": 6
+    }
+  },
+  {
+    "q": "world largest salt flat mirror Bolivia",
+    "cat": "edge",
+    "exp": "Bolivia",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Bolivia",
+        "Peru",
+        "Paraguay",
+        "Chile",
+        "Nicaragua"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2514,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Bolivia",
+        "Chile",
+        "Jordan",
+        "Peru",
+        "Venezuela"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3931,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Bolivia",
+        "Peru",
+        "Paraguay",
+        "Chile",
+        "Nicaragua"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2514,
+      "rank": 1
+    }
+  },
+  {
+    "q": "coelacanth living fossil fish ocean",
+    "cat": "edge",
+    "exp": "Comoros",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Cocos (Keeling) Islands",
+        "French Southern and Antarctic Lands",
+        "Saint Pierre and Miquelon",
+        "Antarctica",
+        "Seychelles"
+      ],
+      "conf": "MED",
+      "delta": 0.0663,
+      "rank": 26
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Comoros",
+        "Palau",
+        "Seychelles",
+        "Mozambique",
+        "Christmas Island"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1758,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Cocos (Keeling) Islands",
+        "French Southern and Antarctic Lands",
+        "Saint Pierre and Miquelon",
+        "Antarctica",
+        "Seychelles"
+      ],
+      "conf": "MED",
+      "delta": 0.0663,
+      "rank": 26
+    }
+  },
+  {
+    "q": "dodo extinction island Indian Ocean",
+    "cat": "edge",
+    "exp": "Mauritius",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "French Southern and Antarctic Lands",
+        "British Indian Ocean Territory",
+        "Mauritius",
+        "R\u00e9union",
+        "Seychelles"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1801,
+      "rank": 3
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Mauritius",
+        "Christmas Island",
+        "Seychelles",
+        "Mayotte",
+        "Cocos (Keeling) Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2609,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "French Southern and Antarctic Lands",
+        "British Indian Ocean Territory",
+        "Mauritius",
+        "R\u00e9union",
+        "Seychelles"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1801,
+      "rank": 3
+    }
+  },
+  {
+    "q": "overwater bungalow paradise lagoon",
+    "cat": "edge",
+    "exp": "Maldives",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Maldives",
+        "Cocos (Keeling) Islands",
+        "Marshall Islands",
+        "Bahamas",
+        "Cayman Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0608,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Maldives",
+        "Palau",
+        "Mayotte",
+        "French Polynesia",
+        "British Virgin Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1955,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Maldives",
+        "Cocos (Keeling) Islands",
+        "Marshall Islands",
+        "Bahamas",
+        "Cayman Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0608,
+      "rank": 1
+    }
+  },
+  {
+    "q": "Angel Falls highest waterfall world",
+    "cat": "edge",
+    "exp": "Venezuela",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Guyana",
+        "Angola",
+        "Venezuela",
+        "Anguilla",
+        "Dominica"
+      ],
+      "conf": "MED",
+      "delta": 0.0854,
+      "rank": 3
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Venezuela",
+        "Guyana",
+        "Angola",
+        "Zambia",
+        "Nicaragua"
+      ],
+      "conf": "HIGH",
+      "delta": 0.294,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Guyana",
+        "Angola",
+        "Venezuela",
+        "Anguilla",
+        "Dominica"
+      ],
+      "conf": "MED",
+      "delta": 0.0854,
+      "rank": 3
+    }
+  }
+]

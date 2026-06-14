@@ -440,7 +440,185 @@ without new structured data sources for the topics that Wikipedia prose doesn't 
 
 ---
 
-## 12. Deployment
+## 12. Brand / Associations Mode (Phase 5)
+
+### What it is
+
+A fifth search mode added as **"Brand / Associations (exp.)"** in the sidebar radio group.
+Isolated from Auto — never fires unless the user explicitly selects it.
+Uses a separate embedding column (`emb_brand`) and scoring function (`src/brand_sim.py`).
+
+### How it works
+
+```python
+# src/brand_sim.py
+def brand_sim(query_vec):
+    scores = MAIN_MAT @ query_vec         # main cosine for all 250 countries
+    for i, bv in BRAND_VECS.items():      # override with brand cosine for profiled countries
+        scores[i] = float(np.dot(bv, query_vec))
+    return scores                          # no length penalty — brand profiles are fixed-length
+```
+
+- **Countries with a brand profile** (all 250): pure brand-profile cosine.
+- **Fallback**: main embedding cosine (currently never used since all 250 are profiled).
+- No length penalty — brand profiles are deliberately short (100–200 words).
+- No BM25 blend.
+
+### Brand profiles
+
+250 hand-written profiles in `data/processed/brand_profiles.json` (ISO3 → profile text).
+Each profile is 100–200 words, focusing on:
+- Cultural exports (music, film, food, sport)
+- Internationally recognized named associations (LEGO→Denmark, kava→Fiji, duduk→Armenia)
+- UNESCO heritage, specific products, invented traditions
+- Neutral phrasing: "internationally associated with", "globally known for", "notable for"
+
+**Rules (do not violate):**
+- No stereotypes, crime clichés, poverty clichés, appearance-based claims
+- No references to conflict/war unless they define the country's international brand identity
+  (e.g., Rwanda's post-genocide reconciliation, Marshall Islands nuclear test legacy)
+- Short territories (Bouvet Island, Heard Island) get shorter profiles — appropriate
+
+### emb_brand column
+
+Added to `embeddings.parquet` as column `emb_brand` (1024-dim float32 arrays).
+Built by `scripts/build_brand_embeddings.py` using Voyage **voyage-4** (must match app model).
+
+**Critical:** Brand profiles must be embedded with the same model as query embeddings (`EMBEDDING_MODEL` in `config.py`). Using voyage-3 for profiles and voyage-4 for queries produces near-zero cosine similarities (a bug that was discovered and fixed during Phase 5).
+
+### Brand mode benchmark results
+
+From `scripts/validate_brand_profiles.py` (55 brand-specific queries, 250 countries):
+- hits@20 **brand**: 54/55 (98.2%)
+- hits@20 **main only**: 2/55 (3.6%)
+- Miss→hit recoveries: 52/55
+- Regressions: 0
+
+From `scripts/run_brand_benchmark.py` (139-query full benchmark, brand max-gate blend):
+- Net lift on existing benchmark: **+0 hits (+0.0pp)**
+- Regressions: **0**
+
+From 150-query full test suite (`scripts/test_full_suite.py`):
+
+| Mode     | Hit@1  | Hit@5  | Hit@10 |
+|----------|--------|--------|--------|
+| Auto     | 49%    | 67%    | 75%    |
+| **Brand**| **54%**| **72%**| **77%**|
+| Semantic | 49%    | 66%    | 75%    |
+
+Brand wins by +6pp at hit@5 over Auto on mixed queries.
+
+From 138-query travel analysis (`scripts/analyze_travel_queries.py`):
+
+| Mode     | Hit@3 travel |
+|----------|-------------|
+| Brand    | 40%         |
+| Auto     | 39%         |
+| Semantic | 39%         |
+
+Brand marginally leads travel too (+1pp), but individual subcategory variation is high.
+
+### Brand mode strong wins
+
+| Query | Expected | Brand Rank | Auto Rank |
+|-------|----------|------------|-----------|
+| espresso coffee cafe culture | Italy | 3 | 18 |
+| tropical beach overwater bungalow | Maldives | 1 | 10 |
+| cycling infrastructure bike friendly | Netherlands | 1 | 6 |
+| polyphonic choral singing tradition | Georgia | 1 | 11 |
+| coelacanth living fossil fish | Comoros | 1 | 26 |
+| door to hell burning gas crater | Turkmenistan | 1 | auto:1 (tied) |
+| chess grandmaster classical tournament | Russia | 2 | 19 |
+
+Brand mode recovers "named association" queries that semantic completely misses.
+The mode excels for: named cultural products, food/drink origins, specific invented traditions,
+named landmarks mentioned in profiles, specific trivia (coelacanth, red crabs, Uyuni).
+
+### Brand mode failure class
+
+Brand mode fails on **generic activity travel queries**:
+- "coral reef scuba diving tropical" → Australia brand rank 43 (Palau dominates)
+- "whale watching marine wildlife" → Iceland brand rank 28 (Palau dominates)
+- "river cruise historic bridges" → Austria brand rank 240 (Bosnia & Herzegovina wins because of Mostar)
+- "folk dance traditional costume" → Hungary brand rank 186 (Fiji wins because of meke dance profile)
+
+Root cause: brand profiles rank by specificity of named associations, not by international recognition of generic activities. Palau's fully marine-focused profile dominates any ocean query.
+
+### Embedding magnet problem (discovered in travel analysis)
+
+Small island territories with highly concentrated profiles dominate many travel queries in Brand mode:
+- **Palau**: 22/138 travel queries in top-5 (15%) — entire profile is marine-focused
+- **Aruba**: 19/138 (13%) — beach/turquoise water language
+- **Cayman Islands**: 16/138 (11%)
+- **Turks and Caicos**: 15/138 (10%)
+
+In Semantic mode, different magnets appear:
+- Cayman Islands, Bouvet Island, Christmas Island all 16/138 (11%) each
+
+This is an open analysis question. The profile concentration of micro-territories causes
+them to absorb cosine similarity for broad query categories even when they aren't the
+expected answer. Length penalty mitigates this for Wikipedia profiles, but brand profiles
+are exempt from the length penalty by design (they're short by intention, not laziness).
+
+### Scripts related to Brand mode
+
+| Script | Purpose |
+|---|---|
+| `scripts/build_brand_embeddings.py` | Embeds brand_profiles.json → emb_brand column. Supports `--batch PATH` to merge batch files. Skips already-embedded ISOs. |
+| `scripts/validate_brand_profiles.py` | 55 brand-specific queries. Measures brand vs main similarity, hits@20, recoveries, regressions. |
+| `scripts/run_brand_benchmark.py` | Full 139-query benchmark with brand max-gate blend. |
+| `scripts/test_brand_queries.py` | 15 targeted queries (anime, K-pop, reggae, LEGO, etc.). Shows top-5 per query. |
+| `scripts/test_full_suite.py` | 150 mixed queries across brand/travel/culture/factual/semantic/edge categories. Runs auto+brand+semantic. |
+| `scripts/analyze_test_suite.py` | Analysis pass over test_full_suite.py output. |
+| `scripts/analyze_travel_queries.py` | 138 travel queries across 17 subcategories. Tests all 4 modes. Quantifies Palau-effect, simulates travel router. |
+
+### Key finding: travel router is not worth building
+
+Simulated keyword-based travel router (brand keywords → brand, else → semantic):
+- Hit@1: -1pp vs auto baseline
+- Hit@3: -1pp vs auto baseline
+- Hit@5: +2pp vs auto baseline
+
+Net gain essentially zero. The two travel query classes (named-association vs generic-activity)
+are not reliably separable from query text alone. Brand should remain a manual mode.
+
+---
+
+## 13. Confidence Badge
+
+A visual quality indicator added to the sidebar (below routing info alert).
+
+**Implementation:** `src/callbacks/slots_callbacks.py` (appended callback), `src/layout/sidebar.py` (added `dbc.Alert(id="confidence-alert")`).
+
+```python
+delta = sorted_sims[0] - sorted_sims[19]   # score gap between rank-1 and rank-20
+if delta > 0.10:  → HIGH (green)   "results are well-separated"
+if delta > 0.05:  → MEDIUM (yellow)
+else:             → LOW (yellow)   "try adding more specific keywords"
+```
+
+Factual routes (tag contains "factual") skip the badge — ordinal scores make delta meaningless.
+
+**Calibration from test suite (150 queries):**
+- HIGH: hit@1 = 72%, hit@5 = 89% — very reliable
+- MED: hit@1 = 17%, hit@5 = 34% — warns user correctly
+- LOW: hit@1 = 0–9%, hit@5 = 36% — correctly signals poor results
+
+**Known issue:** In Brand mode, HIGH appears for 86% of travel queries (brand profiles create sharp scores) even when the top result is wrong. A user might trust HIGH confidence when Brand mode is wrong on a generic travel query. This is a UX documentation issue, not a scoring bug.
+
+---
+
+## 14. Map tooltip fix
+
+**File:** `src/callbacks/map_callbacks.py`
+
+**Bug:** Hovering over centroid dot (Scattergeo trace) showed only the country name. Hovering over the territory fill (Choropleth trace) showed the full slot-score tooltip.
+
+**Fix:** Changed `text=COUNTRIES_DF["name"]` to `text=hover_texts` in the `go.Scattergeo` call. One line change. Both traces now show identical rich tooltips.
+
+---
+
+## 15. Deployment
 
 ### Environment variables
 

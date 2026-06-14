@@ -83,7 +83,7 @@ def update_world_map(sim_data, selected_id):
             mode="markers",
             marker=dict(color=colors, size=6, line=dict(width=0.5, color="rgba(255,255,255,0.6)")),
             customdata=COUNTRIES_DF["id"],
-            text=COUNTRIES_DF["name"],
+            text=hover_texts,
             hovertemplate="%{text}<extra></extra>",
             showlegend=False,
         )

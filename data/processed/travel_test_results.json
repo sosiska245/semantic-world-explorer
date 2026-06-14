@@ -1,0 +1,8006 @@
+[
+  {
+    "q": "white sand beach turquoise water tropical",
+    "sub": "beach",
+    "exp": "Maldives",
+    "note": "classic paradise beach",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Turks and Caicos Islands",
+        "Cayman Islands",
+        "Aruba",
+        "Tuvalu",
+        "Maldives"
+      ],
+      "conf": "MED",
+      "delta": 0.0533,
+      "rank": 5
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Turks and Caicos Islands",
+        "Aruba",
+        "Palau",
+        "Cayman Islands",
+        "Anguilla"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1969,
+      "rank": 15
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Turks and Caicos Islands",
+        "Cayman Islands",
+        "Aruba",
+        "Tuvalu",
+        "Maldives"
+      ],
+      "conf": "MED",
+      "delta": 0.0533,
+      "rank": 5
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Cayman Islands",
+        "Seychelles",
+        "Maldives",
+        "Turks and Caicos Islands",
+        "Cocos (Keeling) Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0715,
+      "rank": 3
+    }
+  },
+  {
+    "q": "pink sand beach Caribbean island",
+    "sub": "beach",
+    "exp": "Bahamas",
+    "note": "Harbour Island pink sand",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Anguilla",
+        "Sint Maarten",
+        "Caribbean Netherlands",
+        "Cayman Islands",
+        "Grenada"
+      ],
+      "conf": "MED",
+      "delta": 0.0812,
+      "rank": 18
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Turks and Caicos Islands",
+        "Aruba",
+        "Anguilla",
+        "Cayman Islands",
+        "Saint Barth\u00e9lemy"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1792,
+      "rank": 15
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Anguilla",
+        "Sint Maarten",
+        "Caribbean Netherlands",
+        "Cayman Islands",
+        "Grenada"
+      ],
+      "conf": "MED",
+      "delta": 0.0812,
+      "rank": 18
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Sint Maarten",
+        "Cayman Islands",
+        "Grenada",
+        "Anguilla",
+        "British Virgin Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1143,
+      "rank": 21
+    }
+  },
+  {
+    "q": "black sand volcanic beach",
+    "sub": "beach",
+    "exp": "Iceland",
+    "note": "Reynisfjara",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Bouvet Island",
+        "Vanuatu",
+        "Saint Vincent and the Grenadines",
+        "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+        "Montserrat"
+      ],
+      "conf": "MED",
+      "delta": 0.067,
+      "rank": 46
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Cape Verde",
+        "Aruba",
+        "Saint Vincent and the Grenadines",
+        "Vanuatu",
+        "Turks and Caicos Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0851,
+      "rank": 19
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Bouvet Island",
+        "Vanuatu",
+        "Saint Vincent and the Grenadines",
+        "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+        "Montserrat"
+      ],
+      "conf": "MED",
+      "delta": 0.067,
+      "rank": 46
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Bouvet Island",
+        "Montserrat",
+        "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+        "Vanuatu",
+        "Dominica"
+      ],
+      "conf": "MED",
+      "delta": 0.0666,
+      "rank": 17
+    }
+  },
+  {
+    "q": "long empty white beach Southeast Asia",
+    "sub": "beach",
+    "exp": "Philippines",
+    "note": "El Nido / Palawan",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Malaysia",
+        "Cambodia",
+        "Thailand",
+        "Christmas Island",
+        "Laos"
+      ],
+      "conf": "MED",
+      "delta": 0.0733,
+      "rank": 13
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Palau",
+        "Cocos (Keeling) Islands",
+        "Turks and Caicos Islands",
+        "Laos",
+        "Micronesia"
+      ],
+      "conf": "MED",
+      "delta": 0.0929,
+      "rank": 39
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Malaysia",
+        "Cambodia",
+        "Thailand",
+        "Christmas Island",
+        "Laos"
+      ],
+      "conf": "MED",
+      "delta": 0.0733,
+      "rank": 13
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Cocos (Keeling) Islands",
+        "Brunei",
+        "Malaysia",
+        "Cambodia",
+        "Laos"
+      ],
+      "conf": "MED",
+      "delta": 0.0867,
+      "rank": 13
+    }
+  },
+  {
+    "q": "surf beach waves Atlantic coast",
+    "sub": "beach",
+    "exp": "Portugal",
+    "note": "Algarve / Nazar\u00e9",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Anguilla",
+        "United States Virgin Islands",
+        "Cape Verde",
+        "Saint Barth\u00e9lemy",
+        "Saint Helena, Ascension and Tristan da Cunha"
+      ],
+      "conf": "MED",
+      "delta": 0.0682,
+      "rank": 37
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Aruba",
+        "Anguilla",
+        "Turks and Caicos Islands",
+        "Cape Verde",
+        "Antigua and Barbuda"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1254,
+      "rank": 10
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Anguilla",
+        "United States Virgin Islands",
+        "Cape Verde",
+        "Saint Barth\u00e9lemy",
+        "Saint Helena, Ascension and Tristan da Cunha"
+      ],
+      "conf": "MED",
+      "delta": 0.0682,
+      "rank": 37
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Cayman Islands",
+        "Anguilla",
+        "United States Virgin Islands",
+        "Cape Verde",
+        "Saint Helena, Ascension and Tristan da Cunha"
+      ],
+      "conf": "MED",
+      "delta": 0.0624,
+      "rank": 37
+    }
+  },
+  {
+    "q": "beach party full moon",
+    "sub": "beach",
+    "exp": "Thailand",
+    "note": "Koh Phangan",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Christmas Island",
+        "Cocos (Keeling) Islands",
+        "Guam",
+        "Pitcairn Islands",
+        "Vanuatu"
+      ],
+      "conf": "LOW",
+      "delta": 0.0468,
+      "rank": 61
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Aruba",
+        "Turks and Caicos Islands",
+        "Anguilla",
+        "Palau",
+        "French Polynesia"
+      ],
+      "conf": "MED",
+      "delta": 0.0872,
+      "rank": 120
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Christmas Island",
+        "Cocos (Keeling) Islands",
+        "Guam",
+        "Pitcairn Islands",
+        "Vanuatu"
+      ],
+      "conf": "LOW",
+      "delta": 0.0468,
+      "rank": 61
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Cocos (Keeling) Islands",
+        "Seychelles",
+        "Cayman Islands",
+        "Sint Maarten",
+        "Nauru"
+      ],
+      "conf": "MED",
+      "delta": 0.0746,
+      "rank": 43
+    }
+  },
+  {
+    "q": "hidden gem secluded cove Mediterranean",
+    "sub": "beach",
+    "exp": "Greece",
+    "note": "lesser-known Greek islands",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Gibraltar",
+        "Monaco",
+        "Malta",
+        "Cyprus",
+        "San Marino"
+      ],
+      "conf": "MED",
+      "delta": 0.0999,
+      "rank": 9
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Seychelles",
+        "Cyprus",
+        "Djibouti",
+        "Croatia",
+        "Montenegro"
+      ],
+      "conf": "MED",
+      "delta": 0.066,
+      "rank": 89
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Gibraltar",
+        "Monaco",
+        "Malta",
+        "Cyprus",
+        "San Marino"
+      ],
+      "conf": "MED",
+      "delta": 0.0999,
+      "rank": 9
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Gibraltar",
+        "Monaco",
+        "Malta",
+        "Cyprus",
+        "Andorra"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1022,
+      "rank": 9
+    }
+  },
+  {
+    "q": "beach resort all inclusive Caribbean",
+    "sub": "beach",
+    "exp": "Jamaica",
+    "note": "Montego Bay etc",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Cayman Islands",
+        "Cura\u00e7ao",
+        "Aruba",
+        "Saint Barth\u00e9lemy",
+        "Anguilla"
+      ],
+      "conf": "MED",
+      "delta": 0.0884,
+      "rank": 6
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Aruba",
+        "Turks and Caicos Islands",
+        "Cayman Islands",
+        "Antigua and Barbuda",
+        "Anguilla"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1585,
+      "rank": 30
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Cayman Islands",
+        "Cura\u00e7ao",
+        "Aruba",
+        "Saint Barth\u00e9lemy",
+        "Anguilla"
+      ],
+      "conf": "MED",
+      "delta": 0.0884,
+      "rank": 6
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Cayman Islands",
+        "Cura\u00e7ao",
+        "Aruba",
+        "Jamaica",
+        "Grenada"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1193,
+      "rank": 4
+    }
+  },
+  {
+    "q": "pristine beach coral reef island",
+    "sub": "beach",
+    "exp": "Maldives",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Niue",
+        "Cocos (Keeling) Islands",
+        "Nauru",
+        "Christmas Island",
+        "Seychelles"
+      ],
+      "conf": "MED",
+      "delta": 0.0779,
+      "rank": 9
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Palau",
+        "Niue",
+        "Turks and Caicos Islands",
+        "Cayman Islands",
+        "Cocos (Keeling) Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.112,
+      "rank": 12
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Niue",
+        "Cocos (Keeling) Islands",
+        "Nauru",
+        "Christmas Island",
+        "Seychelles"
+      ],
+      "conf": "MED",
+      "delta": 0.0779,
+      "rank": 9
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Nauru",
+        "Niue",
+        "Cocos (Keeling) Islands",
+        "Seychelles",
+        "Christmas Island"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1355,
+      "rank": 10
+    }
+  },
+  {
+    "q": "beach camping wild coastline",
+    "sub": "beach",
+    "exp": "New Zealand",
+    "note": "Abel Tasman etc",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Western Sahara",
+        "Christmas Island",
+        "Bouvet Island",
+        "French Southern and Antarctic Lands",
+        "British Indian Ocean Territory"
+      ],
+      "conf": "MED",
+      "delta": 0.0778,
+      "rank": 137
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Turks and Caicos Islands",
+        "Cayman Islands",
+        "South Georgia",
+        "Aruba",
+        "Palau"
+      ],
+      "conf": "MED",
+      "delta": 0.0637,
+      "rank": 169
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Western Sahara",
+        "Christmas Island",
+        "Bouvet Island",
+        "French Southern and Antarctic Lands",
+        "British Indian Ocean Territory"
+      ],
+      "conf": "MED",
+      "delta": 0.0778,
+      "rank": 137
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Cocos (Keeling) Islands",
+        "Cayman Islands",
+        "Western Sahara",
+        "Christmas Island",
+        "Seychelles"
+      ],
+      "conf": "MED",
+      "delta": 0.0839,
+      "rank": 150
+    }
+  },
+  {
+    "q": "scuba diving coral reef tropical water",
+    "sub": "diving",
+    "exp": "Australia",
+    "note": "Great Barrier Reef",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Maldives",
+        "Cura\u00e7ao",
+        "Cocos (Keeling) Islands",
+        "Niue",
+        "Seychelles"
+      ],
+      "conf": "MED",
+      "delta": 0.0553,
+      "rank": 81
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Palau",
+        "Cura\u00e7ao",
+        "Maldives",
+        "Niue",
+        "Belize"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1135,
+      "rank": 42
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Maldives",
+        "Cura\u00e7ao",
+        "Cocos (Keeling) Islands",
+        "Niue",
+        "Seychelles"
+      ],
+      "conf": "MED",
+      "delta": 0.0553,
+      "rank": 81
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Maldives",
+        "Vanuatu",
+        "Niue",
+        "Cura\u00e7ao",
+        "Belize"
+      ],
+      "conf": "MED",
+      "delta": 0.0755,
+      "rank": 83
+    }
+  },
+  {
+    "q": "whale shark snorkeling swimming",
+    "sub": "diving",
+    "exp": "Philippines",
+    "note": "Donsol / Oslob",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Cura\u00e7ao",
+        "Maldives",
+        "Christmas Island",
+        "Aruba",
+        "Cayman Islands"
+      ],
+      "conf": "LOW",
+      "delta": 0.0461,
+      "rank": 63
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Palau",
+        "Djibouti",
+        "Mayotte",
+        "Cayman Islands",
+        "Aruba"
+      ],
+      "conf": "HIGH",
+      "delta": 0.173,
+      "rank": 114
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Cura\u00e7ao",
+        "Maldives",
+        "Christmas Island",
+        "Aruba",
+        "Cayman Islands"
+      ],
+      "conf": "LOW",
+      "delta": 0.0461,
+      "rank": 63
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Niue",
+        "Cayman Islands",
+        "Greenland",
+        "Tonga",
+        "Mozambique"
+      ],
+      "conf": "MED",
+      "delta": 0.0893,
+      "rank": 71
+    }
+  },
+  {
+    "q": "manta ray dive open ocean",
+    "sub": "diving",
+    "exp": "Maldives",
+    "note": "South Ari Atoll",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Maldives",
+        "Cayman Islands",
+        "Oman",
+        "Mauritius",
+        "United Arab Emirates"
+      ],
+      "conf": "MED",
+      "delta": 0.0612,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Cayman Islands",
+        "Palau",
+        "Micronesia",
+        "Mozambique",
+        "Mayotte"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1159,
+      "rank": 6
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Maldives",
+        "Cayman Islands",
+        "Oman",
+        "Mauritius",
+        "United Arab Emirates"
+      ],
+      "conf": "MED",
+      "delta": 0.0612,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Mozambique",
+        "Maldives",
+        "Cura\u00e7ao",
+        "Micronesia",
+        "Mauritius"
+      ],
+      "conf": "MED",
+      "delta": 0.0783,
+      "rank": 2
+    }
+  },
+  {
+    "q": "wreck diving WWII shipwreck",
+    "sub": "diving",
+    "exp": "Palau",
+    "note": "Palau wrecks",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "United States Minor Outlying Islands",
+        "Saint Helena, Ascension and Tristan da Cunha",
+        "Nauru",
+        "Cura\u00e7ao",
+        "Bouvet Island"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1746,
+      "rank": 6
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Solomon Islands",
+        "Marshall Islands",
+        "Northern Mariana Islands",
+        "United States Minor Outlying Islands",
+        "Micronesia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2204,
+      "rank": 11
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "United States Minor Outlying Islands",
+        "Saint Helena, Ascension and Tristan da Cunha",
+        "Nauru",
+        "Cura\u00e7ao",
+        "Bouvet Island"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1746,
+      "rank": 6
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "United States Minor Outlying Islands",
+        "Saint Helena, Ascension and Tristan da Cunha",
+        "Vanuatu",
+        "Nauru",
+        "Cura\u00e7ao"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2349,
+      "rank": 7
+    }
+  },
+  {
+    "q": "hammerhead shark diving archipelago",
+    "sub": "diving",
+    "exp": "Ecuador",
+    "note": "Galapagos",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Cayman Islands",
+        "Marshall Islands",
+        "Saint Helena, Ascension and Tristan da Cunha",
+        "Saint Pierre and Miquelon",
+        "United States Minor Outlying Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0508,
+      "rank": 152
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Palau",
+        "Marshall Islands",
+        "Cayman Islands",
+        "Micronesia",
+        "Niue"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1057,
+      "rank": 76
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Cayman Islands",
+        "Marshall Islands",
+        "Saint Helena, Ascension and Tristan da Cunha",
+        "Saint Pierre and Miquelon",
+        "United States Minor Outlying Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0508,
+      "rank": 152
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Cayman Islands",
+        "Maldives",
+        "Vanuatu",
+        "Philippines",
+        "Saint Pierre and Miquelon"
+      ],
+      "conf": "MED",
+      "delta": 0.07,
+      "rank": 153
+    }
+  },
+  {
+    "q": "bioluminescent bay kayak swim",
+    "sub": "diving",
+    "exp": "Puerto Rico",
+    "note": "Mosquito Bay Vieques",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Palau",
+        "Guam",
+        "United States Minor Outlying Islands",
+        "Tokelau",
+        "Pitcairn Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0636,
+      "rank": 99
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Palau",
+        "Greenland",
+        "French Polynesia",
+        "Micronesia",
+        "Turks and Caicos Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1321,
+      "rank": 157
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Palau",
+        "Guam",
+        "United States Minor Outlying Islands",
+        "Tokelau",
+        "Pitcairn Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0636,
+      "rank": 99
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Cayman Islands",
+        "Palau",
+        "Pitcairn Islands",
+        "Equatorial Guinea",
+        "Saint Pierre and Miquelon"
+      ],
+      "conf": "MED",
+      "delta": 0.0717,
+      "rank": 69
+    }
+  },
+  {
+    "q": "cenote cave diving underground",
+    "sub": "diving",
+    "exp": "Mexico",
+    "note": "Yucatan cenotes",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Cura\u00e7ao",
+        "Cayman Islands",
+        "Christmas Island",
+        "Belize",
+        "Aruba"
+      ],
+      "conf": "MED",
+      "delta": 0.0957,
+      "rank": 8
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Belize",
+        "Honduras",
+        "Palau",
+        "Cura\u00e7ao",
+        "Niue"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1712,
+      "rank": 30
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Cura\u00e7ao",
+        "Cayman Islands",
+        "Christmas Island",
+        "Belize",
+        "Aruba"
+      ],
+      "conf": "MED",
+      "delta": 0.0957,
+      "rank": 8
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Cayman Islands",
+        "Belize",
+        "Cura\u00e7ao",
+        "Aruba",
+        "Philippines"
+      ],
+      "conf": "HIGH",
+      "delta": 0.125,
+      "rank": 12
+    }
+  },
+  {
+    "q": "sea turtle nesting beach diving",
+    "sub": "diving",
+    "exp": "Costa Rica",
+    "note": "Tortuguero",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Cayman Islands",
+        "Christmas Island",
+        "United States Minor Outlying Islands",
+        "Cocos (Keeling) Islands",
+        "Tuvalu"
+      ],
+      "conf": "MED",
+      "delta": 0.0617,
+      "rank": 69
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Palau",
+        "Cocos (Keeling) Islands",
+        "Marshall Islands",
+        "Cayman Islands",
+        "Christmas Island"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1117,
+      "rank": 36
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Cayman Islands",
+        "Christmas Island",
+        "United States Minor Outlying Islands",
+        "Cocos (Keeling) Islands",
+        "Tuvalu"
+      ],
+      "conf": "MED",
+      "delta": 0.0617,
+      "rank": 69
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Cayman Islands",
+        "Cocos (Keeling) Islands",
+        "Christmas Island",
+        "Seychelles",
+        "United States Minor Outlying Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1216,
+      "rank": 64
+    }
+  },
+  {
+    "q": "night diving reef phosphorescence",
+    "sub": "diving",
+    "exp": "Maldives",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Christmas Island",
+        "Nauru",
+        "Cura\u00e7ao",
+        "Niue",
+        "Maldives"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1161,
+      "rank": 5
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Palau",
+        "Micronesia",
+        "Niue",
+        "Marshall Islands",
+        "Solomon Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1387,
+      "rank": 6
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Christmas Island",
+        "Nauru",
+        "Cura\u00e7ao",
+        "Niue",
+        "Maldives"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1161,
+      "rank": 5
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Nauru",
+        "Christmas Island",
+        "Niue",
+        "Tuvalu",
+        "Maldives"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1444,
+      "rank": 5
+    }
+  },
+  {
+    "q": "drift diving strong current pristine reef",
+    "sub": "diving",
+    "exp": "Palau",
+    "note": "Blue Corner",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Cura\u00e7ao",
+        "Maldives",
+        "Nauru",
+        "Cayman Islands",
+        "Niue"
+      ],
+      "conf": "MED",
+      "delta": 0.0711,
+      "rank": 14
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Palau",
+        "Niue",
+        "Micronesia",
+        "Cayman Islands",
+        "Cura\u00e7ao"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1115,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Cura\u00e7ao",
+        "Maldives",
+        "Nauru",
+        "Cayman Islands",
+        "Niue"
+      ],
+      "conf": "MED",
+      "delta": 0.0711,
+      "rank": 14
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Nauru",
+        "Niue",
+        "Maldives",
+        "Cayman Islands",
+        "Belize"
+      ],
+      "conf": "MED",
+      "delta": 0.0917,
+      "rank": 8
+    }
+  },
+  {
+    "q": "trek high altitude mountain base camp",
+    "sub": "hiking",
+    "exp": "Nepal",
+    "note": "Everest Base Camp",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Nepal",
+        "Bhutan",
+        "Bouvet Island",
+        "Mongolia",
+        "British Indian Ocean Territory"
+      ],
+      "conf": "MED",
+      "delta": 0.0936,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Nepal",
+        "Lesotho",
+        "Bhutan",
+        "Tanzania",
+        "Kyrgyzstan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1412,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Nepal",
+        "Bhutan",
+        "Bouvet Island",
+        "Mongolia",
+        "British Indian Ocean Territory"
+      ],
+      "conf": "MED",
+      "delta": 0.0936,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Andorra",
+        "Nepal",
+        "Bhutan",
+        "Kyrgyzstan",
+        "British Indian Ocean Territory"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1095,
+      "rank": 2
+    }
+  },
+  {
+    "q": "volcanic crater hike active lava",
+    "sub": "hiking",
+    "exp": "Iceland",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Heard Island and McDonald Islands",
+        "Bouvet Island",
+        "Montserrat",
+        "Pitcairn Islands",
+        "R\u00e9union"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1193,
+      "rank": 15
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Vanuatu",
+        "R\u00e9union",
+        "Montserrat",
+        "Heard Island and McDonald Islands",
+        "Dominica"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1815,
+      "rank": 9
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Heard Island and McDonald Islands",
+        "Bouvet Island",
+        "Montserrat",
+        "Pitcairn Islands",
+        "R\u00e9union"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1193,
+      "rank": 15
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Heard Island and McDonald Islands",
+        "Bouvet Island",
+        "R\u00e9union",
+        "Montserrat",
+        "Pitcairn Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1734,
+      "rank": 9
+    }
+  },
+  {
+    "q": "fjord hike viewpoint panorama",
+    "sub": "hiking",
+    "exp": "Norway",
+    "note": "Trolltunga Preikestolen",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Norway",
+        "Iceland",
+        "Faroe Islands",
+        "Bouvet Island",
+        "Finland"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1651,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Norway",
+        "Faroe Islands",
+        "Iceland",
+        "Svalbard and Jan Mayen",
+        "Montenegro"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2151,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Norway",
+        "Iceland",
+        "Faroe Islands",
+        "Bouvet Island",
+        "Finland"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1651,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Norway",
+        "Iceland",
+        "Faroe Islands",
+        "Andorra",
+        "Bouvet Island"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1519,
+      "rank": 1
+    }
+  },
+  {
+    "q": "rainforest jungle trek wildlife",
+    "sub": "hiking",
+    "exp": "Costa Rica",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Guyana",
+        "Christmas Island",
+        "French Guiana",
+        "South Sudan",
+        "Jamaica"
+      ],
+      "conf": "MED",
+      "delta": 0.0692,
+      "rank": 34
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Central African Republic",
+        "Gabon",
+        "DR Congo",
+        "Dominica",
+        "Christmas Island"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1257,
+      "rank": 6
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Guyana",
+        "Christmas Island",
+        "French Guiana",
+        "South Sudan",
+        "Jamaica"
+      ],
+      "conf": "MED",
+      "delta": 0.0692,
+      "rank": 34
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Guyana",
+        "Belize",
+        "French Guiana",
+        "Peru",
+        "Christmas Island"
+      ],
+      "conf": "MED",
+      "delta": 0.0789,
+      "rank": 45
+    }
+  },
+  {
+    "q": "high altitude plateau trekking Andes",
+    "sub": "hiking",
+    "exp": "Peru",
+    "note": "Inca Trail",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Peru",
+        "Bolivia",
+        "Andorra",
+        "Argentina",
+        "Chile"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1694,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Bolivia",
+        "Peru",
+        "Lesotho",
+        "Venezuela",
+        "Chile"
+      ],
+      "conf": "HIGH",
+      "delta": 0.172,
+      "rank": 2
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Peru",
+        "Bolivia",
+        "Andorra",
+        "Argentina",
+        "Chile"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1694,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Bolivia",
+        "Peru",
+        "Andorra",
+        "Argentina",
+        "Chile"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2042,
+      "rank": 2
+    }
+  },
+  {
+    "q": "glacier hike ice walk crampons",
+    "sub": "hiking",
+    "exp": "Iceland",
+    "note": "Vatnajokull",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Antarctica",
+        "Greenland",
+        "South Georgia",
+        "Bouvet Island",
+        "Iceland"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1322,
+      "rank": 5
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Greenland",
+        "Svalbard and Jan Mayen",
+        "Norway",
+        "Antarctica",
+        "South Georgia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1458,
+      "rank": 7
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Antarctica",
+        "Greenland",
+        "South Georgia",
+        "Bouvet Island",
+        "Iceland"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1322,
+      "rank": 5
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Bouvet Island",
+        "Antarctica",
+        "Greenland",
+        "South Georgia",
+        "Norway"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1647,
+      "rank": 6
+    }
+  },
+  {
+    "q": "Alps long-distance hiking trail",
+    "sub": "hiking",
+    "exp": "Switzerland",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Switzerland",
+        "Austria",
+        "Andorra",
+        "Albania",
+        "Slovenia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1583,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Switzerland",
+        "Kyrgyzstan",
+        "Slovenia",
+        "Andorra",
+        "Albania"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1274,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Switzerland",
+        "Austria",
+        "Andorra",
+        "Albania",
+        "Slovenia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1583,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Switzerland",
+        "Austria",
+        "Andorra",
+        "Slovenia",
+        "Albania"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1946,
+      "rank": 1
+    }
+  },
+  {
+    "q": "multi-day bush walk coastal",
+    "sub": "hiking",
+    "exp": "New Zealand",
+    "note": "Milford Track",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Christmas Island",
+        "Norfolk Island",
+        "South Georgia",
+        "New Caledonia",
+        "Australia"
+      ],
+      "conf": "MED",
+      "delta": 0.0696,
+      "rank": 12
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Christmas Island",
+        "Mozambique",
+        "Tokelau",
+        "Norfolk Island",
+        "Cocos (Keeling) Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0611,
+      "rank": 105
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Christmas Island",
+        "Norfolk Island",
+        "South Georgia",
+        "New Caledonia",
+        "Australia"
+      ],
+      "conf": "MED",
+      "delta": 0.0696,
+      "rank": 12
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Australia",
+        "Norfolk Island",
+        "Christmas Island",
+        "South Georgia",
+        "Gabon"
+      ],
+      "conf": "MED",
+      "delta": 0.075,
+      "rank": 27
+    }
+  },
+  {
+    "q": "kilimanjaro climb summit Africa",
+    "sub": "hiking",
+    "exp": "Tanzania",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Tanzania",
+        "Kenya",
+        "Rwanda",
+        "Uganda",
+        "Comoros"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1538,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Tanzania",
+        "Kenya",
+        "Rwanda",
+        "Cameroon",
+        "Uganda"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2753,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Tanzania",
+        "Kenya",
+        "Rwanda",
+        "Uganda",
+        "Comoros"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1538,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Tanzania",
+        "Uganda",
+        "Kenya",
+        "Rwanda",
+        "Comoros"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1401,
+      "rank": 1
+    }
+  },
+  {
+    "q": "Camino de Santiago pilgrimage walk",
+    "sub": "hiking",
+    "exp": "Spain",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Spain",
+        "Andorra",
+        "Portugal",
+        "Gibraltar",
+        "Chile"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1231,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Spain",
+        "Portugal",
+        "Vatican City",
+        "Andorra",
+        "Georgia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1312,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Spain",
+        "Andorra",
+        "Portugal",
+        "Gibraltar",
+        "Chile"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1231,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Spain",
+        "Cape Verde",
+        "Chile",
+        "Andorra",
+        "Portugal"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1133,
+      "rank": 1
+    }
+  },
+  {
+    "q": "romantic weekend city break Europe",
+    "sub": "city",
+    "exp": "France",
+    "note": "Paris",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "France",
+        "Luxembourg",
+        "Monaco",
+        "Gibraltar",
+        "Vatican City"
+      ],
+      "conf": "MED",
+      "delta": 0.0841,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "France",
+        "Belgium",
+        "Luxembourg",
+        "Saint Barth\u00e9lemy",
+        "Malta"
+      ],
+      "conf": "MED",
+      "delta": 0.0916,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "France",
+        "Luxembourg",
+        "Monaco",
+        "Gibraltar",
+        "Vatican City"
+      ],
+      "conf": "MED",
+      "delta": 0.0841,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Luxembourg",
+        "Monaco",
+        "France",
+        "Vatican City",
+        "Gibraltar"
+      ],
+      "conf": "MED",
+      "delta": 0.087,
+      "rank": 3
+    }
+  },
+  {
+    "q": "art museum gallery city culture",
+    "sub": "city",
+    "exp": "Italy",
+    "note": "Florence / Rome",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Luxembourg",
+        "Macau",
+        "Liechtenstein",
+        "United Arab Emirates",
+        "Monaco"
+      ],
+      "conf": "MED",
+      "delta": 0.0553,
+      "rank": 84
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Qatar",
+        "Belgium",
+        "Eritrea",
+        "United Arab Emirates",
+        "Mauritania"
+      ],
+      "conf": "MED",
+      "delta": 0.0554,
+      "rank": 31
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Luxembourg",
+        "Macau",
+        "Liechtenstein",
+        "United Arab Emirates",
+        "Monaco"
+      ],
+      "conf": "MED",
+      "delta": 0.0553,
+      "rank": 84
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Luxembourg",
+        "Liechtenstein",
+        "Guatemala",
+        "Macau",
+        "Egypt"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1058,
+      "rank": 69
+    }
+  },
+  {
+    "q": "nightlife bar club city break",
+    "sub": "city",
+    "exp": "Germany",
+    "note": "Berlin",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Saint Barth\u00e9lemy",
+        "Macau",
+        "Gibraltar",
+        "Cura\u00e7ao",
+        "Cayman Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.075,
+      "rank": 27
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Cura\u00e7ao",
+        "Cuba",
+        "Dominican Republic",
+        "Aruba",
+        "Cape Verde"
+      ],
+      "conf": "MED",
+      "delta": 0.061,
+      "rank": 44
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Saint Barth\u00e9lemy",
+        "Macau",
+        "Gibraltar",
+        "Cura\u00e7ao",
+        "Cayman Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.075,
+      "rank": 27
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Macau",
+        "United Arab Emirates",
+        "Saint Barth\u00e9lemy",
+        "Lebanon",
+        "Gibraltar"
+      ],
+      "conf": "MED",
+      "delta": 0.0602,
+      "rank": 34
+    }
+  },
+  {
+    "q": "architecture design modernist city",
+    "sub": "city",
+    "exp": "Spain",
+    "note": "Barcelona Gaudi",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Monaco",
+        "Syria",
+        "Saint Martin",
+        "Vatican City",
+        "Hong Kong"
+      ],
+      "conf": "MED",
+      "delta": 0.0974,
+      "rank": 27
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "United Arab Emirates",
+        "Eritrea",
+        "Singapore",
+        "Malta",
+        "Hong Kong"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1159,
+      "rank": 27
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Monaco",
+        "Syria",
+        "Saint Martin",
+        "Vatican City",
+        "Hong Kong"
+      ],
+      "conf": "MED",
+      "delta": 0.0974,
+      "rank": 27
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Monaco",
+        "Macau",
+        "Vatican City",
+        "Syria",
+        "Hong Kong"
+      ],
+      "conf": "MED",
+      "delta": 0.0887,
+      "rank": 24
+    }
+  },
+  {
+    "q": "canal waterways boat city",
+    "sub": "city",
+    "exp": "Netherlands",
+    "note": "Amsterdam",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "\u00c5land Islands",
+        "Panama",
+        "Saint Pierre and Miquelon",
+        "Saint Helena, Ascension and Tristan da Cunha",
+        "Guernsey"
+      ],
+      "conf": "MED",
+      "delta": 0.0597,
+      "rank": 15
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Panama",
+        "Cura\u00e7ao",
+        "British Virgin Islands",
+        "\u00c5land Islands",
+        "Croatia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1414,
+      "rank": 9
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "\u00c5land Islands",
+        "Panama",
+        "Saint Pierre and Miquelon",
+        "Saint Helena, Ascension and Tristan da Cunha",
+        "Guernsey"
+      ],
+      "conf": "MED",
+      "delta": 0.0597,
+      "rank": 15
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Panama",
+        "\u00c5land Islands",
+        "Saint Helena, Ascension and Tristan da Cunha",
+        "Saint Pierre and Miquelon",
+        "Guadeloupe"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1173,
+      "rank": 26
+    }
+  },
+  {
+    "q": "historic old town cobblestone streets",
+    "sub": "city",
+    "exp": "Czech Republic",
+    "note": "Prague",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Gibraltar",
+        "Guernsey",
+        "Czechia",
+        "Monaco",
+        "Vatican City"
+      ],
+      "conf": "MED",
+      "delta": 0.0711,
+      "rank": -1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Bosnia and Herzegovina",
+        "Yemen",
+        "United States Virgin Islands",
+        "Syria",
+        "Lithuania"
+      ],
+      "conf": "MED",
+      "delta": 0.0556,
+      "rank": -1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Gibraltar",
+        "Guernsey",
+        "Czechia",
+        "Monaco",
+        "Vatican City"
+      ],
+      "conf": "MED",
+      "delta": 0.0711,
+      "rank": -1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Gibraltar",
+        "Jersey",
+        "Macau",
+        "Isle of Man",
+        "Guernsey"
+      ],
+      "conf": "MED",
+      "delta": 0.0822,
+      "rank": -1
+    }
+  },
+  {
+    "q": "street food market city weekend",
+    "sub": "city",
+    "exp": "Thailand",
+    "note": "Bangkok Chatuchak",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Hong Kong",
+        "Macau",
+        "Saint Barth\u00e9lemy",
+        "Singapore",
+        "Martinique"
+      ],
+      "conf": "MED",
+      "delta": 0.0734,
+      "rank": 6
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Hong Kong",
+        "Togo",
+        "Singapore",
+        "Taiwan",
+        "Thailand"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1018,
+      "rank": 5
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Hong Kong",
+        "Macau",
+        "Saint Barth\u00e9lemy",
+        "Singapore",
+        "Martinique"
+      ],
+      "conf": "MED",
+      "delta": 0.0734,
+      "rank": 6
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Macau",
+        "Hong Kong",
+        "Trinidad and Tobago",
+        "Saint Pierre and Miquelon",
+        "Taiwan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1075,
+      "rank": 12
+    }
+  },
+  {
+    "q": "cosmopolitan skyline harbour city",
+    "sub": "city",
+    "exp": "Australia",
+    "note": "Sydney",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Hong Kong",
+        "Macau",
+        "Singapore",
+        "Monaco",
+        "United Arab Emirates"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2147,
+      "rank": 12
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Hong Kong",
+        "Singapore",
+        "United Arab Emirates",
+        "Cura\u00e7ao",
+        "Maldives"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2063,
+      "rank": 50
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Hong Kong",
+        "Macau",
+        "Singapore",
+        "Monaco",
+        "United Arab Emirates"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2147,
+      "rank": 12
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Hong Kong",
+        "Macau",
+        "Singapore",
+        "Monaco",
+        "Jamaica"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2412,
+      "rank": 32
+    }
+  },
+  {
+    "q": "cultural heritage mosque palace city",
+    "sub": "city",
+    "exp": "Morocco",
+    "note": "Marrakesh",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Morocco",
+        "Egypt",
+        "Mali",
+        "Qatar",
+        "T\u00fcrkiye"
+      ],
+      "conf": "MED",
+      "delta": 0.0516,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Mali",
+        "Uzbekistan",
+        "T\u00fcrkiye",
+        "United Arab Emirates",
+        "Mauritania"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1272,
+      "rank": 6
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Morocco",
+        "Egypt",
+        "Mali",
+        "Qatar",
+        "T\u00fcrkiye"
+      ],
+      "conf": "MED",
+      "delta": 0.0516,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Vatican City",
+        "Egypt",
+        "Tunisia",
+        "Morocco",
+        "Monaco"
+      ],
+      "conf": "MED",
+      "delta": 0.0579,
+      "rank": 4
+    }
+  },
+  {
+    "q": "Christmas market winter city break",
+    "sub": "city",
+    "exp": "Germany",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Christmas Island",
+        "Germany",
+        "Saint Martin",
+        "Saint Barth\u00e9lemy",
+        "Svalbard and Jan Mayen"
+      ],
+      "conf": "MED",
+      "delta": 0.0705,
+      "rank": 2
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Bosnia and Herzegovina",
+        "Andorra",
+        "Denmark",
+        "T\u00fcrkiye",
+        "Togo"
+      ],
+      "conf": "MED",
+      "delta": 0.0518,
+      "rank": 25
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Christmas Island",
+        "Germany",
+        "Saint Martin",
+        "Saint Barth\u00e9lemy",
+        "Svalbard and Jan Mayen"
+      ],
+      "conf": "MED",
+      "delta": 0.0705,
+      "rank": 2
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Christmas Island",
+        "Germany",
+        "Czechia",
+        "Norway",
+        "Sweden"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1196,
+      "rank": 2
+    }
+  },
+  {
+    "q": "gastronomic destination Michelin starred",
+    "sub": "food",
+    "exp": "France",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Martinique",
+        "France",
+        "Monaco",
+        "Saint Pierre and Miquelon",
+        "Saint Barth\u00e9lemy"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1091,
+      "rank": 2
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "France",
+        "Mauritius",
+        "Spain",
+        "Tunisia",
+        "Saint Barth\u00e9lemy"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1216,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Martinique",
+        "France",
+        "Monaco",
+        "Saint Pierre and Miquelon",
+        "Saint Barth\u00e9lemy"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1091,
+      "rank": 2
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Monaco",
+        "Saint Barth\u00e9lemy",
+        "France",
+        "Martinique",
+        "Saint Pierre and Miquelon"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1333,
+      "rank": 3
+    }
+  },
+  {
+    "q": "street food hawker stalls authentic",
+    "sub": "food",
+    "exp": "Singapore",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Singapore",
+        "Hong Kong",
+        "Thailand",
+        "Myanmar",
+        "Gambia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1016,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Singapore",
+        "Hong Kong",
+        "Thailand",
+        "Myanmar",
+        "Malaysia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1145,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Singapore",
+        "Hong Kong",
+        "Thailand",
+        "Myanmar",
+        "Gambia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1016,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Singapore",
+        "Hong Kong",
+        "Thailand",
+        "Macau",
+        "Taiwan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1666,
+      "rank": 1
+    }
+  },
+  {
+    "q": "pasta wine Italian food pilgrimage",
+    "sub": "food",
+    "exp": "Italy",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Italy",
+        "San Marino",
+        "Portugal",
+        "Malta",
+        "Moldova"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2031,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Italy",
+        "Moldova",
+        "Portugal",
+        "San Marino",
+        "Georgia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1821,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Italy",
+        "San Marino",
+        "Portugal",
+        "Malta",
+        "Moldova"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2031,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Italy",
+        "San Marino",
+        "Libya",
+        "Portugal",
+        "Croatia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2545,
+      "rank": 1
+    }
+  },
+  {
+    "q": "spicy cuisine chilli pepper hot",
+    "sub": "food",
+    "exp": "Mexico",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Chile",
+        "Mexico",
+        "Peru",
+        "Chad",
+        "India"
+      ],
+      "conf": "MED",
+      "delta": 0.0653,
+      "rank": 2
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Bolivia",
+        "Grenada",
+        "Mexico",
+        "Hungary",
+        "Dominica"
+      ],
+      "conf": "MED",
+      "delta": 0.0601,
+      "rank": 3
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Chile",
+        "Mexico",
+        "Peru",
+        "Chad",
+        "India"
+      ],
+      "conf": "MED",
+      "delta": 0.0653,
+      "rank": 2
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Mexico",
+        "Chile",
+        "Vietnam",
+        "Hungary",
+        "Bhutan"
+      ],
+      "conf": "MED",
+      "delta": 0.0569,
+      "rank": 1
+    }
+  },
+  {
+    "q": "fresh seafood coastal fishing village",
+    "sub": "food",
+    "exp": "Portugal",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Saint Pierre and Miquelon",
+        "French Southern and Antarctic Lands",
+        "Tuvalu",
+        "Anguilla",
+        "Pitcairn Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0658,
+      "rank": 71
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Turks and Caicos Islands",
+        "Mozambique",
+        "Palau",
+        "Anguilla",
+        "Micronesia"
+      ],
+      "conf": "MED",
+      "delta": 0.0891,
+      "rank": 48
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Saint Pierre and Miquelon",
+        "French Southern and Antarctic Lands",
+        "Tuvalu",
+        "Anguilla",
+        "Pitcairn Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0658,
+      "rank": 71
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Saint Pierre and Miquelon",
+        "Niue",
+        "Tokelau",
+        "Anguilla",
+        "French Southern and Antarctic Lands"
+      ],
+      "conf": "MED",
+      "delta": 0.081,
+      "rank": 73
+    }
+  },
+  {
+    "q": "dim sum dumpling brunch culture",
+    "sub": "food",
+    "exp": "Hong Kong",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Hong Kong",
+        "Macau",
+        "Taiwan",
+        "China",
+        "Singapore"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1975,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Hong Kong",
+        "China",
+        "Macau",
+        "Taiwan",
+        "Myanmar"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3213,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Hong Kong",
+        "Macau",
+        "Taiwan",
+        "China",
+        "Singapore"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1975,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Hong Kong",
+        "Macau",
+        "Taiwan",
+        "China",
+        "Singapore"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2521,
+      "rank": 1
+    }
+  },
+  {
+    "q": "sushi omakase chef experience",
+    "sub": "food",
+    "exp": "Japan",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Japan",
+        "Singapore",
+        "Hong Kong",
+        "French Polynesia",
+        "Northern Mariana Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1515,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Japan",
+        "Palau",
+        "Peru",
+        "Micronesia",
+        "Maldives"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1433,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Japan",
+        "Singapore",
+        "Hong Kong",
+        "French Polynesia",
+        "Northern Mariana Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1515,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Japan",
+        "Pitcairn Islands",
+        "Anguilla",
+        "Singapore",
+        "Hong Kong"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1943,
+      "rank": 1
+    }
+  },
+  {
+    "q": "barbecue smoked meat grilling",
+    "sub": "food",
+    "exp": "United States",
+    "note": "Texas BBQ",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Uruguay",
+        "Saint Barth\u00e9lemy",
+        "Barbados",
+        "Argentina",
+        "South Africa"
+      ],
+      "conf": "MED",
+      "delta": 0.0642,
+      "rank": 42
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Uruguay",
+        "Barbados",
+        "Senegal",
+        "Cuba",
+        "Puerto Rico"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1318,
+      "rank": 241
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Uruguay",
+        "Saint Barth\u00e9lemy",
+        "Barbados",
+        "Argentina",
+        "South Africa"
+      ],
+      "conf": "MED",
+      "delta": 0.0642,
+      "rank": 42
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Uruguay",
+        "Argentina",
+        "South Africa",
+        "Barbados",
+        "French Guiana"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1209,
+      "rank": 58
+    }
+  },
+  {
+    "q": "vegetarian vegan spiritual food",
+    "sub": "food",
+    "exp": "India",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Nepal",
+        "Sri Lanka",
+        "Vietnam",
+        "Vanuatu",
+        "India"
+      ],
+      "conf": "MED",
+      "delta": 0.0851,
+      "rank": 5
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Ukraine",
+        "Togo",
+        "Nepal",
+        "Belarus",
+        "Haiti"
+      ],
+      "conf": "MED",
+      "delta": 0.0968,
+      "rank": 61
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Nepal",
+        "Sri Lanka",
+        "Vietnam",
+        "Vanuatu",
+        "India"
+      ],
+      "conf": "MED",
+      "delta": 0.0851,
+      "rank": 5
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "India",
+        "Bhutan",
+        "Nepal",
+        "Vanuatu",
+        "Madagascar"
+      ],
+      "conf": "MED",
+      "delta": 0.0908,
+      "rank": 1
+    }
+  },
+  {
+    "q": "ceviche raw fish lime citrus",
+    "sub": "food",
+    "exp": "Peru",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Cura\u00e7ao",
+        "Belize",
+        "Nicaragua",
+        "Cape Verde",
+        "Honduras"
+      ],
+      "conf": "LOW",
+      "delta": 0.0439,
+      "rank": 13
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Peru",
+        "Lebanon",
+        "Cura\u00e7ao",
+        "Palau",
+        "Turks and Caicos Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1073,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Cura\u00e7ao",
+        "Belize",
+        "Nicaragua",
+        "Cape Verde",
+        "Honduras"
+      ],
+      "conf": "LOW",
+      "delta": 0.0439,
+      "rank": 13
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Cura\u00e7ao",
+        "Pitcairn Islands",
+        "Panama",
+        "Peru",
+        "Ecuador"
+      ],
+      "conf": "MED",
+      "delta": 0.0829,
+      "rank": 4
+    }
+  },
+  {
+    "q": "coffee origin farm tour bean single",
+    "sub": "coffee",
+    "exp": "Ethiopia",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+        "Rwanda",
+        "Norfolk Island",
+        "Uganda",
+        "Cocos (Keeling) Islands"
+      ],
+      "conf": "LOW",
+      "delta": 0.05,
+      "rank": 34
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+        "Ethiopia",
+        "Guatemala",
+        "Burundi",
+        "Honduras"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1271,
+      "rank": 2
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+        "Rwanda",
+        "Norfolk Island",
+        "Uganda",
+        "Cocos (Keeling) Islands"
+      ],
+      "conf": "LOW",
+      "delta": 0.05,
+      "rank": 34
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Rwanda",
+        "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+        "Togo",
+        "Tuvalu",
+        "Dominica"
+      ],
+      "conf": "MED",
+      "delta": 0.0654,
+      "rank": 34
+    }
+  },
+  {
+    "q": "espresso coffee culture caf\u00e9 sit",
+    "sub": "coffee",
+    "exp": "Italy",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Monaco",
+        "Eritrea",
+        "French Guiana",
+        "Djibouti",
+        "Martinique"
+      ],
+      "conf": "LOW",
+      "delta": 0.043,
+      "rank": 12
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Ethiopia",
+        "Eritrea",
+        "Bosnia and Herzegovina",
+        "Yemen",
+        "Italy"
+      ],
+      "conf": "MED",
+      "delta": 0.0914,
+      "rank": 5
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Monaco",
+        "Eritrea",
+        "French Guiana",
+        "Djibouti",
+        "Martinique"
+      ],
+      "conf": "LOW",
+      "delta": 0.043,
+      "rank": 12
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Greenland",
+        "Denmark",
+        "Colombia",
+        "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+        "Eritrea"
+      ],
+      "conf": "LOW",
+      "delta": 0.0434,
+      "rank": 18
+    }
+  },
+  {
+    "q": "third wave specialty coffee scene",
+    "sub": "coffee",
+    "exp": "Australia",
+    "note": "Melbourne",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Martinique",
+        "Colombia",
+        "Cocos (Keeling) Islands",
+        "Norfolk Island",
+        "Saint Barth\u00e9lemy"
+      ],
+      "conf": "LOW",
+      "delta": 0.0482,
+      "rank": 10
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Yemen",
+        "Ethiopia",
+        "Burundi",
+        "Colombia",
+        "Rwanda"
+      ],
+      "conf": "MED",
+      "delta": 0.0789,
+      "rank": 94
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Martinique",
+        "Colombia",
+        "Cocos (Keeling) Islands",
+        "Norfolk Island",
+        "Saint Barth\u00e9lemy"
+      ],
+      "conf": "LOW",
+      "delta": 0.0482,
+      "rank": 10
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Colombia",
+        "Lebanon",
+        "Jamaica",
+        "Martinique",
+        "Greenland"
+      ],
+      "conf": "MED",
+      "delta": 0.0535,
+      "rank": 28
+    }
+  },
+  {
+    "q": "wine region vineyard cellar door",
+    "sub": "wine",
+    "exp": "France",
+    "note": "Bordeaux",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Georgia",
+        "Guernsey",
+        "Vatican City",
+        "Croatia",
+        "Moldova"
+      ],
+      "conf": "MED",
+      "delta": 0.0871,
+      "rank": 26
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Moldova",
+        "Armenia",
+        "Georgia",
+        "Portugal",
+        "Cyprus"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1941,
+      "rank": 33
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Georgia",
+        "Guernsey",
+        "Vatican City",
+        "Croatia",
+        "Moldova"
+      ],
+      "conf": "MED",
+      "delta": 0.0871,
+      "rank": 26
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Georgia",
+        "Croatia",
+        "Moldova",
+        "Portugal",
+        "Martinique"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1342,
+      "rank": 26
+    }
+  },
+  {
+    "q": "wine tour Tuscany rolling hills",
+    "sub": "wine",
+    "exp": "Italy",
+    "note": "Chianti",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Italy",
+        "San Marino",
+        "Tunisia",
+        "Georgia",
+        "Vatican City"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1668,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Moldova",
+        "Georgia",
+        "Italy",
+        "Cyprus",
+        "San Marino"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1308,
+      "rank": 3
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Italy",
+        "San Marino",
+        "Tunisia",
+        "Georgia",
+        "Vatican City"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1668,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Italy",
+        "San Marino",
+        "Rwanda",
+        "Georgia",
+        "Tunisia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2042,
+      "rank": 1
+    }
+  },
+  {
+    "q": "New World wine country tour",
+    "sub": "wine",
+    "exp": "New Zealand",
+    "note": "Marlborough",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "New Caledonia",
+        "Norfolk Island",
+        "New Zealand",
+        "Pitcairn Islands",
+        "Namibia"
+      ],
+      "conf": "MED",
+      "delta": 0.0753,
+      "rank": 3
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "New Zealand",
+        "Chile",
+        "South Africa",
+        "Georgia",
+        "Armenia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1417,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "New Caledonia",
+        "Norfolk Island",
+        "New Zealand",
+        "Pitcairn Islands",
+        "Namibia"
+      ],
+      "conf": "MED",
+      "delta": 0.0753,
+      "rank": 3
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Georgia",
+        "Italy",
+        "New Caledonia",
+        "New Zealand",
+        "Namibia"
+      ],
+      "conf": "LOW",
+      "delta": 0.0488,
+      "rank": 4
+    }
+  },
+  {
+    "q": "champagne cellar sparkling wine",
+    "sub": "wine",
+    "exp": "France",
+    "note": "Reims",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Luxembourg",
+        "France",
+        "Monaco",
+        "Switzerland",
+        "Guernsey"
+      ],
+      "conf": "MED",
+      "delta": 0.0891,
+      "rank": 2
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Armenia",
+        "Georgia",
+        "Moldova",
+        "France",
+        "Luxembourg"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1281,
+      "rank": 4
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Luxembourg",
+        "France",
+        "Monaco",
+        "Switzerland",
+        "Guernsey"
+      ],
+      "conf": "MED",
+      "delta": 0.0891,
+      "rank": 2
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Georgia",
+        "Luxembourg",
+        "Martinique",
+        "France",
+        "Germany"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1107,
+      "rank": 4
+    }
+  },
+  {
+    "q": "sake brewery rice wine tour",
+    "sub": "wine",
+    "exp": "Japan",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Japan",
+        "South Korea",
+        "Cambodia",
+        "Pitcairn Islands",
+        "Taiwan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1753,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Laos",
+        "Japan",
+        "Slovenia",
+        "Czechia",
+        "Moldova"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1198,
+      "rank": 2
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Japan",
+        "South Korea",
+        "Cambodia",
+        "Pitcairn Islands",
+        "Taiwan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1753,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Japan",
+        "Cambodia",
+        "South Korea",
+        "Laos",
+        "Taiwan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2102,
+      "rank": 1
+    }
+  },
+  {
+    "q": "ancient temple ruins sunrise visit",
+    "sub": "cultural",
+    "exp": "Cambodia",
+    "note": "Angkor Wat",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Cambodia",
+        "Sri Lanka",
+        "Laos",
+        "Indonesia",
+        "Thailand"
+      ],
+      "conf": "MED",
+      "delta": 0.0623,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Myanmar",
+        "Guatemala",
+        "Cambodia",
+        "Laos",
+        "Indonesia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.105,
+      "rank": 3
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Cambodia",
+        "Sri Lanka",
+        "Laos",
+        "Indonesia",
+        "Thailand"
+      ],
+      "conf": "MED",
+      "delta": 0.0623,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Laos",
+        "Cambodia",
+        "Sri Lanka",
+        "Tunisia",
+        "Northern Mariana Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0744,
+      "rank": 2
+    }
+  },
+  {
+    "q": "traditional ceremony ritual indigenous",
+    "sub": "cultural",
+    "exp": "Papua New Guinea",
+    "note": "sing-sing",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Northern Mariana Islands",
+        "Niue",
+        "Papua New Guinea",
+        "Vanuatu",
+        "Indonesia"
+      ],
+      "conf": "MED",
+      "delta": 0.0626,
+      "rank": 3
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Eswatini",
+        "Tonga",
+        "Fiji",
+        "Benin",
+        "Papua New Guinea"
+      ],
+      "conf": "MED",
+      "delta": 0.099,
+      "rank": 5
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Northern Mariana Islands",
+        "Niue",
+        "Papua New Guinea",
+        "Vanuatu",
+        "Indonesia"
+      ],
+      "conf": "MED",
+      "delta": 0.0626,
+      "rank": 3
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Indonesia",
+        "Samoa",
+        "Togo",
+        "Northern Mariana Islands",
+        "Norfolk Island"
+      ],
+      "conf": "MED",
+      "delta": 0.0779,
+      "rank": 6
+    }
+  },
+  {
+    "q": "mask festival cultural performance",
+    "sub": "cultural",
+    "exp": "Japan",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Macau",
+        "Gabon",
+        "Burkina Faso",
+        "Mongolia",
+        "Philippines"
+      ],
+      "conf": "MED",
+      "delta": 0.0844,
+      "rank": 29
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Burkina Faso",
+        "Papua New Guinea",
+        "Fiji",
+        "Mali",
+        "Benin"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1439,
+      "rank": 41
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Macau",
+        "Gabon",
+        "Burkina Faso",
+        "Mongolia",
+        "Philippines"
+      ],
+      "conf": "MED",
+      "delta": 0.0844,
+      "rank": 29
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Macau",
+        "Mongolia",
+        "Oman",
+        "Gabon",
+        "Burkina Faso"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1201,
+      "rank": 35
+    }
+  },
+  {
+    "q": "muezzin call to prayer mosque quarter",
+    "sub": "cultural",
+    "exp": "Morocco",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Mayotte",
+        "Qatar",
+        "Azerbaijan",
+        "Comoros",
+        "United Arab Emirates"
+      ],
+      "conf": "MED",
+      "delta": 0.053,
+      "rank": 8
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Mali",
+        "United Arab Emirates",
+        "Morocco",
+        "Qatar",
+        "Azerbaijan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1162,
+      "rank": 3
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Mayotte",
+        "Qatar",
+        "Azerbaijan",
+        "Comoros",
+        "United Arab Emirates"
+      ],
+      "conf": "MED",
+      "delta": 0.053,
+      "rank": 8
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Mayotte",
+        "Tunisia",
+        "Bangladesh",
+        "Qatar",
+        "Azerbaijan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1242,
+      "rank": 10
+    }
+  },
+  {
+    "q": "medieval walled city fortress heritage",
+    "sub": "cultural",
+    "exp": "Croatia",
+    "note": "Dubrovnik",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Gibraltar",
+        "San Marino",
+        "\u00c5land Islands",
+        "Luxembourg",
+        "Liechtenstein"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1277,
+      "rank": 29
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "San Marino",
+        "Malta",
+        "Luxembourg",
+        "Gibraltar",
+        "Albania"
+      ],
+      "conf": "MED",
+      "delta": 0.0885,
+      "rank": 16
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Gibraltar",
+        "San Marino",
+        "\u00c5land Islands",
+        "Luxembourg",
+        "Liechtenstein"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1277,
+      "rank": 29
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Gibraltar",
+        "\u00c5land Islands",
+        "San Marino",
+        "Luxembourg",
+        "Montenegro"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1049,
+      "rank": 17
+    }
+  },
+  {
+    "q": "Incan ruins stone terraces altitude",
+    "sub": "cultural",
+    "exp": "Peru",
+    "note": "Machu Picchu",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Peru",
+        "Bolivia",
+        "Chile",
+        "Anguilla",
+        "Guatemala"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1865,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Peru",
+        "Bolivia",
+        "Guatemala",
+        "Ecuador",
+        "Chile"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1586,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Peru",
+        "Bolivia",
+        "Chile",
+        "Anguilla",
+        "Guatemala"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1865,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Peru",
+        "Bolivia",
+        "Chile",
+        "Andorra",
+        "Rwanda"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1634,
+      "rank": 1
+    }
+  },
+  {
+    "q": "Aboriginal art dreamtime culture",
+    "sub": "cultural",
+    "exp": "Australia",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Australia",
+        "Papua New Guinea",
+        "Niue",
+        "Tokelau",
+        "Norfolk Island"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1715,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Australia",
+        "Namibia",
+        "Cook Islands",
+        "Chad",
+        "Central African Republic"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2102,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Australia",
+        "Papua New Guinea",
+        "Niue",
+        "Tokelau",
+        "Norfolk Island"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1715,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Australia",
+        "Cocos (Keeling) Islands",
+        "Niue",
+        "Tokelau",
+        "Papua New Guinea"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2239,
+      "rank": 1
+    }
+  },
+  {
+    "q": "classical dance costume performance",
+    "sub": "cultural",
+    "exp": "Thailand",
+    "note": "Khon dance",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Georgia",
+        "Turkmenistan",
+        "Gabon",
+        "Uzbekistan",
+        "Burkina Faso"
+      ],
+      "conf": "LOW",
+      "delta": 0.0484,
+      "rank": 9
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Cambodia",
+        "Russia",
+        "Myanmar",
+        "India",
+        "Burundi"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1278,
+      "rank": 59
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Georgia",
+        "Turkmenistan",
+        "Gabon",
+        "Uzbekistan",
+        "Burkina Faso"
+      ],
+      "conf": "LOW",
+      "delta": 0.0484,
+      "rank": 9
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Georgia",
+        "Japan",
+        "China",
+        "Russia",
+        "Dominica"
+      ],
+      "conf": "MED",
+      "delta": 0.0842,
+      "rank": 7
+    }
+  },
+  {
+    "q": "royal palace ceremony changing guard",
+    "sub": "cultural",
+    "exp": "United Kingdom",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Bhutan",
+        "Brunei",
+        "Cambodia",
+        "Monaco",
+        "Bahrain"
+      ],
+      "conf": "MED",
+      "delta": 0.0631,
+      "rank": 39
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Eswatini",
+        "Brunei",
+        "Benin",
+        "Tonga",
+        "Sri Lanka"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1129,
+      "rank": 34
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Bhutan",
+        "Brunei",
+        "Cambodia",
+        "Monaco",
+        "Bahrain"
+      ],
+      "conf": "MED",
+      "delta": 0.0631,
+      "rank": 39
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Bhutan",
+        "Bahrain",
+        "Brunei",
+        "Monaco",
+        "Luxembourg"
+      ],
+      "conf": "MED",
+      "delta": 0.0698,
+      "rank": 22
+    }
+  },
+  {
+    "q": "geisha tea house Japanese tradition",
+    "sub": "cultural",
+    "exp": "Japan",
+    "note": "Kyoto",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Japan",
+        "Taiwan",
+        "Hong Kong",
+        "Macau",
+        "Singapore"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2179,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Japan",
+        "Sri Lanka",
+        "Taiwan",
+        "China",
+        "T\u00fcrkiye"
+      ],
+      "conf": "HIGH",
+      "delta": 0.145,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Japan",
+        "Taiwan",
+        "Hong Kong",
+        "Macau",
+        "Singapore"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2179,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Japan",
+        "Taiwan",
+        "Hong Kong",
+        "Northern Mariana Islands",
+        "Guam"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2642,
+      "rank": 1
+    }
+  },
+  {
+    "q": "Eiffel Tower Paris iconic skyline",
+    "sub": "landmark",
+    "exp": "France",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "France",
+        "R\u00e9union",
+        "French Southern and Antarctic Lands",
+        "Saint Pierre and Miquelon",
+        "Monaco"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1982,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "France",
+        "United Arab Emirates",
+        "Belgium",
+        "French Polynesia",
+        "Hong Kong"
+      ],
+      "conf": "HIGH",
+      "delta": 0.24,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "France",
+        "R\u00e9union",
+        "French Southern and Antarctic Lands",
+        "Saint Pierre and Miquelon",
+        "Monaco"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1982,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "France",
+        "R\u00e9union",
+        "Monaco",
+        "Saint Pierre and Miquelon",
+        "French Southern and Antarctic Lands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2603,
+      "rank": 1
+    }
+  },
+  {
+    "q": "Great Wall historical monument",
+    "sub": "landmark",
+    "exp": "China",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "China",
+        "Mongolia",
+        "Macau",
+        "Hong Kong",
+        "Guam"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1089,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "China",
+        "North Korea",
+        "Nepal",
+        "Gibraltar",
+        "Guam"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1864,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "China",
+        "Mongolia",
+        "Macau",
+        "Hong Kong",
+        "Guam"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1089,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Mongolia",
+        "Macau",
+        "China",
+        "United States",
+        "Hong Kong"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1007,
+      "rank": 3
+    }
+  },
+  {
+    "q": "Colosseum Roman amphitheatre",
+    "sub": "landmark",
+    "exp": "Italy",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Vatican City",
+        "Italy",
+        "Colombia",
+        "Macau",
+        "Libya"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1171,
+      "rank": 2
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Libya",
+        "Italy",
+        "Tunisia",
+        "Greece",
+        "Spain"
+      ],
+      "conf": "MED",
+      "delta": 0.0748,
+      "rank": 2
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Vatican City",
+        "Italy",
+        "Colombia",
+        "Macau",
+        "Libya"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1171,
+      "rank": 2
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Vatican City",
+        "Tunisia",
+        "Italy",
+        "Colombia",
+        "Libya"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1159,
+      "rank": 3
+    }
+  },
+  {
+    "q": "Taj Mahal marble mausoleum",
+    "sub": "landmark",
+    "exp": "India",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Tajikistan",
+        "Turkmenistan",
+        "India",
+        "San Marino",
+        "Uzbekistan"
+      ],
+      "conf": "MED",
+      "delta": 0.0502,
+      "rank": 3
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "India",
+        "Mali",
+        "Uzbekistan",
+        "Tajikistan",
+        "Turkmenistan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1123,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Tajikistan",
+        "Turkmenistan",
+        "India",
+        "San Marino",
+        "Uzbekistan"
+      ],
+      "conf": "MED",
+      "delta": 0.0502,
+      "rank": 3
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "India",
+        "Tajikistan",
+        "Turkmenistan",
+        "San Marino",
+        "Uzbekistan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1095,
+      "rank": 1
+    }
+  },
+  {
+    "q": "Machu Picchu lost Inca city altitude",
+    "sub": "landmark",
+    "exp": "Peru",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Peru",
+        "Chile",
+        "Bolivia",
+        "Guatemala",
+        "Ecuador"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2024,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Peru",
+        "Bolivia",
+        "Ecuador",
+        "Guatemala",
+        "Chile"
+      ],
+      "conf": "HIGH",
+      "delta": 0.231,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Peru",
+        "Chile",
+        "Bolivia",
+        "Guatemala",
+        "Ecuador"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2024,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Peru",
+        "Chile",
+        "Bolivia",
+        "Ecuador",
+        "Andorra"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2482,
+      "rank": 1
+    }
+  },
+  {
+    "q": "Pyramids of Giza sphinx desert",
+    "sub": "landmark",
+    "exp": "Egypt",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Egypt",
+        "Sudan",
+        "Libya",
+        "Algeria",
+        "Mauritania"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2119,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Egypt",
+        "Sudan",
+        "Libya",
+        "United Arab Emirates",
+        "Jordan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2399,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Egypt",
+        "Sudan",
+        "Libya",
+        "Algeria",
+        "Mauritania"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2119,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Egypt",
+        "Sudan",
+        "Algeria",
+        "Mauritania",
+        "Libya"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2521,
+      "rank": 1
+    }
+  },
+  {
+    "q": "Petra rose-red Nabataean city",
+    "sub": "landmark",
+    "exp": "Jordan",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Jordan",
+        "Saudi Arabia",
+        "Palestine",
+        "Yemen",
+        "Lebanon"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1476,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Jordan",
+        "Saudi Arabia",
+        "Palestine",
+        "Mauritania",
+        "Turkmenistan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2325,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Jordan",
+        "Saudi Arabia",
+        "Palestine",
+        "Yemen",
+        "Lebanon"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1476,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Jordan",
+        "Saudi Arabia",
+        "Yemen",
+        "Georgia",
+        "Palestine"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1949,
+      "rank": 1
+    }
+  },
+  {
+    "q": "Angkor Wat temple sunrise Cambodia",
+    "sub": "landmark",
+    "exp": "Cambodia",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Cambodia",
+        "Thailand",
+        "Vietnam",
+        "Laos",
+        "Bhutan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2538,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Cambodia",
+        "Myanmar",
+        "Laos",
+        "Bhutan",
+        "Vietnam"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2892,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Cambodia",
+        "Thailand",
+        "Vietnam",
+        "Laos",
+        "Bhutan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2538,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Cambodia",
+        "Laos",
+        "Thailand",
+        "Vietnam",
+        "Bhutan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3108,
+      "rank": 1
+    }
+  },
+  {
+    "q": "Hagia Sophia Istanbul Ottoman",
+    "sub": "landmark",
+    "exp": "Turkey",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "T\u00fcrkiye",
+        "Egypt",
+        "Syria",
+        "Greece",
+        "Turkmenistan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.161,
+      "rank": -1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "T\u00fcrkiye",
+        "Bosnia and Herzegovina",
+        "Syria",
+        "Uzbekistan",
+        "Greece"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2836,
+      "rank": -1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "T\u00fcrkiye",
+        "Egypt",
+        "Syria",
+        "Greece",
+        "Turkmenistan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.161,
+      "rank": -1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "T\u00fcrkiye",
+        "Syria",
+        "Egypt",
+        "Greece",
+        "Bulgaria"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2171,
+      "rank": -1
+    }
+  },
+  {
+    "q": "Sagrada Familia Gaudi Barcelona",
+    "sub": "landmark",
+    "exp": "Spain",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Spain",
+        "Andorra",
+        "Monaco",
+        "Gibraltar",
+        "Guatemala"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1022,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Spain",
+        "Guatemala",
+        "Portugal",
+        "Andorra",
+        "United Arab Emirates"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2397,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Spain",
+        "Andorra",
+        "Monaco",
+        "Gibraltar",
+        "Guatemala"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1022,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Spain",
+        "Andorra",
+        "Monaco",
+        "Gibraltar",
+        "Ecuador"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1613,
+      "rank": 1
+    }
+  },
+  {
+    "q": "Big Five safari lion elephant leopard",
+    "sub": "wildlife",
+    "exp": "Kenya",
+    "note": "Masai Mara",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "South Sudan",
+        "Zimbabwe",
+        "South Africa",
+        "Kenya",
+        "Ethiopia"
+      ],
+      "conf": "MED",
+      "delta": 0.0533,
+      "rank": 4
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Botswana",
+        "South Africa",
+        "Madagascar",
+        "Namibia",
+        "Central African Republic"
+      ],
+      "conf": "HIGH",
+      "delta": 0.148,
+      "rank": 7
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "South Sudan",
+        "Zimbabwe",
+        "South Africa",
+        "Kenya",
+        "Ethiopia"
+      ],
+      "conf": "MED",
+      "delta": 0.0533,
+      "rank": 4
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Liberia",
+        "South Sudan",
+        "Malawi",
+        "South Africa",
+        "Zimbabwe"
+      ],
+      "conf": "MED",
+      "delta": 0.0734,
+      "rank": 6
+    }
+  },
+  {
+    "q": "mountain gorilla trekking permit",
+    "sub": "wildlife",
+    "exp": "Rwanda",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Rwanda",
+        "Uganda",
+        "Burundi",
+        "Montserrat",
+        "Montenegro"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1187,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Rwanda",
+        "Uganda",
+        "Tanzania",
+        "Gabon",
+        "Papua New Guinea"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2237,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Rwanda",
+        "Uganda",
+        "Burundi",
+        "Montserrat",
+        "Montenegro"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1187,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Rwanda",
+        "Uganda",
+        "Bhutan",
+        "Nepal",
+        "Jamaica"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1768,
+      "rank": 1
+    }
+  },
+  {
+    "q": "polar bear Arctic wildlife",
+    "sub": "wildlife",
+    "exp": "Norway",
+    "note": "Svalbard",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Bouvet Island",
+        "Antarctica",
+        "Svalbard and Jan Mayen",
+        "Greenland",
+        "South Georgia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1858,
+      "rank": 6
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Svalbard and Jan Mayen",
+        "Antarctica",
+        "Greenland",
+        "French Southern and Antarctic Lands",
+        "South Georgia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2864,
+      "rank": 6
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Bouvet Island",
+        "Antarctica",
+        "Svalbard and Jan Mayen",
+        "Greenland",
+        "South Georgia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1858,
+      "rank": 6
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Svalbard and Jan Mayen",
+        "Antarctica",
+        "Bouvet Island",
+        "Greenland",
+        "South Georgia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2109,
+      "rank": 6
+    }
+  },
+  {
+    "q": "Gal\u00e1pagos marine iguana endemic wildlife",
+    "sub": "wildlife",
+    "exp": "Ecuador",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Ecuador",
+        "South Georgia",
+        "Falkland Islands",
+        "Guam",
+        "British Indian Ocean Territory"
+      ],
+      "conf": "MED",
+      "delta": 0.0854,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Ecuador",
+        "Christmas Island",
+        "South Georgia",
+        "Falkland Islands",
+        "French Southern and Antarctic Lands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1587,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Ecuador",
+        "South Georgia",
+        "Falkland Islands",
+        "Guam",
+        "British Indian Ocean Territory"
+      ],
+      "conf": "MED",
+      "delta": 0.0854,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "South Georgia",
+        "Ecuador",
+        "British Indian Ocean Territory",
+        "Guam",
+        "Kiribati"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1296,
+      "rank": 2
+    }
+  },
+  {
+    "q": "orangutan rainforest Borneo",
+    "sub": "wildlife",
+    "exp": "Malaysia",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Brunei",
+        "Indonesia",
+        "Malaysia",
+        "Cocos (Keeling) Islands",
+        "Cambodia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1322,
+      "rank": 3
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Malaysia",
+        "Indonesia",
+        "Gabon",
+        "DR Congo",
+        "Central African Republic"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1505,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Brunei",
+        "Indonesia",
+        "Malaysia",
+        "Cocos (Keeling) Islands",
+        "Cambodia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1322,
+      "rank": 3
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Brunei",
+        "Malaysia",
+        "Indonesia",
+        "Cocos (Keeling) Islands",
+        "Singapore"
+      ],
+      "conf": "HIGH",
+      "delta": 0.193,
+      "rank": 2
+    }
+  },
+  {
+    "q": "giant tortoise island endemic",
+    "sub": "wildlife",
+    "exp": "Ecuador",
+    "note": "Galapagos",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "British Indian Ocean Territory",
+        "South Georgia",
+        "Cayman Islands",
+        "Guam",
+        "Turks and Caicos Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0706,
+      "rank": 60
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Saint Helena, Ascension and Tristan da Cunha",
+        "Christmas Island",
+        "Seychelles",
+        "British Indian Ocean Territory",
+        "Cocos (Keeling) Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.156,
+      "rank": 6
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "British Indian Ocean Territory",
+        "South Georgia",
+        "Cayman Islands",
+        "Guam",
+        "Turks and Caicos Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0706,
+      "rank": 60
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "South Georgia",
+        "British Indian Ocean Territory",
+        "Madagascar",
+        "Cayman Islands",
+        "Guam"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1305,
+      "rank": 29
+    }
+  },
+  {
+    "q": "jaguar pantanal wetland",
+    "sub": "wildlife",
+    "exp": "Brazil",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Paraguay",
+        "Brazil",
+        "Guyana",
+        "South Sudan",
+        "French Guiana"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1213,
+      "rank": 2
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Guyana",
+        "Botswana",
+        "Brazil",
+        "Central African Republic",
+        "South Sudan"
+      ],
+      "conf": "MED",
+      "delta": 0.0737,
+      "rank": 3
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Paraguay",
+        "Brazil",
+        "Guyana",
+        "South Sudan",
+        "French Guiana"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1213,
+      "rank": 2
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Paraguay",
+        "Bolivia",
+        "Brazil",
+        "South Sudan",
+        "Guyana"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1116,
+      "rank": 3
+    }
+  },
+  {
+    "q": "penguin colony subantarctic island",
+    "sub": "wildlife",
+    "exp": "Argentina",
+    "note": "Falklands or Patagonia",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Bouvet Island",
+        "South Georgia",
+        "Heard Island and McDonald Islands",
+        "Antarctica",
+        "French Southern and Antarctic Lands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2957,
+      "rank": 49
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "South Georgia",
+        "French Southern and Antarctic Lands",
+        "Heard Island and McDonald Islands",
+        "Bouvet Island",
+        "Falkland Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3972,
+      "rank": 99
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Bouvet Island",
+        "South Georgia",
+        "Heard Island and McDonald Islands",
+        "Antarctica",
+        "French Southern and Antarctic Lands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2957,
+      "rank": 49
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Bouvet Island",
+        "South Georgia",
+        "Heard Island and McDonald Islands",
+        "Antarctica",
+        "French Southern and Antarctic Lands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3469,
+      "rank": 33
+    }
+  },
+  {
+    "q": "whale watching humpback breach",
+    "sub": "wildlife",
+    "exp": "Iceland",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Bouvet Island",
+        "South Georgia",
+        "Heard Island and McDonald Islands",
+        "Antarctica",
+        "Hong Kong"
+      ],
+      "conf": "MED",
+      "delta": 0.0633,
+      "rank": 6
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Tonga",
+        "Djibouti",
+        "Christmas Island",
+        "Palau",
+        "Mayotte"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1311,
+      "rank": 6
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Bouvet Island",
+        "South Georgia",
+        "Heard Island and McDonald Islands",
+        "Antarctica",
+        "Hong Kong"
+      ],
+      "conf": "MED",
+      "delta": 0.0633,
+      "rank": 6
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Tonga",
+        "Bouvet Island",
+        "Greenland",
+        "South Georgia",
+        "Heard Island and McDonald Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0811,
+      "rank": 8
+    }
+  },
+  {
+    "q": "bird watching migration flamingo",
+    "sub": "wildlife",
+    "exp": "Kenya",
+    "note": "Lake Nakuru",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "South Georgia",
+        "Rwanda",
+        "Egypt",
+        "South Sudan",
+        "Nigeria"
+      ],
+      "conf": "LOW",
+      "delta": 0.0327,
+      "rank": 26
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Christmas Island",
+        "Gambia",
+        "South Georgia",
+        "South Sudan",
+        "Mauritius"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1506,
+      "rank": 42
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "South Georgia",
+        "Rwanda",
+        "Egypt",
+        "South Sudan",
+        "Nigeria"
+      ],
+      "conf": "LOW",
+      "delta": 0.0327,
+      "rank": 26
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Christmas Island",
+        "Dominica",
+        "South Sudan",
+        "Equatorial Guinea",
+        "Gambia"
+      ],
+      "conf": "MED",
+      "delta": 0.0818,
+      "rank": 15
+    }
+  },
+  {
+    "q": "bungee jumping extreme sport",
+    "sub": "adventure",
+    "exp": "New Zealand",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Cayman Islands",
+        "Saint Kitts and Nevis",
+        "British Virgin Islands",
+        "Sint Maarten",
+        "Bahrain"
+      ],
+      "conf": "LOW",
+      "delta": 0.0496,
+      "rank": 212
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Vanuatu",
+        "Cayman Islands",
+        "Bermuda",
+        "Aruba",
+        "British Virgin Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.223,
+      "rank": 22
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Cayman Islands",
+        "Saint Kitts and Nevis",
+        "British Virgin Islands",
+        "Sint Maarten",
+        "Bahrain"
+      ],
+      "conf": "LOW",
+      "delta": 0.0496,
+      "rank": 212
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Cayman Islands",
+        "Saint Kitts and Nevis",
+        "Norway",
+        "British Virgin Islands",
+        "Sint Maarten"
+      ],
+      "conf": "LOW",
+      "delta": 0.0445,
+      "rank": 219
+    }
+  },
+  {
+    "q": "white water rafting river grade",
+    "sub": "adventure",
+    "exp": "Uganda",
+    "note": "Nile source",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Rwanda",
+        "Jordan",
+        "South Sudan",
+        "Central African Republic",
+        "Guinea"
+      ],
+      "conf": "LOW",
+      "delta": 0.0422,
+      "rank": 100
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Palau",
+        "Nicaragua",
+        "Congo",
+        "Gambia",
+        "Montenegro"
+      ],
+      "conf": "MED",
+      "delta": 0.0549,
+      "rank": 29
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Rwanda",
+        "Jordan",
+        "South Sudan",
+        "Central African Republic",
+        "Guinea"
+      ],
+      "conf": "LOW",
+      "delta": 0.0422,
+      "rank": 100
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "South Sudan",
+        "Rwanda",
+        "Central African Republic",
+        "Gambia",
+        "Guyana"
+      ],
+      "conf": "MED",
+      "delta": 0.0719,
+      "rank": 139
+    }
+  },
+  {
+    "q": "paragliding hang gliding mountain launch",
+    "sub": "adventure",
+    "exp": "Switzerland",
+    "note": "Interlaken",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Andorra",
+        "Mongolia",
+        "Kyrgyzstan",
+        "Guam",
+        "Sint Maarten"
+      ],
+      "conf": "MED",
+      "delta": 0.0629,
+      "rank": 61
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Vanuatu",
+        "French Guiana",
+        "Aruba",
+        "Kazakhstan",
+        "Bhutan"
+      ],
+      "conf": "MED",
+      "delta": 0.087,
+      "rank": 58
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Andorra",
+        "Mongolia",
+        "Kyrgyzstan",
+        "Guam",
+        "Sint Maarten"
+      ],
+      "conf": "MED",
+      "delta": 0.0629,
+      "rank": 61
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Andorra",
+        "French Guiana",
+        "Kyrgyzstan",
+        "Slovakia",
+        "Cape Verde"
+      ],
+      "conf": "MED",
+      "delta": 0.0728,
+      "rank": 37
+    }
+  },
+  {
+    "q": "sand dune surfing desert sandboard",
+    "sub": "adventure",
+    "exp": "Namibia",
+    "note": "Swakopmund",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Western Sahara",
+        "Mauritania",
+        "United Arab Emirates",
+        "Qatar",
+        "Bahrain"
+      ],
+      "conf": "MED",
+      "delta": 0.0844,
+      "rank": 17
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Aruba",
+        "Western Sahara",
+        "Namibia",
+        "Cayman Islands",
+        "Mauritania"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1434,
+      "rank": 3
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Western Sahara",
+        "Mauritania",
+        "United Arab Emirates",
+        "Qatar",
+        "Bahrain"
+      ],
+      "conf": "MED",
+      "delta": 0.0844,
+      "rank": 17
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Western Sahara",
+        "Qatar",
+        "Mauritania",
+        "Maldives",
+        "United Arab Emirates"
+      ],
+      "conf": "HIGH",
+      "delta": 0.102,
+      "rank": 14
+    }
+  },
+  {
+    "q": "skydiving scenic jump landscape",
+    "sub": "adventure",
+    "exp": "New Zealand",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Sint Maarten",
+        "Jamaica",
+        "Saint Kitts and Nevis",
+        "Cayman Islands",
+        "Svalbard and Jan Mayen"
+      ],
+      "conf": "MED",
+      "delta": 0.061,
+      "rank": 203
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Vanuatu",
+        "Sint Maarten",
+        "Cayman Islands",
+        "Caribbean Netherlands",
+        "French Guiana"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1432,
+      "rank": 55
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Sint Maarten",
+        "Jamaica",
+        "Saint Kitts and Nevis",
+        "Cayman Islands",
+        "Svalbard and Jan Mayen"
+      ],
+      "conf": "MED",
+      "delta": 0.061,
+      "rank": 203
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Saint Kitts and Nevis",
+        "Cura\u00e7ao",
+        "Sint Maarten",
+        "Jamaica",
+        "Cayman Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0921,
+      "rank": 204
+    }
+  },
+  {
+    "q": "zip line canopy jungle adventure",
+    "sub": "adventure",
+    "exp": "Costa Rica",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Jamaica",
+        "Cayman Islands",
+        "Belize",
+        "Dominica",
+        "Panama"
+      ],
+      "conf": "MED",
+      "delta": 0.0594,
+      "rank": 54
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Dominica",
+        "Cayman Islands",
+        "Vanuatu",
+        "Aruba",
+        "Honduras"
+      ],
+      "conf": "MED",
+      "delta": 0.0745,
+      "rank": 14
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Jamaica",
+        "Cayman Islands",
+        "Belize",
+        "Dominica",
+        "Panama"
+      ],
+      "conf": "MED",
+      "delta": 0.0594,
+      "rank": 54
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Belize",
+        "Honduras",
+        "Jamaica",
+        "Pitcairn Islands",
+        "Cayman Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.077,
+      "rank": 60
+    }
+  },
+  {
+    "q": "motorbike road trip mountain pass",
+    "sub": "adventure",
+    "exp": "Vietnam",
+    "note": "Ha Giang",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Mongolia",
+        "Kyrgyzstan",
+        "Andorra",
+        "Kosovo",
+        "Montenegro"
+      ],
+      "conf": "MED",
+      "delta": 0.0795,
+      "rank": 45
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Pakistan",
+        "Chad",
+        "Isle of Man",
+        "Kyrgyzstan",
+        "Tajikistan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1135,
+      "rank": 13
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Mongolia",
+        "Kyrgyzstan",
+        "Andorra",
+        "Kosovo",
+        "Montenegro"
+      ],
+      "conf": "MED",
+      "delta": 0.0795,
+      "rank": 45
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Kyrgyzstan",
+        "Andorra",
+        "Montenegro",
+        "Pitcairn Islands",
+        "Turkmenistan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1047,
+      "rank": 56
+    }
+  },
+  {
+    "q": "deep sea fishing ocean charter",
+    "sub": "adventure",
+    "exp": "Maldives",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Bouvet Island",
+        "French Southern and Antarctic Lands",
+        "Saint Pierre and Miquelon",
+        "South Georgia",
+        "British Indian Ocean Territory"
+      ],
+      "conf": "MED",
+      "delta": 0.098,
+      "rank": 31
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "British Virgin Islands",
+        "Maldives",
+        "French Southern and Antarctic Lands",
+        "Mayotte",
+        "Djibouti"
+      ],
+      "conf": "MED",
+      "delta": 0.0828,
+      "rank": 2
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Bouvet Island",
+        "French Southern and Antarctic Lands",
+        "Saint Pierre and Miquelon",
+        "South Georgia",
+        "British Indian Ocean Territory"
+      ],
+      "conf": "MED",
+      "delta": 0.098,
+      "rank": 31
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "French Southern and Antarctic Lands",
+        "Bouvet Island",
+        "British Indian Ocean Territory",
+        "Pitcairn Islands",
+        "Saint Pierre and Miquelon"
+      ],
+      "conf": "MED",
+      "delta": 0.0858,
+      "rank": 30
+    }
+  },
+  {
+    "q": "overwater villa private pool infinity",
+    "sub": "luxury",
+    "exp": "Maldives",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Maldives",
+        "Cayman Islands",
+        "Anguilla",
+        "Monaco",
+        "Tuvalu"
+      ],
+      "conf": "MED",
+      "delta": 0.0538,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Maldives",
+        "Palau",
+        "British Virgin Islands",
+        "Cura\u00e7ao",
+        "Niue"
+      ],
+      "conf": "HIGH",
+      "delta": 0.158,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Maldives",
+        "Cayman Islands",
+        "Anguilla",
+        "Monaco",
+        "Tuvalu"
+      ],
+      "conf": "MED",
+      "delta": 0.0538,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Cayman Islands",
+        "Saint Barth\u00e9lemy",
+        "Anguilla",
+        "Maldives",
+        "Monaco"
+      ],
+      "conf": "MED",
+      "delta": 0.0942,
+      "rank": 4
+    }
+  },
+  {
+    "q": "private island exclusive resort",
+    "sub": "luxury",
+    "exp": "Maldives",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Christmas Island",
+        "United States Minor Outlying Islands",
+        "Bouvet Island",
+        "British Virgin Islands",
+        "Saint Barth\u00e9lemy"
+      ],
+      "conf": "LOW",
+      "delta": 0.0441,
+      "rank": 18
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Saint Barth\u00e9lemy",
+        "Saint Vincent and the Grenadines",
+        "Anguilla",
+        "British Virgin Islands",
+        "Niue"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1072,
+      "rank": 9
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Christmas Island",
+        "United States Minor Outlying Islands",
+        "Bouvet Island",
+        "British Virgin Islands",
+        "Saint Barth\u00e9lemy"
+      ],
+      "conf": "LOW",
+      "delta": 0.0441,
+      "rank": 18
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Christmas Island",
+        "Saint Barth\u00e9lemy",
+        "Norfolk Island",
+        "Guadeloupe",
+        "British Virgin Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0885,
+      "rank": 9
+    }
+  },
+  {
+    "q": "butler service safari lodge",
+    "sub": "luxury",
+    "exp": "South Africa",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Bouvet Island",
+        "Botswana",
+        "Eswatini",
+        "South Africa",
+        "Rwanda"
+      ],
+      "conf": "MED",
+      "delta": 0.0931,
+      "rank": 4
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Botswana",
+        "South Africa",
+        "Lesotho",
+        "Uganda",
+        "Eswatini"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1283,
+      "rank": 2
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Bouvet Island",
+        "Botswana",
+        "Eswatini",
+        "South Africa",
+        "Rwanda"
+      ],
+      "conf": "MED",
+      "delta": 0.0931,
+      "rank": 4
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Bouvet Island",
+        "Botswana",
+        "South Africa",
+        "Eswatini",
+        "Rwanda"
+      ],
+      "conf": "MED",
+      "delta": 0.0792,
+      "rank": 3
+    }
+  },
+  {
+    "q": "yacht charter Mediterranean island hop",
+    "sub": "luxury",
+    "exp": "Greece",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Malta",
+        "Cyprus",
+        "Saint Barth\u00e9lemy",
+        "Cura\u00e7ao",
+        "Monaco"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1106,
+      "rank": 6
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Saint Barth\u00e9lemy",
+        "Mayotte",
+        "British Virgin Islands",
+        "Aruba",
+        "Saint Vincent and the Grenadines"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1252,
+      "rank": 19
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Malta",
+        "Cyprus",
+        "Saint Barth\u00e9lemy",
+        "Cura\u00e7ao",
+        "Monaco"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1106,
+      "rank": 6
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Malta",
+        "Cyprus",
+        "Pitcairn Islands",
+        "Monaco",
+        "Saint Barth\u00e9lemy"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1235,
+      "rank": 7
+    }
+  },
+  {
+    "q": "six-star hotel iconic city",
+    "sub": "luxury",
+    "exp": "United Arab Emirates",
+    "note": "Burj Al Arab",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Monaco",
+        "Hong Kong",
+        "Singapore",
+        "Qatar",
+        "Vatican City"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1325,
+      "rank": 7
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "United Arab Emirates",
+        "Singapore",
+        "Saint Barth\u00e9lemy",
+        "Qatar",
+        "Saudi Arabia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1254,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Monaco",
+        "Hong Kong",
+        "Singapore",
+        "Qatar",
+        "Vatican City"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1325,
+      "rank": 7
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Monaco",
+        "Qatar",
+        "Hong Kong",
+        "Macau",
+        "Singapore"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1695,
+      "rank": 8
+    }
+  },
+  {
+    "q": "ski chalet luxury mountain resort",
+    "sub": "luxury",
+    "exp": "Switzerland",
+    "note": "Verbier Gstaad",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Andorra",
+        "Switzerland",
+        "Austria",
+        "Liechtenstein",
+        "Monaco"
+      ],
+      "conf": "MED",
+      "delta": 0.0963,
+      "rank": 2
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Switzerland",
+        "Andorra",
+        "Saint Barth\u00e9lemy",
+        "Austria",
+        "Liechtenstein"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1354,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Andorra",
+        "Switzerland",
+        "Austria",
+        "Liechtenstein",
+        "Monaco"
+      ],
+      "conf": "MED",
+      "delta": 0.0963,
+      "rank": 2
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Andorra",
+        "Switzerland",
+        "Austria",
+        "Norway",
+        "Liechtenstein"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1643,
+      "rank": 2
+    }
+  },
+  {
+    "q": "wine and dine gourmet countryside",
+    "sub": "luxury",
+    "exp": "France",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Guernsey",
+        "France",
+        "Martinique",
+        "Italy",
+        "Rwanda"
+      ],
+      "conf": "MED",
+      "delta": 0.0528,
+      "rank": 2
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Moldova",
+        "Georgia",
+        "Armenia",
+        "Cyprus",
+        "Luxembourg"
+      ],
+      "conf": "HIGH",
+      "delta": 0.131,
+      "rank": 6
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Guernsey",
+        "France",
+        "Martinique",
+        "Italy",
+        "Rwanda"
+      ],
+      "conf": "MED",
+      "delta": 0.0528,
+      "rank": 2
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Martinique",
+        "Georgia",
+        "Ireland",
+        "Italy",
+        "Moldova"
+      ],
+      "conf": "MED",
+      "delta": 0.068,
+      "rank": 8
+    }
+  },
+  {
+    "q": "spa thermal wellness retreat",
+    "sub": "luxury",
+    "exp": "Iceland",
+    "note": "Blue Lagoon",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Andorra",
+        "Georgia",
+        "Jordan",
+        "Dominica",
+        "Croatia"
+      ],
+      "conf": "LOW",
+      "delta": 0.0476,
+      "rank": 24
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Dominica",
+        "Slovakia",
+        "Hungary",
+        "T\u00fcrkiye",
+        "Fiji"
+      ],
+      "conf": "MED",
+      "delta": 0.0834,
+      "rank": 6
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Andorra",
+        "Georgia",
+        "Jordan",
+        "Dominica",
+        "Croatia"
+      ],
+      "conf": "LOW",
+      "delta": 0.0476,
+      "rank": 24
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Bulgaria",
+        "Romania",
+        "Morocco",
+        "Martinique",
+        "Azerbaijan"
+      ],
+      "conf": "MED",
+      "delta": 0.0697,
+      "rank": 30
+    }
+  },
+  {
+    "q": "backpacker hostel cheap travel Asia",
+    "sub": "backpacking",
+    "exp": "Thailand",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Laos",
+        "Thailand",
+        "Brunei",
+        "Myanmar",
+        "Cambodia"
+      ],
+      "conf": "MED",
+      "delta": 0.0904,
+      "rank": 2
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Myanmar",
+        "Thailand",
+        "Laos",
+        "Vietnam",
+        "Bhutan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1021,
+      "rank": 2
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Laos",
+        "Thailand",
+        "Brunei",
+        "Myanmar",
+        "Cambodia"
+      ],
+      "conf": "MED",
+      "delta": 0.0904,
+      "rank": 2
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Laos",
+        "Thailand",
+        "Northern Mariana Islands",
+        "Maldives",
+        "Bangladesh"
+      ],
+      "conf": "MED",
+      "delta": 0.0778,
+      "rank": 2
+    }
+  },
+  {
+    "q": "banana pancake trail Southeast Asia",
+    "sub": "backpacking",
+    "exp": "Thailand",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Thailand",
+        "Malaysia",
+        "Indonesia",
+        "Laos",
+        "Brunei"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1208,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Malaysia",
+        "Laos",
+        "Thailand",
+        "Philippines",
+        "Cambodia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.131,
+      "rank": 3
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Thailand",
+        "Malaysia",
+        "Indonesia",
+        "Laos",
+        "Brunei"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1208,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Thailand",
+        "Malaysia",
+        "Laos",
+        "Indonesia",
+        "Cambodia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1111,
+      "rank": 1
+    }
+  },
+  {
+    "q": "train pass interrail budget Europe",
+    "sub": "backpacking",
+    "exp": "Germany",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "France",
+        "Romania",
+        "Hungary",
+        "Italy",
+        "Czechia"
+      ],
+      "conf": "MED",
+      "delta": 0.0732,
+      "rank": 6
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Mauritania",
+        "Andorra",
+        "Latvia",
+        "France",
+        "Libya"
+      ],
+      "conf": "MED",
+      "delta": 0.0892,
+      "rank": 11
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "France",
+        "Romania",
+        "Hungary",
+        "Italy",
+        "Czechia"
+      ],
+      "conf": "MED",
+      "delta": 0.0732,
+      "rank": 6
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Hungary",
+        "France",
+        "Romania",
+        "Germany",
+        "Monaco"
+      ],
+      "conf": "MED",
+      "delta": 0.0747,
+      "rank": 4
+    }
+  },
+  {
+    "q": "Inca trail independent trek",
+    "sub": "backpacking",
+    "exp": "Peru",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Peru",
+        "Chile",
+        "Bolivia",
+        "Ecuador",
+        "Andorra"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2075,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Peru",
+        "Bolivia",
+        "Ecuador",
+        "Guatemala",
+        "Chile"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1759,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Peru",
+        "Chile",
+        "Bolivia",
+        "Ecuador",
+        "Andorra"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2075,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Peru",
+        "Chile",
+        "Ecuador",
+        "Bolivia",
+        "Argentina"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2577,
+      "rank": 1
+    }
+  },
+  {
+    "q": "night bus overland budget journey",
+    "sub": "backpacking",
+    "exp": "Vietnam",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Niger",
+        "Chad",
+        "Mongolia",
+        "Christmas Island",
+        "British Indian Ocean Territory"
+      ],
+      "conf": "LOW",
+      "delta": 0.0334,
+      "rank": 192
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Mauritania",
+        "Libya",
+        "Pakistan",
+        "Chad",
+        "Djibouti"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1323,
+      "rank": 106
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Niger",
+        "Chad",
+        "Mongolia",
+        "Christmas Island",
+        "British Indian Ocean Territory"
+      ],
+      "conf": "LOW",
+      "delta": 0.0334,
+      "rank": 192
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Cura\u00e7ao",
+        "Barbados",
+        "Nauru",
+        "Kuwait",
+        "United Arab Emirates"
+      ],
+      "conf": "LOW",
+      "delta": 0.0478,
+      "rank": 204
+    }
+  },
+  {
+    "q": "island hopping cheap boat ferry",
+    "sub": "backpacking",
+    "exp": "Philippines",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Faroe Islands",
+        "Tokelau",
+        "Pitcairn Islands",
+        "Saint Pierre and Miquelon",
+        "Cocos (Keeling) Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0602,
+      "rank": 24
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Pitcairn Islands",
+        "British Virgin Islands",
+        "Micronesia",
+        "Tokelau",
+        "\u00c5land Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0703,
+      "rank": 43
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Faroe Islands",
+        "Tokelau",
+        "Pitcairn Islands",
+        "Saint Pierre and Miquelon",
+        "Cocos (Keeling) Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0602,
+      "rank": 24
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Pitcairn Islands",
+        "Faroe Islands",
+        "Saint Pierre and Miquelon",
+        "Northern Mariana Islands",
+        "British Virgin Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1117,
+      "rank": 15
+    }
+  },
+  {
+    "q": "couch surfing local host travel",
+    "sub": "backpacking",
+    "exp": "Germany",
+    "note": "origin of Couchsurfing",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Cook Islands",
+        "Cocos (Keeling) Islands",
+        "United States Minor Outlying Islands",
+        "Tokelau",
+        "Saint Martin"
+      ],
+      "conf": "LOW",
+      "delta": 0.0482,
+      "rank": 236
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "French Polynesia",
+        "Niue",
+        "Cape Verde",
+        "Aruba",
+        "Vietnam"
+      ],
+      "conf": "LOW",
+      "delta": 0.0411,
+      "rank": 238
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Cook Islands",
+        "Cocos (Keeling) Islands",
+        "United States Minor Outlying Islands",
+        "Tokelau",
+        "Saint Martin"
+      ],
+      "conf": "LOW",
+      "delta": 0.0482,
+      "rank": 236
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Maldives",
+        "Tokelau",
+        "Cook Islands",
+        "Cocos (Keeling) Islands",
+        "Equatorial Guinea"
+      ],
+      "conf": "MED",
+      "delta": 0.0698,
+      "rank": 214
+    }
+  },
+  {
+    "q": "budget food market local eat cheap",
+    "sub": "backpacking",
+    "exp": "India",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Martinique",
+        "French Guiana",
+        "Thailand",
+        "Myanmar",
+        "Saint Pierre and Miquelon"
+      ],
+      "conf": "MED",
+      "delta": 0.053,
+      "rank": 166
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Guadeloupe",
+        "Togo",
+        "Saint Lucia",
+        "United States Virgin Islands",
+        "Thailand"
+      ],
+      "conf": "MED",
+      "delta": 0.0762,
+      "rank": 172
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Martinique",
+        "French Guiana",
+        "Thailand",
+        "Myanmar",
+        "Saint Pierre and Miquelon"
+      ],
+      "conf": "MED",
+      "delta": 0.053,
+      "rank": 166
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Northern Mariana Islands",
+        "Tuvalu",
+        "Martinique",
+        "Hong Kong",
+        "French Guiana"
+      ],
+      "conf": "MED",
+      "delta": 0.067,
+      "rank": 199
+    }
+  },
+  {
+    "q": "remote island off-grid escape",
+    "sub": "islands",
+    "exp": "Maldives",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Bouvet Island",
+        "Pitcairn Islands",
+        "Norfolk Island",
+        "United States Minor Outlying Islands",
+        "Tokelau"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1019,
+      "rank": 51
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Bouvet Island",
+        "Pitcairn Islands",
+        "Niue",
+        "Tokelau",
+        "Christmas Island"
+      ],
+      "conf": "HIGH",
+      "delta": 0.155,
+      "rank": 45
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Bouvet Island",
+        "Pitcairn Islands",
+        "Norfolk Island",
+        "United States Minor Outlying Islands",
+        "Tokelau"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1019,
+      "rank": 51
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Bouvet Island",
+        "Pitcairn Islands",
+        "Tokelau",
+        "Norfolk Island",
+        "United States Minor Outlying Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1594,
+      "rank": 43
+    }
+  },
+  {
+    "q": "volcanic tropical island lush green",
+    "sub": "islands",
+    "exp": "Indonesia",
+    "note": "Bali",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Montserrat",
+        "Saint Vincent and the Grenadines",
+        "Dominica",
+        "Vanuatu",
+        "Grenada"
+      ],
+      "conf": "MED",
+      "delta": 0.0888,
+      "rank": 39
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Dominica",
+        "Saint Vincent and the Grenadines",
+        "Vanuatu",
+        "Seychelles",
+        "Montserrat"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1503,
+      "rank": 30
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Montserrat",
+        "Saint Vincent and the Grenadines",
+        "Dominica",
+        "Vanuatu",
+        "Grenada"
+      ],
+      "conf": "MED",
+      "delta": 0.0888,
+      "rank": 39
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Dominica",
+        "Montserrat",
+        "Vanuatu",
+        "Saint Vincent and the Grenadines",
+        "Grenada"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1348,
+      "rank": 34
+    }
+  },
+  {
+    "q": "coral atoll lagoon Pacific paradise",
+    "sub": "islands",
+    "exp": "French Polynesia",
+    "note": "Bora Bora",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Niue",
+        "Tuvalu",
+        "Marshall Islands",
+        "Palau",
+        "Tokelau"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1124,
+      "rank": 17
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Palau",
+        "Micronesia",
+        "Niue",
+        "French Polynesia",
+        "Cocos (Keeling) Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1791,
+      "rank": 4
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Niue",
+        "Tuvalu",
+        "Marshall Islands",
+        "Palau",
+        "Tokelau"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1124,
+      "rank": 17
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Niue",
+        "Tuvalu",
+        "Marshall Islands",
+        "Tokelau",
+        "Cocos (Keeling) Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1628,
+      "rank": 19
+    }
+  },
+  {
+    "q": "Greek island hopping whitewashed village",
+    "sub": "islands",
+    "exp": "Greece",
+    "note": "Cyclades",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Greece",
+        "Cyprus",
+        "Faroe Islands",
+        "Anguilla",
+        "Tuvalu"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1073,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Cyprus",
+        "Greece",
+        "Turks and Caicos Islands",
+        "Cura\u00e7ao",
+        "Palau"
+      ],
+      "conf": "MED",
+      "delta": 0.0905,
+      "rank": 2
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Greece",
+        "Cyprus",
+        "Faroe Islands",
+        "Anguilla",
+        "Tuvalu"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1073,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Greece",
+        "Cyprus",
+        "Niue",
+        "Malta",
+        "Tokelau"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1697,
+      "rank": 1
+    }
+  },
+  {
+    "q": "Caribbean rum beach island",
+    "sub": "islands",
+    "exp": "Barbados",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Saint Barth\u00e9lemy",
+        "Cura\u00e7ao",
+        "Cayman Islands",
+        "British Virgin Islands",
+        "Antigua and Barbuda"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1013,
+      "rank": 7
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Anguilla",
+        "Aruba",
+        "Antigua and Barbuda",
+        "Cayman Islands",
+        "Turks and Caicos Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1529,
+      "rank": 7
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Saint Barth\u00e9lemy",
+        "Cura\u00e7ao",
+        "Cayman Islands",
+        "British Virgin Islands",
+        "Antigua and Barbuda"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1013,
+      "rank": 7
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Cayman Islands",
+        "British Virgin Islands",
+        "Saint Barth\u00e9lemy",
+        "Cura\u00e7ao",
+        "Grenada"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1186,
+      "rank": 10
+    }
+  },
+  {
+    "q": "Nordic island fjord Arctic",
+    "sub": "islands",
+    "exp": "Iceland",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Iceland",
+        "Faroe Islands",
+        "Svalbard and Jan Mayen",
+        "Norway",
+        "Greenland"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2517,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Norway",
+        "Greenland",
+        "Faroe Islands",
+        "Iceland",
+        "Bouvet Island"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2476,
+      "rank": 4
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Iceland",
+        "Faroe Islands",
+        "Svalbard and Jan Mayen",
+        "Norway",
+        "Greenland"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2517,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Iceland",
+        "Norway",
+        "Faroe Islands",
+        "Svalbard and Jan Mayen",
+        "Greenland"
+      ],
+      "conf": "HIGH",
+      "delta": 0.3067,
+      "rank": 1
+    }
+  },
+  {
+    "q": "Polynesian island culture canoe",
+    "sub": "islands",
+    "exp": "Samoa",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Niue",
+        "American Samoa",
+        "Tokelau",
+        "Tuvalu",
+        "Pitcairn Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1213,
+      "rank": 6
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "French Polynesia",
+        "Micronesia",
+        "Tonga",
+        "Cook Islands",
+        "American Samoa"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2145,
+      "rank": 6
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Niue",
+        "American Samoa",
+        "Tokelau",
+        "Tuvalu",
+        "Pitcairn Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1213,
+      "rank": 6
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Tuvalu",
+        "American Samoa",
+        "Tokelau",
+        "Samoa",
+        "Niue"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1543,
+      "rank": 4
+    }
+  },
+  {
+    "q": "island nature reserve biodiversity",
+    "sub": "islands",
+    "exp": "Madagascar",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Bouvet Island",
+        "Christmas Island",
+        "British Indian Ocean Territory",
+        "French Southern and Antarctic Lands",
+        "Caribbean Netherlands"
+      ],
+      "conf": "MED",
+      "delta": 0.0934,
+      "rank": 48
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Christmas Island",
+        "British Indian Ocean Territory",
+        "Caribbean Netherlands",
+        "Dominica",
+        "Bouvet Island"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1657,
+      "rank": 17
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Bouvet Island",
+        "Christmas Island",
+        "British Indian Ocean Territory",
+        "French Southern and Antarctic Lands",
+        "Caribbean Netherlands"
+      ],
+      "conf": "MED",
+      "delta": 0.0934,
+      "rank": 48
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Bouvet Island",
+        "Christmas Island",
+        "French Southern and Antarctic Lands",
+        "British Indian Ocean Territory",
+        "Dominica"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1312,
+      "rank": 23
+    }
+  },
+  {
+    "q": "Northern Lights aurora hunting winter",
+    "sub": "winter",
+    "exp": "Norway",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Norway",
+        "Finland",
+        "Greenland",
+        "Antarctica",
+        "Faroe Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1511,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Greenland",
+        "Iceland",
+        "Svalbard and Jan Mayen",
+        "Antarctica",
+        "Norway"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2491,
+      "rank": 5
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Norway",
+        "Finland",
+        "Greenland",
+        "Antarctica",
+        "Faroe Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1511,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Finland",
+        "Norway",
+        "Antarctica",
+        "Greenland",
+        "Faroe Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1297,
+      "rank": 2
+    }
+  },
+  {
+    "q": "dog sledding husky Arctic winter",
+    "sub": "winter",
+    "exp": "Finland",
+    "note": "Lapland",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Greenland",
+        "Russia",
+        "Antarctica",
+        "Svalbard and Jan Mayen",
+        "Canada"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1369,
+      "rank": 7
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Greenland",
+        "Svalbard and Jan Mayen",
+        "Antarctica",
+        "Iceland",
+        "Chad"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1714,
+      "rank": 60
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Greenland",
+        "Russia",
+        "Antarctica",
+        "Svalbard and Jan Mayen",
+        "Canada"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1369,
+      "rank": 7
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Greenland",
+        "Svalbard and Jan Mayen",
+        "Russia",
+        "Canada",
+        "Antarctica"
+      ],
+      "conf": "HIGH",
+      "delta": 0.199,
+      "rank": 8
+    }
+  },
+  {
+    "q": "skiing world-class piste resort",
+    "sub": "winter",
+    "exp": "Austria",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Andorra",
+        "Switzerland",
+        "Austria",
+        "Norway",
+        "Saint Pierre and Miquelon"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1098,
+      "rank": 3
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Switzerland",
+        "Andorra",
+        "Austria",
+        "Iceland",
+        "R\u00e9union"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1429,
+      "rank": 3
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Andorra",
+        "Switzerland",
+        "Austria",
+        "Norway",
+        "Saint Pierre and Miquelon"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1098,
+      "rank": 3
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Andorra",
+        "Switzerland",
+        "Kosovo",
+        "Norway",
+        "Austria"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1628,
+      "rank": 5
+    }
+  },
+  {
+    "q": "ice hotel snow igloo sleep",
+    "sub": "winter",
+    "exp": "Sweden",
+    "note": "Icehotel Jukkasj\u00e4rvi",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Greenland",
+        "Antarctica",
+        "Bouvet Island",
+        "Iceland",
+        "Svalbard and Jan Mayen"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1591,
+      "rank": 32
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Greenland",
+        "Svalbard and Jan Mayen",
+        "Iceland",
+        "Antarctica",
+        "Norway"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2024,
+      "rank": 68
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Greenland",
+        "Antarctica",
+        "Bouvet Island",
+        "Iceland",
+        "Svalbard and Jan Mayen"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1591,
+      "rank": 32
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Greenland",
+        "Antarctica",
+        "Bouvet Island",
+        "Saint Pierre and Miquelon",
+        "Iceland"
+      ],
+      "conf": "HIGH",
+      "delta": 0.176,
+      "rank": 10
+    }
+  },
+  {
+    "q": "snowmobile glacier winter adventure",
+    "sub": "winter",
+    "exp": "Iceland",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Greenland",
+        "Antarctica",
+        "South Georgia",
+        "Svalbard and Jan Mayen",
+        "Norway"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1374,
+      "rank": 10
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Greenland",
+        "Svalbard and Jan Mayen",
+        "Norway",
+        "Kyrgyzstan",
+        "Iceland"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1878,
+      "rank": 5
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Greenland",
+        "Antarctica",
+        "South Georgia",
+        "Svalbard and Jan Mayen",
+        "Norway"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1374,
+      "rank": 10
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Greenland",
+        "Antarctica",
+        "South Georgia",
+        "Norway",
+        "Svalbard and Jan Mayen"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1172,
+      "rank": 11
+    }
+  },
+  {
+    "q": "winter carnival snow festival",
+    "sub": "winter",
+    "exp": "Canada",
+    "note": "Quebec City",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Svalbard and Jan Mayen",
+        "Norway",
+        "Saint Pierre and Miquelon",
+        "Andorra",
+        "Antarctica"
+      ],
+      "conf": "MED",
+      "delta": 0.0818,
+      "rank": 10
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Svalbard and Jan Mayen",
+        "Bahamas",
+        "Aruba",
+        "Canada",
+        "Norway"
+      ],
+      "conf": "MED",
+      "delta": 0.0988,
+      "rank": 4
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Svalbard and Jan Mayen",
+        "Norway",
+        "Saint Pierre and Miquelon",
+        "Andorra",
+        "Antarctica"
+      ],
+      "conf": "MED",
+      "delta": 0.0818,
+      "rank": 10
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Saint Pierre and Miquelon",
+        "Andorra",
+        "Saint Barth\u00e9lemy",
+        "Mongolia",
+        "Canada"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1197,
+      "rank": 5
+    }
+  },
+  {
+    "q": "music festival outdoor camping",
+    "sub": "festival",
+    "exp": "United Kingdom",
+    "note": "Glastonbury",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Montserrat",
+        "Andorra",
+        "Pitcairn Islands",
+        "British Indian Ocean Territory",
+        "Turks and Caicos Islands"
+      ],
+      "conf": "LOW",
+      "delta": 0.0498,
+      "rank": 154
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Montserrat",
+        "Niger",
+        "Trinidad and Tobago",
+        "Serbia",
+        "Cape Verde"
+      ],
+      "conf": "MED",
+      "delta": 0.0736,
+      "rank": 58
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Montserrat",
+        "Andorra",
+        "Pitcairn Islands",
+        "British Indian Ocean Territory",
+        "Turks and Caicos Islands"
+      ],
+      "conf": "LOW",
+      "delta": 0.0498,
+      "rank": 154
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Turks and Caicos Islands",
+        "Andorra",
+        "Kosovo",
+        "Antigua and Barbuda",
+        "Mongolia"
+      ],
+      "conf": "MED",
+      "delta": 0.0844,
+      "rank": 163
+    }
+  },
+  {
+    "q": "carnival Rio parade costume feathers",
+    "sub": "festival",
+    "exp": "Brazil",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Brazil",
+        "Trinidad and Tobago",
+        "French Guiana",
+        "Guyana",
+        "Guadeloupe"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1329,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Brazil",
+        "Papua New Guinea",
+        "Aruba",
+        "Fiji",
+        "New Caledonia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1594,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Brazil",
+        "Trinidad and Tobago",
+        "French Guiana",
+        "Guyana",
+        "Guadeloupe"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1329,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Brazil",
+        "Trinidad and Tobago",
+        "Venezuela",
+        "Aruba",
+        "Saint Barth\u00e9lemy"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1666,
+      "rank": 1
+    }
+  },
+  {
+    "q": "Oktoberfest beer tent Munich",
+    "sub": "festival",
+    "exp": "Germany",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Germany",
+        "Austria",
+        "Luxembourg",
+        "Czechia",
+        "Liechtenstein"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2226,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Germany",
+        "Czechia",
+        "Denmark",
+        "Ireland",
+        "Slovenia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1717,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Germany",
+        "Austria",
+        "Luxembourg",
+        "Czechia",
+        "Liechtenstein"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2226,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Germany",
+        "Austria",
+        "Czechia",
+        "Luxembourg",
+        "Liechtenstein"
+      ],
+      "conf": "HIGH",
+      "delta": 0.2828,
+      "rank": 1
+    }
+  },
+  {
+    "q": "Diwali fireworks lights celebration",
+    "sub": "festival",
+    "exp": "India",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "India",
+        "Bangladesh",
+        "Pakistan",
+        "Trinidad and Tobago",
+        "Sri Lanka"
+      ],
+      "conf": "MED",
+      "delta": 0.0694,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Hong Kong",
+        "Azerbaijan",
+        "India",
+        "China",
+        "Aruba"
+      ],
+      "conf": "MED",
+      "delta": 0.0658,
+      "rank": 3
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "India",
+        "Bangladesh",
+        "Pakistan",
+        "Trinidad and Tobago",
+        "Sri Lanka"
+      ],
+      "conf": "MED",
+      "delta": 0.0694,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Trinidad and Tobago",
+        "Macau",
+        "India",
+        "Bangladesh",
+        "Aruba"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1162,
+      "rank": 3
+    }
+  },
+  {
+    "q": "cherry blossom hanami festival",
+    "sub": "festival",
+    "exp": "Japan",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Japan",
+        "Taiwan",
+        "Cambodia",
+        "Macau",
+        "South Korea"
+      ],
+      "conf": "HIGH",
+      "delta": 0.174,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Japan",
+        "Vietnam",
+        "North Korea",
+        "T\u00fcrkiye",
+        "Taiwan"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1337,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Japan",
+        "Taiwan",
+        "Cambodia",
+        "Macau",
+        "South Korea"
+      ],
+      "conf": "HIGH",
+      "delta": 0.174,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Japan",
+        "Macau",
+        "Taiwan",
+        "Palestine",
+        "Cambodia"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1513,
+      "rank": 1
+    }
+  },
+  {
+    "q": "lantern festival night sky glow",
+    "sub": "festival",
+    "exp": "Thailand",
+    "note": "Yi Peng Chiang Mai",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Macau",
+        "Taiwan",
+        "Hong Kong",
+        "China",
+        "Sri Lanka"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1379,
+      "rank": 22
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Hong Kong",
+        "China",
+        "Myanmar",
+        "Taiwan",
+        "Vietnam"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1579,
+      "rank": 41
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Macau",
+        "Taiwan",
+        "Hong Kong",
+        "China",
+        "Sri Lanka"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1379,
+      "rank": 22
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Macau",
+        "Taiwan",
+        "Mongolia",
+        "Hong Kong",
+        "China"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1538,
+      "rank": 27
+    }
+  },
+  {
+    "q": "scenic coastal road trip ocean view",
+    "sub": "roadtrip",
+    "exp": "New Zealand",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Saint Helena, Ascension and Tristan da Cunha",
+        "\u00c5land Islands",
+        "Jersey",
+        "Tuvalu",
+        "Pitcairn Islands"
+      ],
+      "conf": "LOW",
+      "delta": 0.0458,
+      "rank": 53
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Turks and Caicos Islands",
+        "Djibouti",
+        "British Virgin Islands",
+        "Mozambique",
+        "French Polynesia"
+      ],
+      "conf": "MED",
+      "delta": 0.0764,
+      "rank": 155
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Saint Helena, Ascension and Tristan da Cunha",
+        "\u00c5land Islands",
+        "Jersey",
+        "Tuvalu",
+        "Pitcairn Islands"
+      ],
+      "conf": "LOW",
+      "delta": 0.0458,
+      "rank": 53
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Pitcairn Islands",
+        "Cocos (Keeling) Islands",
+        "Tokelau",
+        "Saint Helena, Ascension and Tristan da Cunha",
+        "\u00c5land Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0667,
+      "rank": 77
+    }
+  },
+  {
+    "q": "Route 66 classic American road trip",
+    "sub": "roadtrip",
+    "exp": "United States",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "United States",
+        "United States Minor Outlying Islands",
+        "Jordan",
+        "Syria",
+        "Northern Mariana Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1199,
+      "rank": 1
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "United States",
+        "Chad",
+        "Pakistan",
+        "Cuba",
+        "Mauritania"
+      ],
+      "conf": "MED",
+      "delta": 0.0745,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "United States",
+        "United States Minor Outlying Islands",
+        "Jordan",
+        "Syria",
+        "Northern Mariana Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1199,
+      "rank": 1
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "United States",
+        "United States Minor Outlying Islands",
+        "Cocos (Keeling) Islands",
+        "Jordan",
+        "Northern Mariana Islands"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1185,
+      "rank": 1
+    }
+  },
+  {
+    "q": "mountain pass hairpin alpine drive",
+    "sub": "roadtrip",
+    "exp": "Switzerland",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Andorra",
+        "Albania",
+        "Austria",
+        "Kosovo",
+        "Switzerland"
+      ],
+      "conf": "MED",
+      "delta": 0.0851,
+      "rank": 5
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Pakistan",
+        "Montenegro",
+        "Kyrgyzstan",
+        "Andorra",
+        "Iceland"
+      ],
+      "conf": "MED",
+      "delta": 0.0747,
+      "rank": 13
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Andorra",
+        "Albania",
+        "Austria",
+        "Kosovo",
+        "Switzerland"
+      ],
+      "conf": "MED",
+      "delta": 0.0851,
+      "rank": 5
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Andorra",
+        "Austria",
+        "Kosovo",
+        "Kyrgyzstan",
+        "Switzerland"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1222,
+      "rank": 5
+    }
+  },
+  {
+    "q": "wine country touring drive",
+    "sub": "roadtrip",
+    "exp": "Australia",
+    "note": "Barossa Valley",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Georgia",
+        "Norfolk Island",
+        "Pitcairn Islands",
+        "Guernsey",
+        "Italy"
+      ],
+      "conf": "MED",
+      "delta": 0.0534,
+      "rank": 116
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Georgia",
+        "Armenia",
+        "Moldova",
+        "Chile",
+        "Portugal"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1019,
+      "rank": 16
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Georgia",
+        "Norfolk Island",
+        "Pitcairn Islands",
+        "Guernsey",
+        "Italy"
+      ],
+      "conf": "MED",
+      "delta": 0.0534,
+      "rank": 116
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Georgia",
+        "Macau",
+        "Italy",
+        "San Marino",
+        "United States Virgin Islands"
+      ],
+      "conf": "MED",
+      "delta": 0.0782,
+      "rank": 113
+    }
+  },
+  {
+    "q": "safari self-drive game park",
+    "sub": "roadtrip",
+    "exp": "Botswana",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "South Africa",
+        "British Indian Ocean Territory",
+        "Christmas Island",
+        "South Sudan",
+        "Botswana"
+      ],
+      "conf": "MED",
+      "delta": 0.0621,
+      "rank": 5
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Botswana",
+        "Namibia",
+        "Cayman Islands",
+        "South Africa",
+        "Madagascar"
+      ],
+      "conf": "HIGH",
+      "delta": 0.1413,
+      "rank": 1
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "South Africa",
+        "British Indian Ocean Territory",
+        "Christmas Island",
+        "South Sudan",
+        "Botswana"
+      ],
+      "conf": "MED",
+      "delta": 0.0621,
+      "rank": 5
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "South Sudan",
+        "Kenya",
+        "Saint Kitts and Nevis",
+        "Christmas Island",
+        "South Africa"
+      ],
+      "conf": "MED",
+      "delta": 0.0636,
+      "rank": 7
+    }
+  },
+  {
+    "q": "ring road circumnavigate island",
+    "sub": "roadtrip",
+    "exp": "Iceland",
+    "note": "",
+    "auto": {
+      "tag": "auto:semantic",
+      "top5": [
+        "Cocos (Keeling) Islands",
+        "Norfolk Island",
+        "Guam",
+        "Niue",
+        "Christmas Island"
+      ],
+      "conf": "MED",
+      "delta": 0.0546,
+      "rank": 43
+    },
+    "brand": {
+      "tag": "brand",
+      "top5": [
+        "Isle of Man",
+        "Tokelau",
+        "Niue",
+        "Kiribati",
+        "Micronesia"
+      ],
+      "conf": "MED",
+      "delta": 0.0937,
+      "rank": 33
+    },
+    "semantic": {
+      "tag": "semantic",
+      "top5": [
+        "Cocos (Keeling) Islands",
+        "Norfolk Island",
+        "Guam",
+        "Niue",
+        "Christmas Island"
+      ],
+      "conf": "MED",
+      "delta": 0.0546,
+      "rank": 43
+    },
+    "hybrid": {
+      "tag": "hybrid",
+      "top5": [
+        "Cocos (Keeling) Islands",
+        "Norfolk Island",
+        "Jersey",
+        "Guam",
+        "Niue"
+      ],
+      "conf": "MED",
+      "delta": 0.0899,
+      "rank": 46
+    }
+  }
+]
