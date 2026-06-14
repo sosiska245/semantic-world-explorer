@@ -26,6 +26,7 @@ app.layout = html.Div(
         dcc.Store(id="store-slots", data={"R": None, "G": None, "B": None}),
         dcc.Store(id="store-similarity", data={"R": None, "G": None, "B": None}),
         dcc.Store(id="store-selected-entity", data=None),
+        dcc.Store(id="store-ranking-mode", data="auto"),
         navbar(),
         dbc.Container(
             dbc.Row(

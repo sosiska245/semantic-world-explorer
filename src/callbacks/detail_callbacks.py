@@ -1,7 +1,7 @@
 from dash import Input, Output, State, callback, ctx, html, no_update
 
 from src.config import SLOT_COLORS, SLOT_DISPLAY
-from src.data_loader import N_ENTITIES, get_entity, get_entity_index
+from src.data_loader import N_ENTITIES, get_entity, get_entity_index, similar_entities
 from src.facts_loader import INDICATOR_DISPLAY, INDICATOR_LABELS, get_facts, match_category
 from src.similarity import sims_from_store_data
 
@@ -114,6 +114,8 @@ def update_detail_panel(selected_id, sim_data, slots_data):
 
     wiki_url = "https://en.wikipedia.org/wiki/" + entity["name"].replace(" ", "_")
 
+    similar = similar_entities(selected_id, top_k=5)
+
     children = [
         html.H5(entity["name"]),
         html.P("Country", className="text-muted"),
@@ -122,5 +124,8 @@ def update_detail_panel(selected_id, sim_data, slots_data):
     ]
     if evidence_blocks:
         children.append(html.Div(evidence_blocks, className="detail-evidence"))
+    if similar:
+        names = ", ".join(name for name, _ in similar)
+        children.append(html.P(f"Semantically similar: {names}", className="detail-similar"))
     children.append(html.A("Wikipedia ->", href=wiki_url, target="_blank", className="d-block mt-2"))
     return children

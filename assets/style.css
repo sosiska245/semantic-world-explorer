@@ -391,3 +391,51 @@ body {
   border-radius: 4px;
   color: var(--text-primary) !important;
 }
+
+/* --- Query chips --- */
+
+.chips-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.chips-container { line-height: 1.8; }
+
+.query-chip {
+  background: transparent;
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.15rem 0.6rem;
+  margin: 0 0.2rem 0.2rem 0;
+  cursor: pointer;
+}
+
+.query-chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+/* --- Ranking mode radio --- */
+
+.ranking-mode-radio label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-right: 0.75rem;
+}
+
+/* --- Similar countries --- */
+
+.detail-similar {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+}

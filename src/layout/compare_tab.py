@@ -35,7 +35,10 @@ def compare_layout():
                         ],
                         className="mb-2",
                     ),
-                    dcc.Graph(id="bar-chart", style={"height": "420px"}),
+                    dcc.Loading(
+                        dcc.Graph(id="bar-chart", style={"height": "420px"}),
+                        type="circle",
+                    ),
                 ],
                 className="swe-card",
             ),
@@ -59,7 +62,10 @@ def compare_layout():
                         ],
                         className="mb-2",
                     ),
-                    dcc.Graph(id="polarity-scatter", style={"height": "480px"}),
+                    dcc.Loading(
+                        dcc.Graph(id="polarity-scatter", style={"height": "480px"}),
+                        type="circle",
+                    ),
                 ],
                 className="swe-card",
             ),
