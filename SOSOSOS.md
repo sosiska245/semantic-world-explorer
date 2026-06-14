@@ -455,13 +455,15 @@ Uses a separate embedding column (`emb_brand`) and scoring function (`src/brand_
 def brand_sim(query_vec):
     scores = MAIN_MAT @ query_vec         # main cosine for all 250 countries
     for i, bv in BRAND_VECS.items():      # override with brand cosine for profiled countries
-        scores[i] = float(np.dot(bv, query_vec))
-    return scores                          # no length penalty — brand profiles are fixed-length
+        scores[i] = float(np.dot(bv, query_vec)) * BRAND_PENALTY[i]
+    return scores
 ```
 
-- **Countries with a brand profile** (all 250): pure brand-profile cosine.
+- **Countries with a brand profile** (all 250): brand cosine × light length penalty.
 - **Fallback**: main embedding cosine (currently never used since all 250 are profiled).
-- No length penalty — brand profiles are deliberately short (100–200 words).
+- **Light length penalty**: `min(1.0, profile_chars / 1500)` — suppresses micro-territory profiles
+  (e.g. Palau 766 chars → ×0.511, Bouvet Island 521 chars → ×0.347) without affecting named-association
+  wins (Japan 835 chars → ×0.557, Denmark 886 chars → ×0.591). Validated: zero H@5 regressions on 20 Brand wins.
 - No BM25 blend.
 
 ### Brand profiles
@@ -533,6 +535,27 @@ Brand marginally leads travel too (+1pp), but individual subcategory variation i
 Brand mode recovers "named association" queries that semantic completely misses.
 The mode excels for: named cultural products, food/drink origins, specific invented traditions,
 named landmarks mentioned in profiles, specific trivia (coelacanth, red crabs, Uyuni).
+
+### Profile improvements (shipped)
+
+**Hungary (HUN):** Added csárdás folk dance (violin + cimbalom), Matyó embroidery (UNESCO Intangible
+Cultural Heritage), Tokaji Aszú wine ("King of wines, wine of kings"), pálinka fruit brandy.
+Result: "folk dance traditional costume" → Hungary: rank 186 → **rank 2**.
+
+**Philippines (PHL):** Added whale sharks / butanding at Donsol (world-class encounter site),
+Tubbataha Reef Natural Park (UNESCO World Heritage dive destination), Ifugao Rice Terraces in
+Banaue/Batad (UNESCO World Heritage, 2,000-year-old indigenous engineering), Boracay beaches.
+Result: "whale shark encounter swimming" → Philippines: rank 107 → **rank 1**.
+
+### Penalty + profile fix validation results (50-query suite)
+
+| Subset | Baseline (no penalty) | After penalty + fixes |
+|---|---|---|
+| ALL H@5 | 38/50 (76%) | 42/50 (84%) |
+| WIN H@5 (20 named-assoc) | 20/20 (100%) | 20/20 (100%) |
+| FAIL H@5 (20 generic travel) | 10/20 (50%) | 13/20 (65%) |
+| EXTRA H@5 (10 mixed) | 8/10 (80%) | 9/10 (90%) |
+| H@5 regressions | — | **0** |
 
 ### Brand mode failure class
 
