@@ -1,8 +1,21 @@
 import dash_bootstrap_components as dbc
-from dash import dcc, html
+from dash import dcc, html, no_update
 
 from src.config import SLOT_COLORS, SLOT_DISPLAY
 from src.data_loader import ENTITIES_DF
+
+PRESET_QUERIES = [
+    "renewable energy leaders",
+    "Buddhist culture and meditation",
+    "island nations",
+    "alpine mountains and skiing",
+    "oil and gas exporters",
+    "tropical rainforest climate",
+    "democracy and civil liberties",
+    "coffee and tea culture",
+    "space exploration technology",
+    "football soccer culture",
+]
 
 
 def slot_card(index):
@@ -41,7 +54,35 @@ def sidebar():
                         ],
                         className="mb-2",
                     ),
-                    dbc.Alert(id="embedding-error-alert", color="danger", is_open=False, className="mt-2"),
+                    html.Div(
+                        [html.Div("Try:", className="chips-label")]
+                        + [
+                            html.Button(q, id={"type": "query-chip", "query": q}, n_clicks=0, className="query-chip")
+                            for q in PRESET_QUERIES
+                        ],
+                        className="chips-container",
+                        style={"marginBottom": "0.75rem"},
+                    ),
+                    html.Div(
+                        [
+                            html.Div("Ranking mode", className="slot-label"),
+                            dcc.RadioItems(
+                                id="ranking-mode-radio",
+                                options=[
+                                    {"label": "Auto", "value": "auto"},
+                                    {"label": "Semantic", "value": "semantic"},
+                                    {"label": "Hybrid (+ BM25)", "value": "hybrid"},
+                                    {"label": "Domain (exp.)", "value": "domain"},
+                                ],
+                                value="auto",
+                                inline=True,
+                                className="ranking-mode-radio",
+                            ),
+                        ],
+                        className="mb-2",
+                    ),
+                    dbc.Alert(id="routing-info-alert",   color="info",   is_open=False, className="mt-2", style={"fontSize": "0.82em"}),
+                    dbc.Alert(id="embedding-error-alert", color="danger", is_open=False, className="mt-1"),
                 ],
                 className="swe-card",
             ),

@@ -13,6 +13,7 @@ downstream (src/facts_loader.py) as "missing", never inferred or defaulted.
 
 import os
 import re
+import time
 
 import pandas as pd
 import requests
@@ -37,6 +38,13 @@ SOURCES = {
     "political_regime": "https://ourworldindata.org/grapher/political-regime.csv?v=1&csvType=full",
     "population_density": "https://ourworldindata.org/grapher/population-density.csv?v=1&csvType=full",
     "land_area": "https://ourworldindata.org/grapher/land-area-km.csv?v=1&csvType=full",
+    "life_expectancy":    "https://ourworldindata.org/grapher/life-expectancy.csv?v=1&csvType=full",
+    "internet_users":     "https://ourworldindata.org/grapher/share-of-individuals-using-the-internet.csv?v=1&csvType=full",
+    "years_schooling":    "https://ourworldindata.org/grapher/mean-years-of-schooling-long-run.csv?v=1&csvType=full",
+    "tourist_arrivals":   "https://ourworldindata.org/grapher/international-tourist-arrivals.csv?v=1&csvType=full",
+    "health_expenditure": "https://ourworldindata.org/grapher/total-healthcare-expenditure-gdp.csv?v=1&csvType=full",
+    "air_passengers":     "https://ourworldindata.org/grapher/air-passengers-carried.csv?v=1&csvType=full",
+    "military_expenditure_gdp": "https://ourworldindata.org/grapher/military-expenditure-share-gdp.csv?v=1&csvType=full",
 }
 
 ISO3_RE = re.compile(r"^[A-Z]{3}$")
@@ -57,14 +65,20 @@ def load_owid_csv(name, url):
         print(f"Using cached {cache_path}")
         return pd.read_csv(cache_path)
 
-    print(f"Fetching {url}")
-    resp = requests.get(url, timeout=60)
-    resp.raise_for_status()
-
-    os.makedirs(RAW_DIR, exist_ok=True)
-    with open(cache_path, "wb") as f:
-        f.write(resp.content)
-    return pd.read_csv(cache_path)
+    for attempt in range(1, 5):
+        try:
+            print(f"Fetching {url} (attempt {attempt})")
+            resp = requests.get(url, timeout=60)
+            resp.raise_for_status()
+            os.makedirs(RAW_DIR, exist_ok=True)
+            with open(cache_path, "wb") as f:
+                f.write(resp.content)
+            return pd.read_csv(cache_path)
+        except Exception as exc:
+            print(f"  fetch failed: {exc}")
+            if attempt < 4:
+                time.sleep(15 * attempt)
+    raise RuntimeError(f"Failed to fetch {url} after 4 attempts")
 
 
 def latest_per_country(df, max_year=MAX_YEAR):
@@ -153,6 +167,48 @@ def main():
 
     df = load_owid_csv("land_area", SOURCES["land_area"])
     rows += numeric_fact_rows(df, "geography", "land_area_km2", "km²", "World Bank via Our World in Data", round_digits=0)
+
+    try:
+        df = load_owid_csv("life_expectancy", SOURCES["life_expectancy"])
+        rows += numeric_fact_rows(df, "health", "life_expectancy", "years", "UN via Our World in Data", round_digits=1)
+    except Exception as exc:
+        print(f"  WARN: life_expectancy fetch failed: {exc}")
+
+    try:
+        df = load_owid_csv("health_expenditure", SOURCES["health_expenditure"])
+        rows += numeric_fact_rows(df, "health", "health_expenditure_gdp", "% of GDP", "WHO via Our World in Data", round_digits=1)
+    except Exception as exc:
+        print(f"  WARN: health_expenditure fetch failed: {exc}")
+
+    try:
+        df = load_owid_csv("internet_users", SOURCES["internet_users"])
+        rows += numeric_fact_rows(df, "technology", "internet_users_share", "%", "ITU via Our World in Data", round_digits=1)
+    except Exception as exc:
+        print(f"  WARN: internet_users fetch failed: {exc}")
+
+    try:
+        df = load_owid_csv("years_schooling", SOURCES["years_schooling"])
+        rows += numeric_fact_rows(df, "education", "mean_years_schooling", "years", "UNDP via Our World in Data", round_digits=1)
+    except Exception as exc:
+        print(f"  WARN: years_schooling fetch failed: {exc}")
+
+    try:
+        df = load_owid_csv("tourist_arrivals", SOURCES["tourist_arrivals"])
+        rows += numeric_fact_rows(df, "tourism", "tourist_arrivals", "arrivals/year", "UNWTO via Our World in Data", round_digits=0)
+    except Exception as exc:
+        print(f"  WARN: tourist_arrivals fetch failed: {exc}")
+
+    try:
+        df = load_owid_csv("air_passengers", SOURCES["air_passengers"])
+        rows += numeric_fact_rows(df, "aviation", "air_passengers", "passengers/year", "World Bank via Our World in Data", round_digits=0)
+    except Exception as exc:
+        print(f"  WARN: air_passengers fetch failed: {exc}")
+
+    try:
+        df = load_owid_csv("military_expenditure_gdp", SOURCES["military_expenditure_gdp"])
+        rows += numeric_fact_rows(df, "military", "military_expenditure_gdp", "% of GDP", "SIPRI via Our World in Data", round_digits=2)
+    except Exception as exc:
+        print(f"  WARN: military_expenditure_gdp fetch failed: {exc}")
 
     out = pd.DataFrame(rows)
     out.to_csv(OUT_CSV_PATH, index=False)

@@ -47,6 +47,13 @@ INDICATOR_LABELS = {
     "regime_type": "Political regime",
     "population_density": "Population density",
     "land_area_km2": "Land area",
+    "life_expectancy":        "Life expectancy",
+    "health_expenditure_gdp": "Healthcare spending",
+    "internet_users_share":   "Internet users",
+    "mean_years_schooling":   "Mean years of schooling",
+    "tourist_arrivals":       "International tourist arrivals",
+    "air_passengers":         "Air transport passengers",
+    "military_expenditure_gdp": "Military expenditure",
 }
 
 # value/unit -> display string per indicator (unit strings are formatted for
@@ -59,6 +66,13 @@ INDICATOR_DISPLAY = {
     "regime_type": lambda v, unit: str(v),
     "population_density": lambda v, unit: f"{float(v):g} {unit}",
     "land_area_km2": lambda v, unit: f"{float(v):,.0f} {unit}",
+    "life_expectancy":        lambda v, unit: f"{float(v):g} {unit}",
+    "health_expenditure_gdp": lambda v, unit: f"{float(v):g}{unit}",
+    "internet_users_share":   lambda v, unit: f"{float(v):g}{unit}",
+    "mean_years_schooling":   lambda v, unit: f"{float(v):g} {unit}",
+    "tourist_arrivals":       lambda v, unit: f"{float(v):,.0f} {unit}",
+    "air_passengers":         lambda v, unit: f"{float(v)/1e6:.1f}M {unit}",
+    "military_expenditure_gdp": lambda v, unit: f"{float(v):.1f}{unit}",
 }
 
 # Phase-1 categories only (energy/agriculture/politics/geography) - matches
@@ -69,6 +83,30 @@ QUERY_CATEGORY_KEYWORDS = {
     "agriculture": ["agricultur", "farm", "crop", "livestock", "harvest"],
     "politics": ["politic", "democra", "government", "election", "regime", "autocra"],
     "geography": ["geography", "population density", "land area", "square kilometer", "square mile", "terrain"],
+    "health": [
+        "health", "healthcare", "medicine", "hospital", "life expectancy",
+        "mortality", "disease", "wellness", "medical",
+    ],
+    "technology": [
+        "technology", "tech", "internet", "digital", "software", "startup",
+        "innovation", "robotics", "programming",
+    ],
+    "education": [
+        "education", "school", "university", "literacy", "academic",
+        "research", "learning", "student",
+    ],
+    "tourism": [
+        "tourism", "tourist", "travel", "resort", "destination",
+        "backpacking", "sightseeing", "vacation",
+    ],
+    "aviation": [
+        "aviation", "airport", "airline", "passenger", "cargo", "shipping",
+        "maritime", "transport", "landlocked",
+    ],
+    "military": [
+        "military", "armed forces", "army", "navy", "weapons", "arms",
+        "peacekeeping", "war", "conflict", "defence", "defense",
+    ],
 }
 
 

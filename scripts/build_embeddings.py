@@ -41,6 +41,12 @@ RATE_LIMIT_RETRY_SECONDS = 65
 
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser(description="Embed entity profiles via Voyage AI")
+    parser.add_argument("--force", action="store_true",
+                        help="Re-embed all profiles even if already embedded (use after profile_text changes)")
+    args = parser.parse_args()
+
     load_dotenv()
     api_key = os.environ.get("VOYAGE_API_KEY")
     if not api_key:
@@ -48,10 +54,12 @@ def main():
 
     df = pd.read_parquet(INTERIM_PARQUET)
 
-    if os.path.exists(OUT_PARQUET):
+    if os.path.exists(OUT_PARQUET) and not args.force:
         existing = pd.read_parquet(OUT_PARQUET)
         existing_ids = set(existing["id"])
     else:
+        if args.force and os.path.exists(OUT_PARQUET):
+            print("--force: clearing existing embeddings for full re-embed")
         existing = None
         existing_ids = set()
 
@@ -92,6 +100,64 @@ def main():
             time.sleep(SECONDS_BETWEEN_REQUESTS)
 
     print(f"Wrote {len(existing)} embedded profiles to {OUT_PARQUET}")
+
+    # Merge text_* columns from profiles into existing (may be absent if main loop was skipped)
+    text_cols = [c for c in df.columns if c.startswith("text_")]
+    for col in text_cols:
+        if col not in existing.columns:
+            existing = existing.merge(df[["id", col]], on="id", how="left")
+            print(f"  merged {col} from profiles into existing")
+
+    SECTION_COLS = {
+        "emb_economy":   "text_economy",
+        "emb_culture":   "text_culture",
+        "emb_geography": "text_geography",
+        "emb_politics":  "text_politics",
+        "emb_history":   "text_history",
+    }
+
+    for emb_col, text_col in SECTION_COLS.items():
+        if text_col not in existing.columns:
+            print(f"  {text_col} column not found in profiles, skipping {emb_col}")
+            continue
+
+        if emb_col not in existing.columns:
+            existing[emb_col] = None
+
+        if existing[emb_col].notna().all():
+            print(f"  {emb_col} already complete, skipping")
+            continue
+
+        todo_mask = (
+            existing[text_col].fillna("").str.len() > 50
+        ) & existing[emb_col].isna()
+        todo_idx = existing[todo_mask].index.tolist()
+        print(f"  embedding {emb_col}: {len(todo_idx)} rows")
+
+        for start in range(0, len(todo_idx), BATCH_SIZE):
+            batch_idx = todo_idx[start : start + BATCH_SIZE]
+            texts = existing.loc[batch_idx, text_col].tolist()
+
+            while True:
+                try:
+                    result = client.embed(
+                        texts, model=EMBEDDING_MODEL,
+                        input_type="document", output_dimension=EMBEDDING_DIM,
+                    )
+                    break
+                except voyageai.error.RateLimitError:
+                    print(f"    rate limited, sleeping {RATE_LIMIT_RETRY_SECONDS}s")
+                    time.sleep(RATE_LIMIT_RETRY_SECONDS)
+                except Exception as exc:
+                    print(f"    transient error ({exc}), retrying 30s")
+                    time.sleep(30)
+
+            for i, emb in zip(batch_idx, result.embeddings):
+                existing.at[i, emb_col] = list(emb)
+
+            existing.to_parquet(OUT_PARQUET, index=False)
+            print(f"    {emb_col}: {min(start+BATCH_SIZE, len(todo_idx))}/{len(todo_idx)}")
+            time.sleep(SECONDS_BETWEEN_REQUESTS)
 
     if os.path.exists(FACTS_INTERIM_CSV):
         shutil.copy(FACTS_INTERIM_CSV, FACTS_PROCESSED_CSV)

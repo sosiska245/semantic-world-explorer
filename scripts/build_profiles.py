@@ -63,6 +63,19 @@ COUNTRY_SECTION_ORDER = [
     "transport",
 ]
 
+MACRO_SECTION_MAP = {
+    "economy":   ["economy", "agriculture", "energy", "infrastructure", "transport", "science", "technology"],
+    "culture":   ["culture", "religion", "cuisine", "demographics", "sports", "tourism", "education"],
+    "geography": ["geography", "climate"],
+    "politics":  ["government", "politics", "military"],
+    "history":   ["history"],
+}
+MACRO_SECTION_CHAR_CAP = 6000
+# Bump when the cache format changes (e.g. cap increase) to invalidate old entries.
+CACHE_VERSION = 2
+# Raw sections stored in cache up to this limit, so future cap raises don't require re-fetching.
+_RAW_SECTION_STORE_CAP = 15000
+
 # Manual overrides for country names whose Wikipedia article title differs
 # from the restcountries "common name". Expand this dict if a pipeline run
 # reports an entity with no wiki text (see WARN logs below).
@@ -115,11 +128,23 @@ def _collect_sections(sections, order, depth=0, max_depth=2):
 
 
 def fetch_wiki(entity_id, title, alt_title, section_order):
-    """Returns dict {summary, sections_text, source_title} or None. Cached on disk."""
+    """Returns dict {summary, sections_text, source_title, macro_sections}. Cached on disk.
+
+    Cache v2 stores raw (uncapped) section text so that future MACRO_SECTION_CHAR_CAP
+    changes apply without re-fetching Wikipedia.
+    """
     cache_path = os.path.join(WIKI_CACHE_DIR, f"{entity_id}.json")
     if os.path.exists(cache_path):
         with open(cache_path, "r", encoding="utf-8") as f:
-            return json.load(f)
+            cached = json.load(f)
+        if cached.get("cache_version", 1) >= CACHE_VERSION and "macro_sections_raw" in cached:
+            result = dict(cached)
+            result["macro_sections"] = {
+                k: v[:MACRO_SECTION_CHAR_CAP]
+                for k, v in cached["macro_sections_raw"].items()
+            }
+            return result
+        os.remove(cache_path)  # old format or old version: delete and re-fetch
 
     def _fetch(t):
         page = wiki.page(t)
@@ -127,6 +152,7 @@ def fetch_wiki(entity_id, title, alt_title, section_order):
             return None
         summary = page.summary.strip()
         grouped = _collect_sections(page.sections, section_order)
+
         ordered_texts = []
         for category in section_order:
             blocks = grouped.get(category)
@@ -134,7 +160,25 @@ def fetch_wiki(entity_id, title, alt_title, section_order):
                 continue
             ordered_texts.append("\n\n".join(blocks)[:CATEGORY_CHAR_CAP])
         sections_text = "\n\n".join(ordered_texts)
-        return {"summary": summary, "sections_text": sections_text, "source_title": t}
+
+        macro_sections_raw = {}
+        for macro_key, keywords in MACRO_SECTION_MAP.items():
+            parts = []
+            for kw in keywords:
+                parts.extend(grouped.get(kw, []))
+            if parts:
+                macro_sections_raw[macro_key] = "\n\n".join(parts)[:_RAW_SECTION_STORE_CAP]
+
+        macro_sections = {k: v[:MACRO_SECTION_CHAR_CAP] for k, v in macro_sections_raw.items()}
+
+        return {
+            "summary": summary,
+            "sections_text": sections_text,
+            "source_title": t,
+            "macro_sections": macro_sections,
+            "macro_sections_raw": macro_sections_raw,
+            "cache_version": CACHE_VERSION,
+        }
 
     result = _retry(_fetch, title)
     if result is None and alt_title and alt_title != title:
@@ -142,7 +186,10 @@ def fetch_wiki(entity_id, title, alt_title, section_order):
 
     if result is None:
         print(f"  WARN: no Wikipedia page found for '{title}' (id={entity_id})")
-        result = {"summary": "", "sections_text": "", "source_title": None}
+        result = {
+            "summary": "", "sections_text": "", "source_title": None,
+            "macro_sections": {}, "macro_sections_raw": {}, "cache_version": CACHE_VERSION,
+        }
 
     os.makedirs(WIKI_CACHE_DIR, exist_ok=True)
     with open(cache_path, "w", encoding="utf-8") as f:
@@ -199,6 +246,13 @@ FACT_TEMPLATES = {
     "regime_type": lambda name, v, year: f"{name} is classified as {'an' if v[0].lower() in 'aeiou' else 'a'} {v} ({year}).",
     "population_density": lambda name, v, year: f"{name} has a population density of approximately {v:g} people per square kilometer ({year}).",
     "land_area_km2": lambda name, v, year: f"{name} has a land area of approximately {v:,.0f} square kilometers ({year}).",
+    "life_expectancy":        lambda name, v, year: f"Life expectancy in {name} is approximately {v:g} years ({year}).",
+    "health_expenditure_gdp": lambda name, v, year: f"{name} spends approximately {v:g}% of its GDP on healthcare ({year}).",
+    "internet_users_share":   lambda name, v, year: f"Approximately {v:g}% of {name}'s population uses the internet ({year}).",
+    "mean_years_schooling":   lambda name, v, year: f"The average person in {name} has approximately {v:g} years of schooling ({year}).",
+    "tourist_arrivals":       lambda name, v, year: f"{name} receives approximately {v:,.0f} international tourist arrivals per year ({year}).",
+    "air_passengers":         lambda name, v, year: f"Air transport in {name}: approximately {v/1e6:.1f} million passengers ({year}).",
+    "military_expenditure_gdp": lambda name, v, year: f"{name} spent approximately {v:.1f}% of its GDP on military expenditure ({year}).",
 }
 
 
@@ -253,6 +307,7 @@ def main():
         facts = facts_by_iso3.get(c["iso3"], [])
         profile_text = build_profile_text(c["name_common"], "country", wiki_result, stats_row, facts)
 
+        macro = wiki_result.get("macro_sections", {})
         rows.append(
             {
                 "id": entity_id,
@@ -264,6 +319,11 @@ def main():
                 "lon": lon,
                 "profile_text": profile_text,
                 "profile_excerpt": (wiki_result["summary"] or profile_text)[:EXCERPT_CHARS],
+                "text_economy":   macro.get("economy", ""),
+                "text_culture":   macro.get("culture", ""),
+                "text_geography": macro.get("geography", ""),
+                "text_politics":  macro.get("politics", ""),
+                "text_history":   macro.get("history", ""),
             }
         )
 
