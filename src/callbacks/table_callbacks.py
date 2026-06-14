@@ -1,4 +1,4 @@
-from dash import Input, Output, callback
+from dash import Input, Output, callback, no_update
 from dash.dash_table.Format import Format, Scheme
 
 from src.config import SLOT_COLORS, SLOT_DISPLAY
@@ -21,6 +21,23 @@ def _relevance_bar(value, vmin, vmax, length=BAR_LENGTH):
     return BAR_FILLED * filled + BAR_EMPTY * (length - filled)
 
 
+def _to_tsv(rows, columns, precision):
+    numeric_ids = {c["id"] for c in columns if c.get("type") == "numeric"}
+    fmt = f".{precision}f"
+
+    def _fmt(col_id, val):
+        if col_id in numeric_ids and val not in ("", None):
+            try:
+                return format(float(val), fmt)
+            except (TypeError, ValueError):
+                pass
+        return str(val) if val is not None else ""
+
+    header = "\t".join(c["name"] for c in columns)
+    lines = ["\t".join(_fmt(c["id"], row.get(c["id"], "")) for c in columns) for row in rows]
+    return "\n".join([header] + lines)
+
+
 @callback(
     Output("ranking-table", "data"),
     Output("ranking-table", "columns"),
@@ -40,16 +57,19 @@ def update_ranking_table(sim_data, sort_color):
     sort_col = f"sim_{sort_color}"
     if sort_color in active_colors:
         sim_arr = sims[sort_color]
-        vmin, vmax = float(sim_arr.min()), float(sim_arr.max())
-        df["relevance_bar"] = [_relevance_bar(v, vmin, vmax) for v in sim_arr]
+        top_val = float(sim_arr.max())
+        df["score_pct"] = [
+            int(round(v / top_val * 100)) if top_val > 0 else 0
+            for v in sim_arr
+        ]
         df = df.sort_values(sort_col, ascending=False).reset_index(drop=True)
         df["rank"] = df.index + 1
         df = df.head(TOP_N)
         sort_by = [{"column_id": sort_col, "direction": "desc"}]
         columns = [
-            {"name": "#", "id": "rank"},
-            {"name": "Relevance", "id": "relevance_bar"},
-            {"name": "Name", "id": "name"},
+            {"name": "#",      "id": "rank"},
+            {"name": "Score%", "id": "score_pct"},
+            {"name": "Name",   "id": "name"},
         ]
     else:
         sort_by = []
@@ -59,6 +79,31 @@ def update_ranking_table(sim_data, sort_color):
 
     for color in active_colors:
         col_id = f"sim_{color}"
-        columns.append({"name": f"Sim - {SLOT_DISPLAY[color]}", "id": col_id, "type": "numeric", "format": SIM_FORMAT})
+        columns.append({"name": f"Sim ({SLOT_DISPLAY[color]})", "id": col_id, "type": "numeric", "format": SIM_FORMAT})
 
     return df.to_dict("records"), columns, sort_by
+
+
+@callback(
+    Output("table-copy-btn", "content"),
+    Input("ranking-table", "data"),
+    Input("ranking-table", "columns"),
+    Input("ranking-table", "page_current"),
+)
+def update_copy_page(data, columns, page_current):
+    if not data or not columns:
+        return ""
+    page = page_current or 0
+    visible = data[page * 12 : (page + 1) * 12]
+    return _to_tsv(visible, columns, precision=3)
+
+
+@callback(
+    Output("table-copy-all-btn", "content"),
+    Input("ranking-table", "data"),
+    Input("ranking-table", "columns"),
+)
+def update_copy_all(data, columns):
+    if not data or not columns:
+        return ""
+    return _to_tsv(data, columns, precision=4)

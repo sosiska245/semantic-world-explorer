@@ -54,6 +54,7 @@ INDICATOR_LABELS = {
     "tourist_arrivals":       "International tourist arrivals",
     "air_passengers":         "Air transport passengers",
     "military_expenditure_gdp": "Military expenditure",
+    "military_spending_usd":   "Military spending",
 }
 
 # value/unit -> display string per indicator (unit strings are formatted for
@@ -73,6 +74,9 @@ INDICATOR_DISPLAY = {
     "tourist_arrivals":       lambda v, unit: f"{float(v):,.0f} {unit}",
     "air_passengers":         lambda v, unit: f"{float(v)/1e6:.1f}M {unit}",
     "military_expenditure_gdp": lambda v, unit: f"{float(v):.1f}{unit}",
+    "military_spending_usd": lambda v, unit: (
+        f"${float(v)/1e9:.1f}B" if float(v) >= 1e9 else f"${float(v)/1e6:.0f}M"
+    ),
 }
 
 # Phase-1 categories only (energy/agriculture/politics/geography) - matches

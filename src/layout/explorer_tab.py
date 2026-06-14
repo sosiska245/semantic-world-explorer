@@ -34,6 +34,20 @@ def explorer_layout():
                                 clearable=False,
                                 style={"width": "240px", "display": "inline-block"},
                             ),
+                            dcc.Clipboard(
+                                id="table-copy-btn",
+                                content="",
+                                title="Copy current page (12 rows, 3dp)",
+                                className="swe-btn table-copy-btn",
+                                style={"display": "inline-block", "marginLeft": "0.6rem", "verticalAlign": "middle"},
+                            ),
+                            dcc.Clipboard(
+                                id="table-copy-all-btn",
+                                content="",
+                                title="Copy all 50 rows (4dp)",
+                                className="swe-btn table-copy-btn",
+                                style={"display": "inline-block", "marginLeft": "0.3rem", "verticalAlign": "middle"},
+                            ),
                         ]
                     ),
                     dcc.Loading(
@@ -44,8 +58,8 @@ def explorer_layout():
                             ],
                             data=[],
                             sort_action="native",
-                            row_selectable="single",
                             page_size=12,
+                            page_current=0,
                             style_table={"overflowX": "auto", "marginTop": "0.75rem"},
                             style_header={
                                 "backgroundColor": "#ece9e2",
@@ -62,8 +76,8 @@ def explorer_layout():
                                 "padding": "6px 10px",
                             },
                             style_cell_conditional=[
-                                {"if": {"column_id": "rank"}, "width": "48px", "textAlign": "center"},
-                                {"if": {"column_id": "relevance_bar"}, "width": "110px", "letterSpacing": "1px"},
+                                {"if": {"column_id": "rank"},      "width": "40px", "textAlign": "center"},
+                                {"if": {"column_id": "score_pct"}, "width": "64px", "textAlign": "right"},
                             ],
                             style_data_conditional=[
                                 {
@@ -76,7 +90,7 @@ def explorer_layout():
                                     "color": "#d97757",
                                 },
                                 {
-                                    "if": {"state": "selected"},
+                                    "if": {"state": "active"},
                                     "backgroundColor": "#f0ddd4",
                                     "border": "1px solid #d97757",
                                 },
