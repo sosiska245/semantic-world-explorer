@@ -1,4 +1,4 @@
-from dash import ALL, Input, Output, State, callback, ctx, html, no_update
+from dash import ALL, ClientsideFunction, Input, Output, State, callback, clientside_callback, ctx, html, no_update
 
 from src.config import MAX_SLOTS, SLOT_COLORS
 from src.data_loader import EMBEDDINGS, ENTITIES_DF, N_ENTITIES
@@ -54,15 +54,42 @@ def update_store_slots(values):
     return data
 
 
-@callback(
-    Output({"type": "slot-input", "index": 0}, "value"),
-    Input({"type": "query-chip", "query": ALL}, "n_clicks"),
+# Track which slot input was most recently typed in
+clientside_callback(
+    """
+    function() {
+        var ctx = window.dash_clientside.callback_context;
+        if (!ctx || !ctx.triggered || !ctx.triggered.length) return window.dash_clientside.no_update;
+        var prop_id = ctx.triggered[0].prop_id;
+        var idStr = prop_id.split('.')[0];
+        try {
+            var idObj = JSON.parse(idStr);
+            if (typeof idObj.index !== 'undefined') return idObj.index;
+        } catch(e) {}
+        return window.dash_clientside.no_update;
+    }
+    """,
+    Output("store-last-focused-slot", "data"),
+    Input({"type": "slot-input", "index": ALL}, "value"),
     prevent_initial_call=True,
 )
-def chip_clicked(n_clicks_list):
+
+
+@callback(
+    Output({"type": "slot-input", "index": ALL}, "value"),
+    Input({"type": "query-chip", "query": ALL}, "n_clicks"),
+    State("store-last-focused-slot", "data"),
+    State({"type": "slot-input", "index": ALL}, "value"),
+    prevent_initial_call=True,
+)
+def chip_clicked(n_clicks_list, last_focused_slot, current_values):
     if not any(n_clicks_list):
-        return no_update
-    return ctx.triggered_id["query"]
+        return [no_update] * len(current_values)
+    query = ctx.triggered_id["query"]
+    result = [no_update] * len(current_values)
+    target = min(int(last_focused_slot or 0), len(result) - 1)
+    result[target] = query
+    return result
 
 
 @callback(

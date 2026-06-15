@@ -2,7 +2,7 @@ import plotly.graph_objects as go
 from dash import Input, Output, callback, html
 
 from src.choropleth import LOW_RELEVANCE_GRAY, country_blend_colors, discrete_colorscale
-from src.config import SLOT_COLORS, SLOT_DISPLAY
+from src.config import SLOT_COLOR_HEX, SLOT_COLORS, SLOT_DISPLAY
 from src.data_loader import ENTITIES_DF, N_ENTITIES, get_entity
 from src.similarity import sims_from_store_data
 
@@ -28,13 +28,14 @@ def _hover_texts(sims, country_mask):
     """List[str], one per country in COUNTRIES_DF order: name plus a
     'Slot X (Color): <sim>' line for each active slot, joined with <br> for
     a multi-line Plotly hover tooltip."""
-    lines_per_country = [[name] for name in COUNTRIES_DF["name"]]
+    lines_per_country = [["<b>" + name + "</b>"] for name in COUNTRIES_DF["name"]]
     for color in SLOT_COLORS:
         sim = sims.get(color)
         if sim is None:
             continue
+        hex_col = SLOT_COLOR_HEX.get(color, "#ffffff")
         for lines, v in zip(lines_per_country, sim[country_mask]):
-            lines.append(f"{SLOT_DISPLAY[color]}: {float(v):.3f}")
+            lines.append(f'<span style="color:{hex_col}">{SLOT_DISPLAY[color]}: {float(v):.3f}</span>')
     return ["<br>".join(lines) for lines in lines_per_country]
 
 
@@ -49,6 +50,8 @@ def update_world_map(sim_data, selected_id):
 
     fig = go.Figure()
     hover_texts = _hover_texts(sims, COUNTRY_MASK)
+
+    _HOVER_LABEL = dict(bgcolor="rgba(30,30,30,0.88)", font_color="white", bordercolor="rgba(0,0,0,0)")
 
     if active:
         colors = country_blend_colors(sims, COUNTRY_MASK)
@@ -67,6 +70,7 @@ def update_world_map(sim_data, selected_id):
                 customdata=COUNTRIES_DF["id"],
                 text=hover_texts,
                 hovertemplate="%{text}<extra></extra>",
+                hoverlabel=_HOVER_LABEL,
             )
         )
     else:
@@ -85,6 +89,7 @@ def update_world_map(sim_data, selected_id):
             customdata=COUNTRIES_DF["id"],
             text=hover_texts,
             hovertemplate="%{text}<extra></extra>",
+            hoverlabel=_HOVER_LABEL,
             showlegend=False,
         )
     )
@@ -109,6 +114,7 @@ def update_world_map(sim_data, selected_id):
         margin=dict(l=0, r=0, t=10, b=0),
         paper_bgcolor="#f3ecd8",
         plot_bgcolor="#f3ecd8",
+        uirevision="world-map-static",
     )
     return fig
 
