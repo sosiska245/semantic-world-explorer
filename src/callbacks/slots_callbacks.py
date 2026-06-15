@@ -228,9 +228,13 @@ def update_similarities(slots_data, ranking_mode):
                 from src.bm25 import blend as bm25_blend
                 final = bm25_blend(cosine, text, alpha=0.08)
                 mode_info[color] = "auto→hybrid" if ranking_mode == "auto" else "hybrid"
+                if ranking_mode == "auto":
+                    routing_msgs.append(f"Slot {slot_num}: Auto → Hybrid (BM25 boosted)")
             else:
                 final = cosine
                 mode_info[color] = "auto→semantic" if ranking_mode == "auto" else "semantic"
+                if ranking_mode == "auto":
+                    routing_msgs.append(f"Slot {slot_num}: Auto → Semantic embedding")
 
         query_vecs[color] = vec.tolist()
         sims[color]       = final.tolist()

@@ -366,7 +366,6 @@ def update_detail_panel(
             [
                 html.Span(f"Match Score {score_pct}/100", className="detail-score-value"),
                 html.Span(f" · #{rank_n}", className="detail-score-rank"),
-                html.Div(f"Mode: {mode_text}", className="detail-mode-label"),
             ],
             className="detail-score-block",
         )
