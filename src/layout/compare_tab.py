@@ -173,7 +173,6 @@ def compare_layout():
                                 labelStyle={"marginRight": "1rem", "cursor": "pointer"},
                                 className="compare-view-radio d-inline-flex",
                             ),
-                            html.Div(id="compare-mode-info", style={"display": "flex", "gap": "0.4rem", "flexWrap": "wrap"}),
                         ],
                         style={"display": "flex", "alignItems": "center", "flexWrap": "wrap", "gap": "0.5rem", "marginBottom": "0.5rem"},
                     ),

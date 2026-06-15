@@ -678,41 +678,6 @@ def ranking_table_click(active_cell, virtual_data, table_data):
     return no_update
 
 
-# ── Compare tab mode-info banner ──────────────────────────────────────────────
-
-@callback(
-    Output("compare-mode-info", "children"),
-    Input("store-mode-info", "data"),
-)
-def update_compare_mode_info(mode_info):
-    if not mode_info:
-        return []
-    from src.config import SLOT_COLOR_HEX, SLOT_COLORS, SLOT_DISPLAY
-    badges = []
-    for color in SLOT_COLORS:
-        m = (mode_info or {}).get(color)
-        if not m:
-            continue
-        hex_col = SLOT_COLOR_HEX.get(color, "#888")
-        label = _mode_label(m)
-        badges.append(
-            html.Span(
-                f"{SLOT_DISPLAY[color]}: {label}",
-                style={
-                    "display": "inline-block",
-                    "marginRight": "0.75rem",
-                    "fontSize": "0.78em",
-                    "fontFamily": "var(--font-mono, monospace)",
-                    "color": hex_col,
-                    "padding": "0.1rem 0.45rem",
-                    "border": f"1px solid {hex_col}",
-                    "borderRadius": "4px",
-                },
-            )
-        )
-    return badges
-
-
 # ── Compact row: route via store-list-click (ctrl → remove filter, click → details) ──
 
 clientside_callback(
