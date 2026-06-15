@@ -8,6 +8,14 @@ document.addEventListener('keyup', function (e) {
 });
 window.addEventListener('blur', function () { window._swe_metaKey = false; });
 
+// Capture modifier state on mouseup — used by box-select because during a
+// Plotly drag the browser may suppress keyup events, making _swe_metaKey
+// unreliable. mouseup fires at the exact moment drag ends with the true state.
+window._swe_mouseupMeta = false;
+document.addEventListener('mouseup', function (e) {
+    window._swe_mouseupMeta = e.metaKey || e.ctrlKey || false;
+});
+
 window.dash_clientside = window.dash_clientside || {};
 window.dash_clientside.swe = {
     // Fires when a button in the sidebar Selected list is clicked.
@@ -30,9 +38,9 @@ window.dash_clientside.swe = {
     },
 
     // Fires when user box-selects on polarity scatter.
-    // Only acts when Ctrl/Cmd is held — merges selected entity IDs into current filter.
+    // Uses mouseup meta state (reliable even during Plotly drag).
     routeSelectedData: function (selectedData, currentFilter) {
-        if (!window._swe_metaKey) return window.dash_clientside.no_update;
+        if (!window._swe_mouseupMeta) return window.dash_clientside.no_update;
         if (!selectedData || !selectedData.points || !selectedData.points.length) {
             return window.dash_clientside.no_update;
         }
