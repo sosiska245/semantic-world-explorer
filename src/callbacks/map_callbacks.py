@@ -2,7 +2,7 @@ import plotly.graph_objects as go
 from dash import Input, Output, callback, html
 
 from src.choropleth import LOW_RELEVANCE_GRAY, country_blend_colors, discrete_colorscale
-from src.config import SLOT_COLOR_HEX, SLOT_COLORS, SLOT_DISPLAY
+from src.config import SLOT_COLORS, SLOT_DISPLAY
 from src.data_loader import ENTITIES_DF, N_ENTITIES, get_entity
 from src.similarity import sims_from_store_data
 
@@ -39,21 +39,20 @@ def _hover_texts(sims, country_mask):
     Output("world-map", "figure"),
     Input("store-similarity", "data"),
     Input("store-selected-entity", "data"),
-    Input("ranking-sort-dropdown", "value"),
 )
-def update_world_map(sim_data, selected_id, sort_color):
+def update_world_map(sim_data, selected_id):
     sims = sims_from_store_data(sim_data, N_ENTITIES)
     active = any(sims[c] is not None for c in sims)
 
     fig = go.Figure()
     hover_texts = _hover_texts(sims, COUNTRY_MASK)
 
-    slot_hex = SLOT_COLOR_HEX.get(sort_color or "R", "#c2452d")
-    _HOVER_LABEL = dict(bgcolor=slot_hex, font_color="white", bordercolor="rgba(0,0,0,0)")
+    _DARK_LABEL = dict(bgcolor="rgba(30,30,30,0.88)", font_color="white", bordercolor="rgba(0,0,0,0)")
 
     if active:
         colors = country_blend_colors(sims, COUNTRY_MASK)
         z, zmin, zmax, colorscale = discrete_colorscale(colors)
+        _COUNTRY_LABEL = dict(bgcolor=list(colors), font_color="white", bordercolor="rgba(0,0,0,0)")
         fig.add_trace(
             go.Choropleth(
                 locations=COUNTRIES_DF["iso3"],
@@ -68,11 +67,12 @@ def update_world_map(sim_data, selected_id, sort_color):
                 customdata=COUNTRIES_DF["id"],
                 text=hover_texts,
                 hovertemplate="%{text}<extra></extra>",
-                hoverlabel=_HOVER_LABEL,
+                hoverlabel=_COUNTRY_LABEL,
             )
         )
     else:
         colors = [LOW_RELEVANCE_GRAY] * len(COUNTRIES_DF)
+        _COUNTRY_LABEL = _DARK_LABEL
 
     # Small centroid markers, same color as the choropleth fill, for every
     # country: keeps every country clickable, and acts as a fallback for any
@@ -87,7 +87,7 @@ def update_world_map(sim_data, selected_id, sort_color):
             customdata=COUNTRIES_DF["id"],
             text=hover_texts,
             hovertemplate="%{text}<extra></extra>",
-            hoverlabel=_HOVER_LABEL,
+            hoverlabel=_COUNTRY_LABEL,
             showlegend=False,
         )
     )
