@@ -248,7 +248,9 @@ def handle_section_highlight(n_clicks_list, _selected_entity, current_highlight)
     Input("clear-filter-btn", "n_clicks"),
     prevent_initial_call=True,
 )
-def clear_filter(_):
+def clear_filter(n_clicks):
+    if not n_clicks:
+        return no_update
     return []
 
 
@@ -257,7 +259,9 @@ def clear_filter(_):
     Input("clear-filter-sidebar-btn", "n_clicks"),
     prevent_initial_call=True,
 )
-def clear_filter_sidebar(_):
+def clear_filter_sidebar(n_clicks):
+    if not n_clicks:
+        return no_update
     return []
 
 
