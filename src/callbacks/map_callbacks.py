@@ -25,17 +25,13 @@ COUNTRIES_DF = ENTITIES_DF[ENTITIES_DF["type"] == "country"]
 
 
 def _hover_texts(sims, country_mask):
-    """List[str], one per country in COUNTRIES_DF order: name plus a
-    'Slot X (Color): <sim>' line for each active slot, joined with <br> for
-    a multi-line Plotly hover tooltip."""
     lines_per_country = [["<b>" + name + "</b>"] for name in COUNTRIES_DF["name"]]
     for color in SLOT_COLORS:
         sim = sims.get(color)
         if sim is None:
             continue
-        hex_col = SLOT_COLOR_HEX.get(color, "#ffffff")
         for lines, v in zip(lines_per_country, sim[country_mask]):
-            lines.append(f'<span style="color:{hex_col}">{SLOT_DISPLAY[color]}: {float(v):.3f}</span>')
+            lines.append(f"{SLOT_DISPLAY[color]}: {float(v):.3f}")
     return ["<br>".join(lines) for lines in lines_per_country]
 
 
@@ -43,15 +39,17 @@ def _hover_texts(sims, country_mask):
     Output("world-map", "figure"),
     Input("store-similarity", "data"),
     Input("store-selected-entity", "data"),
+    Input("ranking-sort-dropdown", "value"),
 )
-def update_world_map(sim_data, selected_id):
+def update_world_map(sim_data, selected_id, sort_color):
     sims = sims_from_store_data(sim_data, N_ENTITIES)
     active = any(sims[c] is not None for c in sims)
 
     fig = go.Figure()
     hover_texts = _hover_texts(sims, COUNTRY_MASK)
 
-    _HOVER_LABEL = dict(bgcolor="rgba(30,30,30,0.88)", font_color="white", bordercolor="rgba(0,0,0,0)")
+    slot_hex = SLOT_COLOR_HEX.get(sort_color or "R", "#c2452d")
+    _HOVER_LABEL = dict(bgcolor=slot_hex, font_color="white", bordercolor="rgba(0,0,0,0)")
 
     if active:
         colors = country_blend_colors(sims, COUNTRY_MASK)

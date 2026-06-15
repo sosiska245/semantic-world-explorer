@@ -553,8 +553,8 @@ def _build_compact_row(entity_id, sims, query_vecs, sort_color):
 
     return html.Button(
         [
-            html.Span(flag or "🌐", className="cmp-flag"),
             html.Span(name, className="cmp-name"),
+            html.Span(flag or "🌐", className="cmp-flag"),
             html.Span(str(score_pct) if score_pct is not None else "—", className="cmp-score"),
             html.Span(f"#{rank_n}" if rank_n else "—", className="cmp-rank"),
             html.Span(top_section, className="cmp-section"),

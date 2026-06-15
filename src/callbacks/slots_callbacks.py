@@ -83,10 +83,16 @@ clientside_callback(
     prevent_initial_call=True,
 )
 def chip_clicked(n_clicks_list, last_focused_slot, current_values):
-    if not any(n_clicks_list):
+    if not any(n for n in n_clicks_list if n):
         return [no_update] * len(current_values)
     query = ctx.triggered_id["query"]
     result = [no_update] * len(current_values)
+    # Priority 1: first empty slot (fill it)
+    for i, v in enumerate(current_values):
+        if not (v or "").strip():
+            result[i] = query
+            return result
+    # Priority 2: all slots filled → target last-typed slot
     target = min(int(last_focused_slot or 0), len(result) - 1)
     result[target] = query
     return result
