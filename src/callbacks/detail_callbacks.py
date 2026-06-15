@@ -655,6 +655,65 @@ def compare_table_click(active_cell, table_data):
     return no_update
 
 
+# ── Ranking table click → details (Python fallback; more reliable than JS row-index) ──
+
+@callback(
+    Output("store-selected-entity", "data", allow_duplicate=True),
+    Input("ranking-table", "active_cell"),
+    State("ranking-table", "derived_virtual_data"),
+    State("ranking-table", "data"),
+    prevent_initial_call=True,
+)
+def ranking_table_click(active_cell, virtual_data, table_data):
+    if not active_cell:
+        return no_update
+    row = active_cell.get("row")
+    if row is None:
+        return no_update
+    # derived_virtual_data reflects current sort/filter order; fall back to raw data
+    rows = virtual_data if virtual_data else table_data
+    if rows and row < len(rows):
+        eid = rows[row].get("id")
+        if eid:
+            return eid
+    return no_update
+
+
+# ── Compare tab mode-info banner ──────────────────────────────────────────────
+
+@callback(
+    Output("compare-mode-info", "children"),
+    Input("store-mode-info", "data"),
+)
+def update_compare_mode_info(mode_info):
+    if not mode_info:
+        return []
+    from src.config import SLOT_COLOR_HEX, SLOT_COLORS, SLOT_DISPLAY
+    badges = []
+    for color in SLOT_COLORS:
+        m = (mode_info or {}).get(color)
+        if not m:
+            continue
+        hex_col = SLOT_COLOR_HEX.get(color, "#888")
+        label = _mode_label(m)
+        badges.append(
+            html.Span(
+                f"{SLOT_DISPLAY[color]}: {label}",
+                style={
+                    "display": "inline-block",
+                    "marginRight": "0.75rem",
+                    "fontSize": "0.78em",
+                    "fontFamily": "var(--font-mono, monospace)",
+                    "color": hex_col,
+                    "padding": "0.1rem 0.45rem",
+                    "border": f"1px solid {hex_col}",
+                    "borderRadius": "4px",
+                },
+            )
+        )
+    return badges
+
+
 # ── Compact row: route via store-list-click (ctrl → remove filter, click → details) ──
 
 clientside_callback(

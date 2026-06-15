@@ -176,6 +176,7 @@ def compare_layout():
                         ],
                         style={"display": "flex", "alignItems": "center", "flexWrap": "wrap", "gap": "0.5rem", "marginBottom": "0.5rem"},
                     ),
+                    html.Div(id="compare-mode-info", style={"marginBottom": "0.4rem"}),
                     html.P(
                         "Select countries in the filter above (or ⌘-click on the map) to compare.",
                         id="compare-details-hint",
