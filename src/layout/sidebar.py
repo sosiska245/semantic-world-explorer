@@ -106,16 +106,16 @@ def sidebar():
                             className="text-muted",
                         ),
                     ),
-                    html.Button(
-                        "Unselect all",
-                        id="clear-filter-detail-btn",
-                        n_clicks=0,
-                        className="swe-btn",
-                        style={"display": "none", "marginTop": "0.6rem", "fontSize": "0.78em"},
-                    ),
                 ],
                 id="sidebar-details-card",
                 className="swe-card",
+            ),
+            html.Button(
+                "Unselect all",
+                id="clear-filter-detail-btn",
+                n_clicks=0,
+                className="swe-btn",
+                style={"display": "none"},
             ),
             html.Div(
                 [

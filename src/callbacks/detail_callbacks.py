@@ -24,8 +24,6 @@ clientside_callback(
     Input("world-map", "clickData"),
     Input("polarity-scatter", "clickData"),
     Input("bar-chart", "clickData"),
-    Input("ranking-table", "active_cell"),
-    State("ranking-table", "data"),
 )
 
 # ── Clientside click router: sidebar Selected list buttons → store-list-click ─
@@ -667,71 +665,46 @@ def update_compare_details(filter_ids, sim_data, slots_data, mode_info, query_ve
 
 # ── Compare table click → details ─────────────────────────────────────────────
 
-# ── Compare table name-column click → store-list-click (ctrl = remove, plain = details) ──
-clientside_callback(
-    """
+# ── Table name-column click → store-list-click (ctrl = remove, plain = details) ──
+# Resets active_cell in the same callback (clientside) so it doesn't race with a
+# separate server-side reset callback fighting over the same prop.
+_TABLE_NAME_CLICK_JS = """
     function(activeCell, virtualData, tableData) {
-        if (!activeCell || !tableData) return window.dash_clientside.no_update;
-        if (activeCell.column_id !== 'name') return window.dash_clientside.no_update;
-        var rows = (virtualData && virtualData.length) ? virtualData : tableData;
-        var row = activeCell.row;
-        if (row === undefined || row >= rows.length) return window.dash_clientside.no_update;
-        var entityId = rows[row].id;
-        if (!entityId) return window.dash_clientside.no_update;
-        return { entity_id: entityId, meta: window._swe_metaKey || false };
+        if (!activeCell) return [window.dash_clientside.no_update, window.dash_clientside.no_update];
+        var result = window.dash_clientside.no_update;
+        if (activeCell.column_id === 'name' && tableData) {
+            var rows = (virtualData && virtualData.length) ? virtualData : tableData;
+            var row = activeCell.row;
+            if (row !== undefined && row < rows.length) {
+                var entityId = rows[row].id;
+                if (entityId) {
+                    result = { entity_id: entityId, meta: window._swe_metaKey || false };
+                }
+            }
+        }
+        return [result, null];
     }
-    """,
+"""
+
+clientside_callback(
+    _TABLE_NAME_CLICK_JS,
     Output("store-list-click", "data", allow_duplicate=True),
+    Output("compare-table", "active_cell"),
     Input("compare-table", "active_cell"),
     State("compare-table", "derived_virtual_data"),
     State("compare-table", "data"),
     prevent_initial_call=True,
 )
 
-@callback(
-    Output("compare-table", "active_cell"),
-    Input("compare-table", "active_cell"),
-    prevent_initial_call=True,
-)
-def reset_compare_table_cell(active_cell):
-    if active_cell:
-        return None
-    return no_update
-
-
-# ── Ranking table click → details (Python fallback; more reliable than JS row-index) ──
-
-@callback(
-    Output("store-selected-entity", "data", allow_duplicate=True),
+clientside_callback(
+    _TABLE_NAME_CLICK_JS,
+    Output("store-list-click", "data", allow_duplicate=True),
+    Output("ranking-table", "active_cell"),
     Input("ranking-table", "active_cell"),
     State("ranking-table", "derived_virtual_data"),
     State("ranking-table", "data"),
     prevent_initial_call=True,
 )
-def ranking_table_click(active_cell, virtual_data, table_data):
-    if not active_cell:
-        return no_update
-    row = active_cell.get("row")
-    if row is None:
-        return no_update
-    # derived_virtual_data reflects current sort/filter order; fall back to raw data
-    rows = virtual_data if virtual_data else table_data
-    if rows and row < len(rows):
-        eid = rows[row].get("id")
-        if eid:
-            return eid
-    return no_update
-
-
-@callback(
-    Output("ranking-table", "active_cell"),
-    Input("ranking-table", "active_cell"),
-    prevent_initial_call=True,
-)
-def reset_ranking_table_cell(active_cell):
-    if active_cell:
-        return None
-    return no_update
 
 
 # ── Compact row: route via store-list-click (ctrl → remove filter, click → details) ──
@@ -768,10 +741,11 @@ clientside_callback(
 @callback(
     Output("clear-filter-detail-btn", "style"),
     Input("country-filter-dropdown", "value"),
+    Input("tabs", "value"),
 )
-def toggle_unselect_all_btn(filter_ids):
-    base = {"marginTop": "0.6rem", "fontSize": "0.78em"}
-    if filter_ids:
+def toggle_unselect_all_btn(filter_ids, tab):
+    base = {"fontSize": "0.78em", "display": "block", "margin": "1rem 0 0 1rem", "width": "fit-content"}
+    if filter_ids and tab == "compare":
         return base
     return {**base, "display": "none"}
 

@@ -81,6 +81,10 @@ def explorer_layout():
                                     "backgroundColor": "#f0ddd4",
                                     "border": "1px solid #d97757",
                                 },
+                                {
+                                    "if": {"column_id": "name"},
+                                    "cursor": "pointer",
+                                },
                             ],
                         ),
                         type="dot",

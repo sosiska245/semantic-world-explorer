@@ -112,7 +112,7 @@ window.dash_clientside.swe = {
         return ids;
     },
 
-    routeClick: function (mapClick, scatterClick, barClick, activeCell, tableData) {
+    routeClick: function (mapClick, scatterClick, barClick) {
         var ctx = window.dash_clientside.callback_context;
         if (!ctx || !ctx.triggered || !ctx.triggered.length) {
             return window.dash_clientside.no_update;
@@ -126,11 +126,6 @@ window.dash_clientside.swe = {
             entityId = scatterClick.points[0].customdata;
         } else if (prop === 'bar-chart.clickData' && barClick && barClick.points && barClick.points.length) {
             entityId = barClick.points[0].customdata;
-        } else if (prop === 'ranking-table.active_cell' && activeCell && tableData) {
-            var row = activeCell.row;
-            if (row !== undefined && tableData && row < tableData.length) {
-                entityId = tableData[row].id;
-            }
         }
 
         if (!entityId) return window.dash_clientside.no_update;

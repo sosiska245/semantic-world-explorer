@@ -34,6 +34,16 @@ body {
   cursor: text !important;
 }
 
+/* Name column — clickable, underline only on hover */
+.dash-cell[data-dash-column="name"] div,
+.dash-cell[data-dash-column="name"] .dash-cell-value {
+  cursor: pointer !important;
+}
+.dash-cell[data-dash-column="name"]:hover div,
+.dash-cell[data-dash-column="name"]:hover .dash-cell-value {
+  text-decoration: underline;
+}
+
 .swe-navbar {
   background-color: var(--bg-card);
   border-bottom: 1px solid var(--border-soft);
