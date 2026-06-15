@@ -550,12 +550,18 @@ def _build_compact_row(entity_id, sims, query_vecs, sort_color):
         top_key = max(sec_scores, key=sec_scores.get)
         top_section = _SECTION_LABELS.get(top_key, top_key.title())
 
+    sim_arr = sims.get(sort_color or "R")
+    sim_val = None
+    if sim_arr is not None and idx is not None:
+        sim_val = float(np.array(sim_arr, dtype=np.float32)[idx])
+
     return html.Button(
         [
             html.Span(name, className="cmp-name"),
             html.Span(flag or "🌐", className="cmp-flag"),
             html.Span(str(score_pct) if score_pct is not None else "—", className="cmp-score"),
             html.Span(f"#{rank_n}" if rank_n else "—", className="cmp-rank"),
+            html.Span(f"{sim_val:.3f}" if sim_val is not None else "—", className="cmp-sim"),
             html.Span(top_section, className="cmp-section"),
         ],
         id={"type": "compare-compact-btn", "eid": entity_id},
@@ -661,18 +667,35 @@ def update_compare_details(filter_ids, sim_data, slots_data, mode_info, query_ve
 
 # ── Compare table click → details ─────────────────────────────────────────────
 
-@callback(
-    Output("store-selected-entity", "data", allow_duplicate=True),
+# ── Compare table name-column click → store-list-click (ctrl = remove, plain = details) ──
+clientside_callback(
+    """
+    function(activeCell, virtualData, tableData) {
+        if (!activeCell || !tableData) return window.dash_clientside.no_update;
+        if (activeCell.column_id !== 'name') return window.dash_clientside.no_update;
+        var rows = (virtualData && virtualData.length) ? virtualData : tableData;
+        var row = activeCell.row;
+        if (row === undefined || row >= rows.length) return window.dash_clientside.no_update;
+        var entityId = rows[row].id;
+        if (!entityId) return window.dash_clientside.no_update;
+        return { entity_id: entityId, meta: window._swe_metaKey || false };
+    }
+    """,
+    Output("store-list-click", "data", allow_duplicate=True),
     Input("compare-table", "active_cell"),
+    State("compare-table", "derived_virtual_data"),
     State("compare-table", "data"),
     prevent_initial_call=True,
 )
-def compare_table_click(active_cell, table_data):
-    if not active_cell or not table_data:
-        return no_update
-    row = active_cell.get("row")
-    if row is not None and row < len(table_data):
-        return table_data[row]["id"]
+
+@callback(
+    Output("compare-table", "active_cell"),
+    Input("compare-table", "active_cell"),
+    prevent_initial_call=True,
+)
+def reset_compare_table_cell(active_cell):
+    if active_cell:
+        return None
     return no_update
 
 
@@ -700,6 +723,17 @@ def ranking_table_click(active_cell, virtual_data, table_data):
     return no_update
 
 
+@callback(
+    Output("ranking-table", "active_cell"),
+    Input("ranking-table", "active_cell"),
+    prevent_initial_call=True,
+)
+def reset_ranking_table_cell(active_cell):
+    if active_cell:
+        return None
+    return no_update
+
+
 # ── Compact row: route via store-list-click (ctrl → remove filter, click → details) ──
 
 clientside_callback(
@@ -718,3 +752,36 @@ clientside_callback(
     State("country-filter-dropdown", "value"),
     prevent_initial_call=True,
 )
+
+# ── Bar chart box-select → add to compare filter (no cmd required) ───────────
+
+clientside_callback(
+    ClientsideFunction(namespace="swe", function_name="routeBarSelectedData"),
+    Output("country-filter-dropdown", "value", allow_duplicate=True),
+    Input("bar-chart", "selectedData"),
+    State("country-filter-dropdown", "value"),
+    prevent_initial_call=True,
+)
+
+# ── "Unselect all" button in sidebar detail card ──────────────────────────────
+
+@callback(
+    Output("clear-filter-detail-btn", "style"),
+    Input("country-filter-dropdown", "value"),
+)
+def toggle_unselect_all_btn(filter_ids):
+    base = {"marginTop": "0.6rem", "fontSize": "0.78em"}
+    if filter_ids:
+        return base
+    return {**base, "display": "none"}
+
+
+@callback(
+    Output("country-filter-dropdown", "value", allow_duplicate=True),
+    Input("clear-filter-detail-btn", "n_clicks"),
+    prevent_initial_call=True,
+)
+def clear_filter_detail(n_clicks):
+    if not n_clicks:
+        return no_update
+    return []

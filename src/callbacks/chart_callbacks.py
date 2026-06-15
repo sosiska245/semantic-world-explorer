@@ -49,35 +49,50 @@ def update_bar_chart(sim_data, color, top_n, filter_ids):
     if sim is None:
         return _empty_figure(f"Type a concept into {SLOT_DISPLAY.get(color, 'this slot')} to see top matches")
 
+    show_all = (top_n is None or int(top_n) >= 35)
+    n_show   = None if show_all else int(top_n)
+
     filter_idx = _filter_indices(filter_ids)
     if filter_idx is not None and len(filter_idx) > 0:
         sub_sim = sim[filter_idx]
         order = np.argsort(sub_sim)[::-1]
+        if not show_all:
+            order = order[:n_show]
         sorted_indices = filter_idx[order]
         names      = ENTITIES_DF["name"].iloc[sorted_indices].to_numpy()[::-1]
         entity_ids = ENTITIES_DF["id"].iloc[sorted_indices].to_numpy()[::-1]
         values = sub_sim[order][::-1]
-        title = f"Selected {len(filter_idx)} countries — {SLOT_DISPLAY.get(color, '')}"
+        shown = len(sorted_indices)
+        total = len(filter_idx)
+        label = "All" if show_all else f"Top {shown}"
+        title = f"{label} of {total} selected — {SLOT_DISPLAY.get(color, '')}"
     else:
-        order = np.argsort(sim)[::-1][: int(top_n)]
+        order = np.argsort(sim)[::-1]
+        if not show_all:
+            order = order[:n_show]
         names      = ENTITIES_DF["name"].iloc[order].to_numpy()[::-1]
         entity_ids = ENTITIES_DF["id"].iloc[order].to_numpy()[::-1]
         values = sim[order][::-1]
-        title = f"Top {int(top_n)} — {SLOT_DISPLAY.get(color, '')}"
+        label = "All" if show_all else f"Top {len(order)}"
+        title = f"{label} — {SLOT_DISPLAY.get(color, '')}"
 
+    bar_color = SLOT_COLOR_HEX.get(color, "#5c9aff")
     fig = go.Figure(
         go.Bar(
             x=values,
             y=names,
             customdata=entity_ids,
             orientation="h",
-            marker_color=SLOT_COLOR_HEX.get(color, "#5c9aff"),
+            marker_color=bar_color,
+            selected={"marker": {"color": bar_color, "opacity": 1.0}},
+            unselected={"marker": {"opacity": 0.25}},
         )
     )
     fig.update_layout(
         **CARTESIAN_LAYOUT,
         title=title,
         xaxis_title="Cosine similarity",
+        dragmode="zoom",
     )
     return fig
 
@@ -159,7 +174,7 @@ def update_polarity_scatter(sim_data, x_color, y_color, selected_id, filter_ids)
     suffix = f" (filtered to {len(filter_idx)})" if filter_idx is not None else ""
     fig.update_layout(
         **CARTESIAN_LAYOUT,
-        dragmode="select",
+        dragmode="zoom",
         xaxis_title=f"Similarity — {SLOT_DISPLAY.get(x_color, '')}{suffix}",
         yaxis_title=f"Similarity — {SLOT_DISPLAY.get(y_color, '')}",
     )

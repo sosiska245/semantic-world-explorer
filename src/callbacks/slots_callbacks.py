@@ -289,22 +289,14 @@ def update_confidence_badge(sim_data, sort_color, mode_info):
 
 @callback(
     Output("chips-container", "style"),
-    Input("tabs", "value"),
-)
-def toggle_chips_visibility(tab):
-    if tab == "compare":
-        return {"display": "none"}
-    return {"marginBottom": "0.75rem"}
-
-
-@callback(
     Output("sidebar-details-card", "style"),
+    Output("detail-jump-to", "style"),
     Input("tabs", "value"),
 )
-def toggle_details_card(tab):
+def toggle_tab_visibility(tab):
     if tab == "compare":
-        return {"display": "none"}
-    return {}
+        return {"display": "none"}, {}, {"display": "none"}
+    return {"marginBottom": "0.75rem"}, {}, {"marginBottom": "0.5rem"}
 
 
 @callback(

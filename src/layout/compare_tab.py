@@ -22,6 +22,7 @@ _TABLE_STYLE_CELL = {
 _TABLE_STYLE_DATA_CONDITIONAL = [
     {"if": {"state": "active"}, "backgroundColor": "#f0ddd4", "border": "1px solid #d97757"},
     {"if": {"filter_query": "{rank} <= 5", "column_id": "rank"}, "color": "#d97757", "fontWeight": "700"},
+    {"if": {"column_id": "name"}, "color": "#d97757", "cursor": "pointer", "textDecoration": "underline"},
 ]
 _TABLE_COL_CONDITIONAL = [
     {"if": {"column_id": "name"},        "textAlign": "left", "width": "140px"},
@@ -107,10 +108,10 @@ def compare_layout():
                                     dcc.Slider(
                                         id="bar-topn-slider",
                                         min=5,
-                                        max=30,
-                                        step=5,
+                                        max=35,
+                                        step=None,
                                         value=10,
-                                        marks={n: str(n) for n in range(5, 31, 5)},
+                                        marks={**{n: str(n) for n in range(5, 31, 5)}, 35: "All"},
                                     ),
                                 ],
                                 style={"display": "inline-block", "width": "300px", "verticalAlign": "middle"},
