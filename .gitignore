@@ -9,3 +9,4 @@ data/raw/*.json
 data/interim/
 *.log
 .claude/
+dev_notes/
