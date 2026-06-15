@@ -720,7 +720,7 @@ body {
 .cmp-row-btn:active,
 .cmp-row-btn:focus  { outline: none; background: none; }
 .cmp-flag    { width: 1.6em; text-align: center; flex-shrink: 0; }
-.cmp-name    { flex: 1 1 120px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cmp-name    { flex: 1 1 120px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: center; }
 .cmp-score   { width: 36px; text-align: right; flex-shrink: 0; color: var(--accent); font-weight: 600; }
 .cmp-rank    { width: 46px; text-align: right; flex-shrink: 0; color: var(--text-muted); }
 .cmp-section { flex-shrink: 0; color: var(--text-muted); }
@@ -728,18 +728,5 @@ body {
 /* Compare tab — view mode radio */
 .compare-view-radio label { font-size: 0.85em; color: var(--text-primary); }
 
-/* Bottom breathing room so last card doesn't sit flush at viewport edge */
-.tab-content { padding-bottom: 5rem; }
-
-/* Footer */
-.swe-footer {
-    text-align: center;
-    font-family: var(--font-mono);
-    font-size: 0.75em;
-    color: var(--text-muted);
-    padding: 2rem 0 4rem;
-    letter-spacing: 0.04em;
-}
-
-/* Increase bottom breathing room */
-.tab-content { padding-bottom: 8rem !important; }
+/* Bottom breathing room */
+.tab-content { padding-bottom: 3rem; }

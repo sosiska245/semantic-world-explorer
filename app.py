@@ -75,10 +75,6 @@ app.layout = html.Div(
             fluid=True,
             className="mt-3",
         ),
-        html.Footer(
-            "pipitkachenko.inc",
-            className="swe-footer",
-        ),
     ]
 )
 
