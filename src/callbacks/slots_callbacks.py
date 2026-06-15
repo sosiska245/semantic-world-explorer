@@ -309,7 +309,19 @@ def update_selected_card(tab, filter_ids):
         for eid in filter_ids
     ]
     return [
-        html.Div("Selected", className="swe-section-title"),
+        html.Div(
+            [
+                html.Div("Selected", className="swe-section-title d-inline-block"),
+                html.Button(
+                    "Clear",
+                    id="clear-filter-sidebar-btn",
+                    n_clicks=0,
+                    className="swe-btn",
+                    style={"fontSize": "0.72em", "padding": "0.1rem 0.4rem", "marginLeft": "0.5rem", "verticalAlign": "middle"},
+                ),
+            ],
+            style={"marginBottom": "0.3rem"},
+        ),
         html.Div(items, style={"display": "flex", "flexDirection": "column", "gap": "0.15rem"}),
         html.P(
             "Click → details  ·  ⌘-click → remove",

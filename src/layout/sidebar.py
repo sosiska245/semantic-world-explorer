@@ -1,5 +1,5 @@
 import dash_bootstrap_components as dbc
-from dash import dcc, html, no_update
+from dash import dcc, html
 
 from src.config import SLOT_COLORS, SLOT_DISPLAY
 from src.data_loader import ENTITIES_DF
@@ -60,6 +60,7 @@ def sidebar():
                             html.Button(q, id={"type": "query-chip", "query": q}, n_clicks=0, className="query-chip")
                             for q in PRESET_QUERIES
                         ],
+                        id="chips-container",
                         className="chips-container",
                         style={"marginBottom": "0.75rem"},
                     ),
@@ -106,7 +107,21 @@ def sidebar():
                         ),
                     ),
                 ],
+                id="sidebar-details-card",
                 className="swe-card",
+            ),
+            html.Div(
+                [
+                    html.Button(
+                        "Clear",
+                        id="clear-filter-sidebar-btn",
+                        n_clicks=0,
+                        style={"display": "none"},
+                    ),
+                ],
+                id="sidebar-selected-card",
+                className="swe-card",
+                style={"display": "none"},
             ),
         ],
         id="sidebar",

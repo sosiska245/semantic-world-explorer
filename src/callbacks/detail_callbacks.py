@@ -241,6 +241,26 @@ def handle_section_highlight(n_clicks_list, _selected_entity, current_highlight)
     return no_update
 
 
+# ── Clear-all filter buttons ──────────────────────────────────────────────────
+
+@callback(
+    Output("country-filter-dropdown", "value", allow_duplicate=True),
+    Input("clear-filter-btn", "n_clicks"),
+    prevent_initial_call=True,
+)
+def clear_filter(_):
+    return []
+
+
+@callback(
+    Output("country-filter-dropdown", "value", allow_duplicate=True),
+    Input("clear-filter-sidebar-btn", "n_clicks"),
+    prevent_initial_call=True,
+)
+def clear_filter_sidebar(_):
+    return []
+
+
 # ── entity selection / compare-filter routing ─────────────────────────────────
 
 @callback(

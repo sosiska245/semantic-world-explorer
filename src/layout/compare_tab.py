@@ -58,14 +58,26 @@ def compare_layout():
                         className="text-muted",
                         style={"fontSize": "0.82em", "marginBottom": "0.5rem"},
                     ),
-                    dcc.Dropdown(
-                        id="country-filter-dropdown",
-                        options=_country_filter_options(),
-                        multi=True,
-                        searchable=True,
-                        placeholder="Type country name or ISO3 code…",
-                        clearable=True,
-                        className="mb-1",
+                    html.Div(
+                        [
+                            dcc.Dropdown(
+                                id="country-filter-dropdown",
+                                options=_country_filter_options(),
+                                multi=True,
+                                searchable=True,
+                                placeholder="Type country name or ISO3 code…",
+                                clearable=True,
+                                style={"flex": "1 1 auto"},
+                            ),
+                            html.Button(
+                                "Clear all",
+                                id="clear-filter-btn",
+                                n_clicks=0,
+                                className="swe-btn",
+                                style={"flexShrink": "0", "fontSize": "0.78em", "padding": "0.2rem 0.55rem"},
+                            ),
+                        ],
+                        style={"display": "flex", "alignItems": "center", "gap": "0.5rem", "marginBottom": "0.25rem"},
                     ),
                     html.Div(
                         id="country-filter-info",
