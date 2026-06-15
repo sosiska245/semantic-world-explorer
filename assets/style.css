@@ -720,7 +720,7 @@ body {
 .cmp-row-btn:active,
 .cmp-row-btn:focus  { outline: none; background: none; }
 .cmp-flag    { width: 1.6em; text-align: center; flex-shrink: 0; }
-.cmp-name    { flex: 1 1 120px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: center; }
+.cmp-name    { flex: 1 1 120px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: right; }
 .cmp-score   { width: 36px; text-align: right; flex-shrink: 0; color: var(--accent); font-weight: 600; }
 .cmp-rank    { width: 46px; text-align: right; flex-shrink: 0; color: var(--text-muted); }
 .cmp-section { flex-shrink: 0; color: var(--text-muted); }
