@@ -595,6 +595,18 @@ def _build_table_row(entity_id, sims, query_vecs, sort_color):
 
 # ── Compare-tab main callback ─────────────────────────────────────────────────
 
+_CARD_CAP    = 12
+_COMPACT_CAP = 80
+
+
+def _overflow_note(shown, total, suggestion):
+    return html.P(
+        f"Showing {shown} of {total} — switch to {suggestion} to see all.",
+        className="text-muted",
+        style={"fontSize": "0.8em", "marginBottom": "0.4rem"},
+    )
+
+
 @callback(
     Output("compare-detail-panels", "children"),
     Output("compare-detail-panels", "style"),
@@ -616,25 +628,35 @@ def update_compare_details(filter_ids, sim_data, slots_data, mode_info, query_ve
     if not filter_ids:
         return [], _HIDE, [], _HIDE, _SHOW
 
-    sims = sims_from_store_data(sim_data, N_ENTITIES)
-    sc   = sort_color or "R"
-    vm   = view_mode or "cards"
+    sims  = sims_from_store_data(sim_data, N_ENTITIES)
+    sc    = sort_color or "R"
+    vm    = view_mode or "cards"
+    total = len(filter_ids)
 
     if vm == "table":
         rows = [r for r in (_build_table_row(eid, sims, query_vecs, sc) for eid in filter_ids) if r]
         return [], _HIDE, rows, _SHOW, _HIDE
 
     if vm == "compact":
-        btns = [b for b in (_build_compact_row(eid, sims, query_vecs, sc) for eid in filter_ids) if b]
-        compact = html.Div(btns, className="cmp-list")
-        return compact, _SHOW, [], _HIDE, _HIDE
+        ids  = filter_ids[:_COMPACT_CAP]
+        btns = [b for b in (_build_compact_row(eid, sims, query_vecs, sc) for eid in ids) if b]
+        parts = []
+        if total > _COMPACT_CAP:
+            parts.append(_overflow_note(_COMPACT_CAP, total, "Table"))
+        parts.append(html.Div(btns, className="cmp-list"))
+        return parts, _SHOW, [], _HIDE, _HIDE
 
-    # cards (default)
+    # cards — hard cap to avoid browser freeze
+    ids   = filter_ids[:_CARD_CAP]
     cards = [
         html.Div(_build_compare_card(eid, sims, mode_info, query_vecs, slots_data, sc), className="compare-detail-col")
-        for eid in filter_ids
+        for eid in ids
     ]
-    return html.Div(cards, className="compare-detail-grid"), _SHOW, [], _HIDE, _HIDE
+    parts = []
+    if total > _CARD_CAP:
+        parts.append(_overflow_note(_CARD_CAP, total, "Table or Compact"))
+    parts.append(html.Div(cards, className="compare-detail-grid"))
+    return parts, _SHOW, [], _HIDE, _HIDE
 
 
 # ── Compare table click → details ─────────────────────────────────────────────
