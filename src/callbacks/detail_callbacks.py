@@ -631,17 +631,21 @@ def compare_table_click(active_cell, table_data):
     return no_update
 
 
-# ── Compact row click → details ───────────────────────────────────────────────
+# ── Compact row: route via store-list-click (ctrl → remove filter, click → details) ──
 
-@callback(
-    Output("store-selected-entity", "data", allow_duplicate=True),
+clientside_callback(
+    ClientsideFunction(namespace="swe", function_name="routeSelectedItem"),
+    Output("store-list-click", "data", allow_duplicate=True),
     Input({"type": "compare-compact-btn", "eid": ALL}, "n_clicks"),
     prevent_initial_call=True,
 )
-def compact_btn_click(n_clicks_list):
-    if not any(n for n in n_clicks_list if n):
-        return no_update
-    trigger = ctx.triggered_id
-    if isinstance(trigger, dict) and trigger.get("type") == "compare-compact-btn":
-        return trigger["eid"]
-    return no_update
+
+# ── Scatter box-select (ctrl+drag) → add to compare filter ───────────────────
+
+clientside_callback(
+    ClientsideFunction(namespace="swe", function_name="routeSelectedData"),
+    Output("country-filter-dropdown", "value", allow_duplicate=True),
+    Input("polarity-scatter", "selectedData"),
+    State("country-filter-dropdown", "value"),
+    prevent_initial_call=True,
+)

@@ -1,6 +1,6 @@
 import numpy as np
 import plotly.graph_objects as go
-from dash import Input, Output, State, callback, no_update
+from dash import Input, Output, callback
 
 from src.config import SLOT_COLOR_HEX, SLOT_COLORS, SLOT_DISPLAY
 from src.data_loader import ENTITIES_DF, N_ENTITIES, get_entity_index
@@ -159,6 +159,7 @@ def update_polarity_scatter(sim_data, x_color, y_color, selected_id, filter_ids)
     suffix = f" (filtered to {len(filter_idx)})" if filter_idx is not None else ""
     fig.update_layout(
         **CARTESIAN_LAYOUT,
+        dragmode="select",
         xaxis_title=f"Similarity — {SLOT_DISPLAY.get(x_color, '')}{suffix}",
         yaxis_title=f"Similarity — {SLOT_DISPLAY.get(y_color, '')}",
     )
@@ -176,20 +177,3 @@ def update_filter_info(filter_ids):
     return f"Filtered to {n} {'country' if n == 1 else 'countries'} — charts show only these."
 
 
-@callback(
-    Output("country-filter-dropdown", "value", allow_duplicate=True),
-    Input("polarity-scatter", "selectedData"),
-    State("country-filter-dropdown", "value"),
-    prevent_initial_call=True,
-)
-def scatter_box_select_to_filter(selected_data, current_filter):
-    if not selected_data or not selected_data.get("points"):
-        return no_update
-    new_ids = [p["customdata"] for p in selected_data["points"] if p.get("customdata")]
-    if not new_ids:
-        return no_update
-    current = list(current_filter or [])
-    for eid in new_ids:
-        if eid not in current:
-            current.append(eid)
-    return current

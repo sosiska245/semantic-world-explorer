@@ -730,3 +730,16 @@ body {
 
 /* Bottom breathing room so last card doesn't sit flush at viewport edge */
 .tab-content { padding-bottom: 5rem; }
+
+/* Footer */
+.swe-footer {
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.75em;
+    color: var(--text-muted);
+    padding: 2rem 0 4rem;
+    letter-spacing: 0.04em;
+}
+
+/* Increase bottom breathing room */
+.tab-content { padding-bottom: 8rem !important; }

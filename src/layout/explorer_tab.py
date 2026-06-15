@@ -34,20 +34,6 @@ def explorer_layout():
                                 clearable=False,
                                 style={"width": "240px", "display": "inline-block"},
                             ),
-                            dcc.Clipboard(
-                                id="table-copy-btn",
-                                content="",
-                                title="Copy current page (12 rows, 3dp)",
-                                className="swe-btn table-copy-btn",
-                                style={"display": "inline-block", "marginLeft": "0.6rem", "verticalAlign": "middle"},
-                            ),
-                            dcc.Clipboard(
-                                id="table-copy-all-btn",
-                                content="",
-                                title="Copy all 50 rows (4dp)",
-                                className="swe-btn table-copy-btn",
-                                style={"display": "inline-block", "marginLeft": "0.3rem", "verticalAlign": "middle"},
-                            ),
                         ]
                     ),
                     dcc.Loading(
@@ -78,6 +64,7 @@ def explorer_layout():
                             style_cell_conditional=[
                                 {"if": {"column_id": "rank"},      "width": "40px", "textAlign": "center"},
                                 {"if": {"column_id": "score_pct"}, "width": "64px", "textAlign": "right"},
+                                {"if": {"column_id": "name"},      "textAlign": "left"},
                             ],
                             style_data_conditional=[
                                 {

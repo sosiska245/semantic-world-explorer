@@ -84,26 +84,3 @@ def update_ranking_table(sim_data, sort_color):
     return df.to_dict("records"), columns, sort_by
 
 
-@callback(
-    Output("table-copy-btn", "content"),
-    Input("ranking-table", "data"),
-    Input("ranking-table", "columns"),
-    Input("ranking-table", "page_current"),
-)
-def update_copy_page(data, columns, page_current):
-    if not data or not columns:
-        return ""
-    page = page_current or 0
-    visible = data[page * 12 : (page + 1) * 12]
-    return _to_tsv(visible, columns, precision=3)
-
-
-@callback(
-    Output("table-copy-all-btn", "content"),
-    Input("ranking-table", "data"),
-    Input("ranking-table", "columns"),
-)
-def update_copy_all(data, columns):
-    if not data or not columns:
-        return ""
-    return _to_tsv(data, columns, precision=4)
