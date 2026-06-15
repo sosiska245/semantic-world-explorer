@@ -206,6 +206,7 @@ def update_similarities(slots_data, ranking_mode):
             mode_info[color]  = None
             query_vecs[color] = None
             errors.append(f"Couldn't embed Slot {slot_num}: {exc}")
+            print(f"[embed_query error] {exc!r} status={getattr(exc, 'http_status', None)} headers={dict(getattr(exc, 'headers', {}) or {})}", flush=True)
             continue
 
         if ranking_mode == "brand":
